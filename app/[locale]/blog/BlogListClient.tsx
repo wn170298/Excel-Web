@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Clock, Search } from 'lucide-react';
 import type { BlogPostSummary } from '@/lib/blog-data';
 
@@ -87,12 +88,20 @@ export default function BlogListClient({ locale, featured, posts, categories }: 
             href={getLocalePath(`/blog/${featured.slug}`, locale)}
             className="group flex flex-col md:flex-row gap-0 rounded-[12px] overflow-hidden border border-[#e8e8e8] mb-10 card-hover"
           >
-            {/* Left: dark visual panel */}
+            {/* Left: visual panel — image if available, else dark fallback */}
             <div
-              className="md:w-[340px] shrink-0 flex items-end p-8"
-              style={{ background: '#0a0a0a', minHeight: '220px' }}
+              className="md:w-[380px] shrink-0 relative overflow-hidden flex items-end p-8"
+              style={{ background: '#0a0a0a', minHeight: '240px' }}
             >
-              <div>
+              {featured.image && (
+                <Image
+                  src={featured.image}
+                  alt={featured.title}
+                  fill
+                  className="object-cover opacity-80"
+                />
+              )}
+              <div className="relative z-10">
                 <span
                   className="inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3"
                   style={{ background: featuredColor.bg, color: featuredColor.text }}

@@ -8,6 +8,7 @@ export interface BlogPost {
   readTime: string;
   date: string;
   author: string;
+  image?: string;
   seoTitle: string;
   seoDescription: string;
   keywords: string[];
@@ -16,6 +17,94 @@ export interface BlogPost {
 export type BlogPostSummary = Omit<BlogPost, 'content' | 'seoTitle' | 'seoDescription' | 'keywords'>;
 
 export const blogPosts: BlogPost[] = [
+  // ─── PERFORMANCE MARKETING ───────────────────────────────────────────────────
+  {
+    slug: 'procurement-pivot-stop-marketing-start-buying',
+    title: 'The Procurement Pivot: Why You Should Stop "Marketing" and Start Buying Customers',
+    category: 'Performance Marketing',
+    categorySlug: 'performance',
+    excerpt: 'Most businesses budget for marketing incorrectly. High-ticket SMEs don\'t need visibility — they need customers on demand. Here\'s how EXCEL treats digital marketing as a procurement system where the math either works or it doesn\'t.',
+    readTime: '12 min read',
+    date: '2025-04-27',
+    author: 'Wali Nori',
+    image: '/blog-procurement-pivot.png',
+    seoTitle: 'The Procurement Pivot: Stop Marketing, Start Buying Customers',
+    seoDescription: 'Learn how high-ticket SMEs can treat digital marketing as a procurement system — with unit economics, real budget ranges, and a framework to calculate ad spend that actually works.',
+    keywords: ['digital marketing ROI', 'performance marketing', 'customer acquisition cost', 'lead generation', 'ad spend calculator', 'procurement marketing'],
+    content: `<h2>Most businesses budget for marketing incorrectly.</h2>
+<p>They treat it like an expense: branding, content, ads, "visibility." But high-ticket SMEs don't need visibility. They need customers on demand.</p>
+<p>At EXCEL, we don't view digital marketing as creativity or communication. We treat it as a procurement system — where you are buying raw inputs (leads) and converting them into profit through a measurable spread.</p>
+<p>If the math doesn't work, we don't spend. If it does, we scale.</p>
+
+<h2>1. What a Digital Marketing Agency Actually Is (In This Model)</h2>
+<p>EXCEL is not a traditional agency. It is a performance system designed to generate high-value sales through automated acquisition infrastructure.</p>
+<p><strong>Core components:</strong></p>
+<ul>
+<li><strong>Lead Generation (Search + Social Ads)</strong> — Capturing high-intent demand at the exact moment of need.</li>
+<li><strong>Conversion Infrastructure (Landing Pages + SEO)</strong> — Fast, lightweight Vercel-built systems designed to convert traffic into calls.</li>
+<li><strong>AI-Driven Operations (Claude Code workflows)</strong> — Automated copy testing, reporting, and performance optimisation.</li>
+<li><strong>Strategic Filtering (Unit economics control)</strong> — Only entering markets where margins support paid acquisition.</li>
+</ul>
+
+<h2>2. Real Budget Ranges (EXCEL Model)</h2>
+<p><strong>Small Business Setup (Local)</strong><br/>Ad Spend: €1,000–€2,000 · Fee: €1,000 · Total: €2,000–€3,000</p>
+<p><strong>Scaling Business (Regional)</strong><br/>Ad Spend: €3,000–€6,000 · Fee: €2,000 · Total: €5,000–€8,000</p>
+<p><strong>Performance Player (High Volume)</strong><br/>Ad Spend: €10,000+ · Fee: €3,000 · Total: €13,000+</p>
+<p>The key principle: we don't charge based on spend. We charge for system operation.</p>
+
+<h2>3. Case Studies</h2>
+<p><strong>Salvage Yard (Automotive Recycling)</strong><br/>10 → 85+ calls/month. €1,500 → €4,500 monthly investment. ROI: ~€34,000/month revenue from leads. Fix: Removed low-value "parts" traffic using negative keywords.</p>
+<p><strong>Solar Contractor</strong><br/>12–15 high-intent appointments/month. €3,000 → €8,000 monthly spend. €5,000+ profit per deal. Fix: Mobile conversion redesign — a sticky call button doubled conversions.</p>
+
+<h2>4. What Most Businesses Get Wrong About Budgeting</h2>
+<ol>
+<li><strong>The Total Budget Trap</strong> — People negotiate fees instead of evaluating ROI.</li>
+<li><strong>SEO First Thinking</strong> — SEO is not a startup strategy. It is a compounding layer built after paid data.</li>
+<li><strong>Ignoring Technical Speed</strong> — A slow website silently destroys ad spend efficiency.</li>
+<li><strong>Percentage-Based Fees</strong> — Misaligned incentives: agencies profit from spend, not efficiency.</li>
+<li><strong>No Budget for Bad Leads</strong> — You are paying for data, not perfection.</li>
+</ol>
+
+<h2>5. EXCEL Budgeting Framework: How to Calculate Spend</h2>
+<p><strong>Step 1: True Profit per Job (GPJ)</strong><br/>Calculate gross profit after all real costs. If GPJ &lt; €500, paid ads likely fail.</p>
+<p><strong>Step 2: Assume Reality-Based Conversion</strong><br/>1 in 5 calls converts (20%).</p>
+<p><strong>Step 3: Target Cost per Lead (CPL ceiling)</strong><br/><code>(GPJ × 0.33) ÷ 5 = CPL ceiling</code></p>
+<p><strong>Step 4: Minimum Monthly Spend</strong><br/>You need at least 4 sales/month for signal stability. Leads needed × CPL = ad budget.</p>
+<p><strong>Step 5: Commit to 90 Days</strong><br/>Month 1 = data purchase. Month 2 = optimisation. Month 3 = stabilisation. If you cannot survive Month 1, you cannot run paid acquisition.</p>
+
+<h2>6. EXCEL vs Traditional Agencies</h2>
+<p><strong>Traditional Agencies:</strong> charge % of spend · sell meetings and reports · optimise for retention.</p>
+<p><strong>EXCEL:</strong> flat fee (€1k–€3k) · optimises for profit spread · removes unnecessary roles using AI · focuses only on leads and calls.</p>
+<p>We don't scale spend. We scale efficiency.</p>
+
+<h2>7. When This Model Fails</h2>
+<p>EXCEL does NOT work when:</p>
+<ul>
+<li>Profit per sale is under €500</li>
+<li>Demand is not search-driven (no intent)</li>
+<li>Client cannot respond to leads quickly</li>
+<li>CPCs exceed viable margins (auction wars)</li>
+<li>Sales cycles are long and untrackable</li>
+</ul>
+<p>This is not a universal system. It is a high-intent machine.</p>
+
+<h2>8. Core Mindset Shift</h2>
+<p>Stop budgeting for marketing. Start budgeting for inventory procurement. You are not paying for ads. You are buying leads that become revenue.</p>
+<p><strong>Rule of Thumb:</strong> Only spend if a single sale generates at least 3× the customer acquisition cost.</p>
+<p><strong>EXCEL Checklist:</strong></p>
+<ul>
+<li>GPJ ≥ €500?</li>
+<li>1/5 leads converts?</li>
+<li>90-day runway available?</li>
+<li>Website fast enough for mobile?</li>
+</ul>
+<p>If not, do not scale.</p>
+
+<h2>Final Principle: The Spread</h2>
+<p>All performance marketing comes down to one thing: the gap between cost per customer and profit per customer. If that spread exists, scaling is mechanical. If it doesn't, no agency in the world can fix it.</p>
+<p>If your business meets the unit economics required for the EXCEL model, <a href="/services">apply directly</a>. Otherwise, use the math first before spending a euro.</p>`,
+  },
+
   // ─── PRIVACY & COMPLIANCE ────────────────────────────────────────────────────
   {
     slug: 'google-consent-mode-v2-conversion-data',

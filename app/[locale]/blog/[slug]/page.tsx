@@ -100,6 +100,20 @@ export default function BlogPostPage({
             </div>
           </div>
 
+          {/* Hero image */}
+          {post.image && (
+            <div className="mb-10 rounded-[10px] overflow-hidden border border-[#ebebeb]">
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={1408}
+                height={768}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          )}
+
           {/* Article content */}
           <div
             className="prose"
