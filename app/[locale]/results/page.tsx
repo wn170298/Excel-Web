@@ -140,14 +140,14 @@ export default function ResultsPage({ params: { locale } }: { params: { locale: 
     <main>
 
       {/* Hero */}
-      <section className="pt-28 pb-16 border-b border-[#e8e8e8]">
+      <section className="pt-16 sm:pt-28 pb-16 border-b border-[#e8e8e8]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="max-w-[720px]">
             <span className="text-label mb-5 block">Client Results</span>
-            <h1 className="text-[48px] sm:text-[56px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] mb-6">
+            <h1 className="text-[36px] sm:text-[48px] lg:text-[56px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] mb-6">
               The numbers from<br />real work.
             </h1>
-            <p className="text-[18px] text-[#555555] leading-[1.65] max-w-[520px] mb-8">
+            <p className="text-[16px] sm:text-[18px] text-[#555555] leading-[1.65] max-w-[520px] mb-8">
               We don&apos;t publish case studies until we have the data to back them up. Every result below is from a real client engagement — verified against their CRM or ad account.
             </p>
             <Link

@@ -55,7 +55,7 @@ export default function BlogPostPage({
     .slice(0, 3);
 
   return (
-    <div className="max-w-[1200px] mx-auto px-6 py-16">
+    <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-16">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16">
         {/* Article */}
         <article>

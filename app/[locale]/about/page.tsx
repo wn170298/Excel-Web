@@ -42,17 +42,17 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-[1200px] mx-auto px-6 pt-20 pb-16">
+      <section className="max-w-[1200px] mx-auto px-6 pt-14 sm:pt-20 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full text-[12px] font-medium text-[#0068d6] bg-[#ebf5ff]">
               Founder & Consultant
             </div>
-            <h1 className="text-[52px] font-semibold tracking-[-0.15rem] text-[#171717] mb-5 leading-[1.05]">
+            <h1 className="text-[36px] sm:text-[52px] font-semibold tracking-[-0.10rem] sm:tracking-[-0.15rem] text-[#171717] mb-5 leading-[1.05]">
               Wali Nori<br />
               <span className="text-[#808080]">Digital Marketing<br />Consultant</span>
             </h1>
-            <p className="text-[17px] text-[#4d4d4d] leading-[1.7] mb-6 max-w-[480px]">
+            <p className="text-[15px] sm:text-[17px] text-[#4d4d4d] leading-[1.7] mb-6 max-w-[480px]">
               I'm a marketing operations specialist based in Perth, Australia, serving clients across Europe and the Asia-Pacific. I founded Excel to solve one specific problem: most SMEs have the right tools — they're just not connected.
             </p>
             <div className="flex items-center gap-3 flex-wrap">

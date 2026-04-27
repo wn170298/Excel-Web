@@ -217,14 +217,14 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
 
       {/* ── HERO ────────────────────────────────────────────────────────────────── */}
       <section className="border-b border-[#e8e8e8]">
-        <div className="max-w-[1200px] mx-auto px-6 pt-20 pb-16">
+        <div className="max-w-[1200px] mx-auto px-6 pt-14 sm:pt-20 pb-16">
           <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full text-[12px] font-semibold text-[#2563eb] bg-[#eff6ff]">
             Transparent pricing · No hidden fees
           </div>
-          <h1 className="text-[52px] font-semibold tracking-[-0.15rem] text-[#0a0a0a] mb-5 max-w-[680px] leading-[1.07]">
+          <h1 className="text-[34px] sm:text-[52px] font-semibold tracking-[-0.10rem] sm:tracking-[-0.15rem] text-[#0a0a0a] mb-5 max-w-[680px] leading-[1.07]">
             Four plans. One methodology.
           </h1>
-          <p className="text-[18px] text-[#555555] max-w-[540px] leading-[1.65]">
+          <p className="text-[15px] sm:text-[18px] text-[#555555] max-w-[540px] leading-[1.65]">
             Whether you're launching from zero or scaling an active operation, every plan is built on the same technical foundation — proper tracking, real attribution, and systems your team can own.
           </p>
         </div>
@@ -378,7 +378,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
                   {['Launch', 'Growth', 'Scale', 'Market Leader'].map((plan, i) => (
                     <th key={plan} className={`text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-wider ${i === 1 ? 'text-[#0a0a0a] bg-[#f7f7f7]' : 'text-[#808080]'}`}>
                       {plan}
-                      {i === 1 && <span className="ml-1.5 text-[9px] font-bold text-white bg-[#0a0a0a] px-1.5 py-0.5 rounded-full">★</span>}
+                      {i === 1 && <span className="ml-1.5 text-[11px] font-bold text-white bg-[#0a0a0a] px-1.5 py-0.5 rounded-full">★</span>}
                     </th>
                   ))}
                 </tr>
