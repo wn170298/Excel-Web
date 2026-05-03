@@ -344,13 +344,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-16 p-7 bg-[#f5f7fa] dark:bg-[#111111] rounded-[16px] border border-[#ebebeb] dark:border-[#2a2a2a]">
             <Image
               src="/profile.jpeg"
-              alt="Wali Noorzad — Founder, Excel Consultancy"
+              alt="Wali Nori — Founder, Excel Consultancy"
               width={72}
               height={72}
               className="rounded-full object-cover shrink-0"
             />
             <div>
-              <p className="text-[15px] font-bold text-[#171717] dark:text-white">Wali Noorzad</p>
+              <p className="text-[15px] font-bold text-[#171717] dark:text-white">Wali Nori</p>
               <p className="text-[13px] text-[#0068d6] font-medium mb-2">Founder & Lead Strategist — Excel Consultancy</p>
               <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.65]">
                 Digital marketing specialist with hands-on experience across SEO, paid media, and AI-driven strategy. I work directly with every client — no account managers, no junior handoffs. When you work with Excel, you work with me.
