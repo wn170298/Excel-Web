@@ -488,6 +488,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               alt="Wali Nori — Founder, Excel Consultancy"
               width={72}
               height={72}
+              loading="lazy"
               className="rounded-full object-cover shrink-0"
               style={{ boxShadow: '0 0 0 3px rgba(0,104,214,0.18)' }}
             />
@@ -726,6 +727,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                       src={post.image}
                       alt={post.title}
                       fill
+                      loading="lazy"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

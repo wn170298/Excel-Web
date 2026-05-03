@@ -130,6 +130,7 @@ export default function BlogPostPage({
               alt="Wali Nori"
               width={48}
               height={48}
+              loading="lazy"
               className="w-12 h-12 rounded-full object-cover shrink-0"
             />
             <div>
