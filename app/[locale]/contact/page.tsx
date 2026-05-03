@@ -1,224 +1,142 @@
-'use client';
+import type { Metadata } from 'next';
+import { Mail, MapPin, Linkedin, ArrowUpRight, Phone, CalendarDays } from 'lucide-react';
+import ContactSection from '@/components/contact-section';
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Mail, Linkedin, MapPin, Clock, CheckCircle2 } from 'lucide-react';
+export const metadata: Metadata = {
+  title: 'Contact Excel Consultancy — Book a Free Strategy Session',
+  description:
+    'Book a free 30-minute digital marketing strategy session. We\'ll audit your current digital presence, identify growth opportunities, and give you a clear action plan — no commitment required.',
+  keywords: [
+    'contact digital marketing agency',
+    'book free strategy session',
+    'digital marketing consultation',
+    'Excel Consultancy contact',
+    'Perth digital marketing agency',
+  ],
+};
+
+const OFFICES = [
+  {
+    city: 'Perth',
+    country: 'Australia',
+    flag: '🇦🇺',
+    detail: 'Western Australia · Primary Office',
+    serving: 'Serving all of Australia',
+  },
+  {
+    city: 'Europe',
+    country: 'Remote',
+    flag: '🇪🇺',
+    detail: 'UK, Italy, Germany & beyond',
+    serving: 'Serving the EU & UK',
+  },
+  {
+    city: 'UAE',
+    country: 'Remote',
+    flag: '🇦🇪',
+    detail: 'Dubai & Abu Dhabi',
+    serving: 'Serving the Middle East',
+  },
+];
+
+const QUICK_LINKS = [
+  { icon: CalendarDays, label: 'Book instantly', value: 'Book a 30-min strategy call', href: 'https://calendly.com/wali-noorzad12/30min' },
+  { icon: Phone, label: 'Call us directly', value: '+39 344 442 4021', href: 'tel:+393444424021' },
+  { icon: Mail, label: 'Email us', value: 'hello@get-excel.com', href: 'mailto:hello@get-excel.com' },
+  { icon: Linkedin, label: 'Connect on LinkedIn', value: 'linkedin.com/in/walinoorzad', href: 'https://www.linkedin.com/in/walinoorzad/' },
+];
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '', email: '', company: '', service: '', message: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
-    <div className="max-w-[1200px] mx-auto px-6 py-20">
-      {/* Header */}
-      <div className="max-w-[560px] mb-16">
-        <h1 className="text-[52px] font-semibold tracking-[-0.15rem] text-[#171717] mb-4 leading-[1.05]">
-          Let's Build Your<br />Marketing System
-        </h1>
-        <p className="text-[17px] text-[#4d4d4d] leading-[1.65]">
-          Ready to connect your tools and start measuring what matters? Send a message or book a call directly.
-        </p>
-      </div>
+    <div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16">
-        {/* Form */}
-        <div>
-          {submitted ? (
-            <div
-              className="p-12 rounded-[12px] bg-white text-center"
-              style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.08), 0px 2px 2px rgba(0,0,0,0.04)' }}
-            >
-              <div className="w-12 h-12 rounded-full bg-[#171717] flex items-center justify-center mx-auto mb-5">
-                <CheckCircle2 size={22} className="text-white" />
-              </div>
-              <h2 className="text-[22px] font-semibold text-[#171717] mb-3">Message sent</h2>
-              <p className="text-[15px] text-[#666666] max-w-[320px] mx-auto leading-[1.65]">
-                I'll respond within 24 hours. Check your inbox — and spam folder just in case.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[13px] font-medium text-[#171717] mb-1.5">
-                    Your Name <span className="text-[#808080]">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Jane Smith"
-                    className="w-full h-10 px-3 text-[14px] bg-white rounded-[6px] outline-none focus:ring-2 focus:ring-[hsla(212,100%,48%,0.3)]"
-                    style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.12)' }}
-                  />
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#171717] mb-1.5">
-                    Work Email <span className="text-[#808080]">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="jane@company.com"
-                    className="w-full h-10 px-3 text-[14px] bg-white rounded-[6px] outline-none focus:ring-2 focus:ring-[hsla(212,100%,48%,0.3)]"
-                    style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.12)' }}
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[13px] font-medium text-[#171717] mb-1.5">Company</label>
-                  <input
-                    type="text"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    placeholder="Acme Ltd"
-                    className="w-full h-10 px-3 text-[14px] bg-white rounded-[6px] outline-none focus:ring-2 focus:ring-[hsla(212,100%,48%,0.3)]"
-                    style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.12)' }}
-                  />
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#171717] mb-1.5">Service of Interest</label>
-                  <select
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full h-10 px-3 text-[14px] bg-white rounded-[6px] outline-none focus:ring-2 focus:ring-[hsla(212,100%,48%,0.3)]"
-                    style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.12)' }}
-                  >
-                    <option value="">Select a service</option>
-                    <option value="launch">Launch Package</option>
-                    <option value="growth">Growth Retainer</option>
-                    <option value="scale">Scale Plan</option>
-                    <option value="market-leader">Market Leader</option>
-                    <option value="audit">Stack Audit</option>
-                    <option value="other">Other / Not sure</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-[13px] font-medium text-[#171717] mb-1.5">
-                  Message <span className="text-[#808080]">*</span>
-                </label>
-                <textarea
-                  required
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Tell me about your current marketing setup, what's broken, and what outcome you're looking for."
-                  className="w-full px-3 py-2.5 text-[14px] bg-white rounded-[6px] outline-none focus:ring-2 focus:ring-[hsla(212,100%,48%,0.3)] resize-none"
-                  style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.12)' }}
-                />
-              </div>
-
-              <div className="text-[12px] text-[#808080] leading-[1.6]">
-                Your data is processed in accordance with GDPR and the Australian Privacy Act. It will only be used to respond to your enquiry and will not be shared with third parties. See our{' '}
-                <Link href="/privacy" className="text-[#0072f5] underline">Privacy Policy</Link>.
-              </div>
-
-              <button
-                type="submit"
-                className="w-full h-11 text-[15px] font-medium text-white bg-[#171717] rounded-[6px] hover:opacity-90 transition-opacity"
-              >
-                Send Message
-              </button>
-            </form>
-          )}
+      {/* ── HERO ─────────────────────────────────────────────────── */}
+      <section className="pt-20 pb-16 bg-white dark:bg-[#0a0a0a]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#f0f7ff] dark:bg-[#0068d6]/15 border border-[#cce0ff] dark:border-[#0068d6]/30">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0068d6]" />
+            <span className="text-[12px] font-semibold text-[#0068d6] tracking-wide">Free Strategy Session</span>
+          </div>
+          <h1 className="text-[40px] sm:text-[52px] font-bold leading-[1.1] text-[#171717] dark:text-white max-w-[700px] mb-5">
+            Talk to a Digital Marketing Expert Today.
+          </h1>
+          <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[580px] mb-8">
+            Book a free 30-minute strategy session — valued at $2,000. No sales pitch. Just a clear audit of your digital marketing and an honest action plan to grow your business.
+          </p>
+          <a
+            href="https://calendly.com/wali-noorzad12/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 h-12 px-7 bg-[#0068d6] hover:bg-[#0055b3] text-white font-semibold rounded-[8px] text-[15px] transition-colors"
+          >
+            <CalendarDays size={16} />
+            Book Your Free Session — Instant Scheduling
+          </a>
         </div>
+      </section>
 
-        {/* Contact info sidebar */}
-        <div className="space-y-6">
-          {/* Profile card */}
-          <div
-            className="p-6 rounded-[8px] bg-white"
-            style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.08), 0px 2px 2px rgba(0,0,0,0.04), 0px 0px 0px 1px #fafafa' }}
-          >
-            <div className="flex items-center gap-4 mb-5">
-              <Image
-                src="/profile.jpeg"
-                alt="Wali Nori"
-                width={56}
-                height={56}
-                className="rounded-full object-cover"
-                style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.08)' }}
-              />
-              <div>
-                <div className="text-[16px] font-semibold text-[#171717]">Wali Nori</div>
-                <div className="text-[13px] text-[#666666]">Founder, Excel Consultancy</div>
-              </div>
-            </div>
+      {/* ── QUICK CONTACT + LOCATIONS ────────────────────────────── */}
+      <section className="pb-12 bg-white dark:bg-[#0a0a0a]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-            <div className="space-y-3">
-              <a
-                href="mailto:hello@get-excel.com"
-                className="flex items-center gap-3 text-[14px] text-[#4d4d4d] hover:text-[#171717] transition-colors"
-              >
-                <Mail size={15} className="text-[#808080]" />
-                hello@get-excel.com
-              </a>
-              <a
-                href="https://www.linkedin.com/in/walinoorzad/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[14px] text-[#4d4d4d] hover:text-[#171717] transition-colors"
-              >
-                <Linkedin size={15} className="text-[#808080]" />
-                linkedin.com/in/walinoorzad
-              </a>
-              <div className="flex items-center gap-3 text-[14px] text-[#4d4d4d]">
-                <MapPin size={15} className="text-[#808080]" />
-                Perth, Australia (GMT+8)
-              </div>
-              <div className="flex items-center gap-3 text-[14px] text-[#4d4d4d]">
-                <Clock size={15} className="text-[#808080]" />
-                Response within 24 hours
-              </div>
-            </div>
-          </div>
+            {/* Quick links */}
+            {QUICK_LINKS.map((item) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="group flex items-center gap-4 p-5 bg-[#f5f7fa] dark:bg-[#111111] rounded-[14px] border border-[#ebebeb] dark:border-[#2a2a2a] hover:border-[#0068d6]/40 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-[10px] bg-[#f0f7ff] dark:bg-[#0068d6]/15 flex items-center justify-center shrink-0">
+                    <Icon size={18} className="text-[#0068d6]" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-semibold text-[#999999] dark:text-[#555555] uppercase tracking-wide mb-0.5">{item.label}</p>
+                    <p className="text-[13px] font-medium text-[#171717] dark:text-white truncate group-hover:text-[#0068d6] transition-colors">
+                      {item.value}
+                    </p>
+                  </div>
+                  {item.href.startsWith('http') && (
+                    <ArrowUpRight size={14} className="text-[#999999] dark:text-[#555555] shrink-0 ml-auto" />
+                  )}
+                </a>
+              );
+            })}
 
-          {/* GDPR note */}
-          <div
-            className="p-5 rounded-[8px] bg-[#fafafa]"
-            style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.08)' }}
-          >
-            <div className="flex items-center gap-1.5 mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-              <span className="text-[12px] font-semibold text-[#171717] uppercase tracking-wider">GDPR Compliant</span>
-            </div>
-            <p className="text-[13px] text-[#666666] leading-[1.55]">
-              All communications comply with GDPR and the Australian Privacy Act. Your data is never sold or shared with third parties.
-            </p>
-          </div>
-
-          {/* Book call CTA */}
-          <div
-            className="p-5 rounded-[8px] bg-[#171717]"
-          >
-            <p className="text-[14px] text-white font-medium mb-1">Prefer a call?</p>
-            <p className="text-[13px] text-[rgba(255,255,255,0.5)] mb-4">
-              Book a free 30-minute strategy session directly.
-            </p>
-            <Link
-              href="/book"
-              className="w-full h-9 rounded-[6px] text-[13px] font-medium text-[#171717] bg-white inline-flex items-center justify-center hover:opacity-80 transition-opacity"
-            >
-              Book a Call
-            </Link>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* ── CONTACT FORM + FAQ ───────────────────────────────────── */}
+      <ContactSection />
+
+      {/* ── OFFICES ──────────────────────────────────────────────── */}
+      <section className="py-20 bg-white dark:bg-[#0a0a0a]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="mb-10">
+            <p className="text-[13px] font-semibold text-[#0068d6] uppercase tracking-wider mb-3">Locations</p>
+            <h2 className="text-[28px] font-bold text-[#171717] dark:text-white">Where We Operate</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {OFFICES.map((office) => (
+              <div
+                key={office.city}
+                className="p-7 bg-[#f5f7fa] dark:bg-[#111111] rounded-[16px] border border-[#ebebeb] dark:border-[#2a2a2a]"
+              >
+                <div className="text-[32px] mb-4">{office.flag}</div>
+                <p className="text-[20px] font-bold text-[#171717] dark:text-white mb-1">{office.city}</p>
+                <p className="text-[13px] text-[#666666] dark:text-[#888888] mb-1">{office.detail}</p>
+                <p className="text-[12px] font-semibold text-[#0068d6]">{office.serving}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

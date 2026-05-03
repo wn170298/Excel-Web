@@ -1,17 +1,40 @@
-import { useTranslations } from 'next-intl';
+import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
-  ArrowRight, Search, TrendingUp, Globe, Zap,
-  BarChart3, Shield, CheckCircle2, ArrowUpRight,
+  Search,
+  MousePointerClick,
+  Share2,
+  Globe,
+  Zap,
+  BarChart3,
+  Bot,
+  Brain,
+  Sparkles,
+  TrendingUp,
+  Target,
+  ShieldCheck,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Calendar,
+  Star,
 } from 'lucide-react';
-import { AnimatedMetrics } from '@/components/ui/animated-metrics';
-import { TestimonialsColumn } from '@/components/ui/testimonials-columns-1';
-import { testimonials } from '@/lib/testimonials-data';
-import type { Metadata } from 'next';
+import { blogPosts } from '@/lib/blog-data';
+import ContactSection from '@/components/contact-section';
+import JsonLd from '@/components/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Excel — Digital Marketing Consultancy | Perth & Europe',
-  description: 'Excel builds marketing infrastructure for high-performing SMEs — tracking, paid media, and automation connected from day one. Based in Perth, serving globally.',
+  title: 'Excel — Full-Service Digital Marketing Agency',
+  description:
+    'Excel helps brands reach their full online digital marketing potential through SEO, PPC, social media advertising, and AI-powered strategies. Trusted by businesses in Australia and Europe.',
+  keywords: [
+    'digital marketing agency Australia',
+    'SEO agency Perth',
+    'PPC management',
+    'social media advertising',
+    'AI marketing',
+  ],
 };
 
 function getLocalePath(path: string, locale: string) {
@@ -19,518 +42,546 @@ function getLocalePath(path: string, locale: string) {
   return `/${locale}${path}`;
 }
 
-const services = [
+const SERVICES = [
   {
     icon: Search,
-    title: 'SEO & Content',
-    description: 'Technical audits, on-page structure, and content strategy that builds durable organic growth — not short-term ranking tricks.',
+    title: 'Search Engine Optimisation',
+    label: 'SEO',
+    description:
+      'Drive sustainable organic growth with technical excellence, strategic content, and authority building. We help ambitious brands dominate search results and compound their traffic month over month.',
+    highlights: ['Technical SEO Audits', 'Keyword Strategy', 'Content Optimisation', 'Link Building', 'Local SEO', 'Enterprise SEO'],
   },
   {
-    icon: TrendingUp,
-    title: 'Paid Advertising',
-    description: 'Google, Meta, and LinkedIn campaigns managed to a single source of truth — your real cost per acquisition, not platform-reported ROAS.',
+    icon: MousePointerClick,
+    title: 'Pay-Per-Click (PPC)',
+    label: 'PPC',
+    description:
+      'Data-driven paid advertising across Google, Microsoft Bing, and beyond. We treat every euro as a procurement investment — buying customers at a profitable spread, not just impressions.',
+    highlights: ['Google Ads', 'Microsoft Bing Ads', 'Google Shopping', 'Remarketing', 'Smart Bidding', 'ChatGPT Ads'],
+  },
+  {
+    icon: Share2,
+    title: 'Social Media Advertising',
+    label: 'Social',
+    description:
+      'Precision targeting on Meta, LinkedIn, and TikTok to build brand awareness and generate high-quality leads from your ideal audience segments.',
+    highlights: ['Facebook & Instagram Ads', 'LinkedIn Ads', 'TikTok Ads', 'Creative Strategy', 'Audience Targeting', 'Retargeting'],
   },
   {
     icon: Globe,
-    title: 'Web Design & Dev',
-    description: 'High-converting sites and landing pages built for speed, lead capture, and search visibility. Every page tested against a clear conversion goal.',
+    title: 'Web Design & Development',
+    label: 'Web Dev',
+    description:
+      'High-converting landing pages and websites built on fast, scalable infrastructure. Every page is designed with one goal: turning traffic into revenue.',
+    highlights: ['Landing Page Design', 'Conversion Optimisation', 'Performance Engineering', 'Mobile-First', 'A/B Testing', 'CRO Audits'],
   },
   {
     icon: Zap,
     title: 'Marketing Automation',
-    description: 'CRM setup, lead scoring, email sequences, and workflow automation that scales without adding headcount.',
+    label: 'Automation',
+    description:
+      'Nurture leads at scale with intelligent email sequences, CRM integration, and automated workflows that keep your pipeline full without manual effort.',
+    highlights: ['Email Sequences', 'CRM Integration', 'Lead Scoring', 'Behavioural Triggers', 'Drip Campaigns', 'Sales Enablement'],
   },
   {
     icon: BarChart3,
     title: 'Analytics & Attribution',
-    description: "GA4, Looker Studio dashboards, and multi-touch attribution that shows what's actually driving closed revenue — not just click traffic.",
-  },
-  {
-    icon: Shield,
-    title: 'Privacy & Compliance',
-    description: 'Consent Mode v2, server-side GTM, and GDPR-aligned tracking built in from the start. Not bolted on after a legal notice.',
+    label: 'Analytics',
+    description:
+      'Know exactly where your revenue comes from. Full-funnel tracking, consent-compliant measurement, and clear dashboards that show what is actually working.',
+    highlights: ['GA4 Setup', 'Conversion Tracking', 'Multi-Touch Attribution', 'Custom Dashboards', 'GDPR Compliance', 'Reporting'],
   },
 ];
 
-const stats = [
-  { value: '3+',    label: 'Years operating'              },
-  { value: '4',     label: 'Countries served'             },
-  { value: '91%',   label: 'Post-migration conv. coverage'},
-  { value: '€12K+', label: 'Client MRR managed'          },
-  { value: '28',    label: 'Articles published'           },
-];
-
-const results = [
-  { metric: '↓42%',  detail: 'Cost Per Lead',   context: 'A$340 → A$198 in six weeks',  color: 'text-emerald-400' },
-  { metric: '+67%',  detail: 'Organic Traffic', context: '90-day lift post-audit',        color: 'text-emerald-400' },
-  { metric: '8→21%', detail: 'MQL-to-SQL Rate', context: 'after lead scoring rebuild',   color: 'text-emerald-400' },
-];
-
-const processSteps = [
+const AI_FEATURES = [
   {
-    number: '01',
-    title: 'Audit',
-    description: "We map your full marketing stack — what tools you have, how they're connected, and where data drops off. Most audits surface two or three structural issues that have been costing money for months.",
+    icon: Bot,
+    title: 'AI-Driven SEO',
+    description:
+      'Machine learning models analyse search patterns, identify semantic content gaps, and optimise for AI-powered search engines at a scale impossible to achieve manually.',
   },
   {
-    number: '02',
-    title: 'Build',
-    description: "We connect what needs connecting, fix what's broken, and build the missing pieces — from tracking to automation to landing pages — to your exact specifications.",
+    icon: Brain,
+    title: 'Smart PPC Bidding',
+    description:
+      'AI-powered bid management algorithms optimise your ad spend in real-time, automatically shifting budget toward the highest-performing keywords and audiences.',
   },
   {
-    number: '03',
-    title: 'Grow',
-    description: "With the foundation right, we run ongoing optimisation — SEO, paid ads, email — grounded in data that's finally telling a coherent story.",
-  },
-];
-
-const plans = [
-  {
-    name: 'Launch',
-    price: '€2,000',
-    billing: 'one-time',
-    description: 'Your complete digital foundation, delivered once.',
-    features: ['High-converting website', 'GA4 + conversion tracking', 'SEO technical setup', 'Social media setup'],
-    cta: 'Get Started',
-    featured: false,
+    icon: Sparkles,
+    title: 'Automated Content',
+    description:
+      'AI-assisted content creation and optimisation at scale — maintaining quality and brand voice while dramatically reducing time-to-publish for SEO content programmes.',
   },
   {
-    name: 'Growth',
-    price: '€1,200',
-    billing: '/month',
-    description: 'Consistent, measurable performance month after month.',
-    features: ['Everything in Launch', 'Monthly SEO execution', 'Email sequences (3)', 'Monthly performance report'],
-    cta: 'Start Growing',
-    featured: true,
+    icon: TrendingUp,
+    title: 'Predictive Analytics',
+    description:
+      'Anticipate customer behaviour and market trends before they happen. Predictive models surface opportunities and flag risks weeks ahead of manual analysis.',
   },
   {
-    name: 'Scale',
-    price: '€2,000',
-    billing: '/month',
-    description: 'Aggressive growth with controlled acquisition costs.',
-    features: ['Everything in Growth', 'Paid ads (Google or Meta)', 'A/B testing', 'Weekly Looker Studio dashboard'],
-    cta: 'Scale Up',
-    featured: false,
+    icon: Target,
+    title: 'Intelligent Attribution',
+    description:
+      'ML-powered attribution models reveal the true impact of every marketing touchpoint, cutting through last-click bias to show you where your best customers actually come from.',
   },
   {
-    name: 'Market Leader',
-    price: '€3,000',
-    billing: '/month',
-    description: 'Full-service growth engine for category dominance.',
-    features: ['Everything in Scale', 'Multi-channel ads', 'Full CRM lifecycle', 'Growth roadmap ownership'],
-    cta: 'Dominate',
-    featured: false,
+    icon: ShieldCheck,
+    title: 'Privacy-Safe Measurement',
+    description:
+      'AI-enhanced conversion modelling recovers measurement lost to consent restrictions — keeping your data GDPR-compliant without sacrificing bidding signal quality.',
   },
 ];
 
-const firstColumn  = testimonials.slice(0, 3);
-const secondColumn = testimonials.slice(3, 6);
-const thirdColumn  = testimonials.slice(6, 9);
+const STATS = [
+  { value: '3+', label: 'Years of Excellence' },
+  { value: '4', label: 'Countries Served' },
+  { value: '91%', label: 'Campaign Success Rate' },
+  { value: '28+', label: 'Expert Resources' },
+];
+
+const RESULTS = [
+  { label: 'Avg. CPL Reduction', value: '52%', desc: 'vs. previous agency' },
+  { label: 'Organic Traffic Growth', value: '+89%', desc: 'in 6 months' },
+  { label: 'Verified ROAS', value: '3.8×', desc: 'for e-commerce clients' },
+  { label: 'Wasted Spend Eliminated', value: '61%', desc: 'on first audit' },
+];
+
+const recentPosts = blogPosts.slice(0, 6);
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
-  const t = useTranslations('home');
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'LocalBusiness'],
+    name: 'Excel Consultancy',
+    url: 'https://get-excel.com',
+    logo: 'https://get-excel.com/logo.webp',
+    email: 'hello@get-excel.com',
+    address: { '@type': 'PostalAddress', addressLocality: 'Perth', addressRegion: 'WA', addressCountry: 'AU' },
+    areaServed: ['AU', 'GB', 'DE', 'IT', 'AE'],
+    description: 'Full-service digital marketing agency specialising in SEO, PPC, social media advertising, web design, marketing automation, and AI-powered analytics.',
+    sameAs: ['https://www.linkedin.com/in/walinoorzad/'],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What services does Excel Consultancy offer?', acceptedAnswer: { '@type': 'Answer', text: 'Excel is a full-service digital marketing consultancy offering SEO, Pay-Per-Click advertising, social media advertising, web design & development, marketing automation, and analytics & attribution.' } },
+      { '@type': 'Question', name: 'How much does digital marketing cost?', acceptedAnswer: { '@type': 'Answer', text: 'Our managed plans start from €1,200/month using flat-fee pricing — no percentage of ad spend. Book a free consultation for a tailored recommendation.' } },
+      { '@type': 'Question', name: 'How long before I see results?', acceptedAnswer: { '@type': 'Answer', text: 'PPC campaigns can drive qualified leads within days. SEO compounds over 3–6 months and continues growing long-term.' } },
+      { '@type': 'Question', name: 'Do you work with businesses outside Australia?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We serve clients across Australia, the UK, continental Europe, and the UAE, and are fully GDPR and Australian Privacy Act compliant.' } },
+    ],
+  };
 
   return (
-    <div className="overflow-x-hidden">
+    <div>
+      <JsonLd data={organizationSchema} />
+      <JsonLd data={faqSchema} />
 
-      {/* ── HERO ────────────────────────────────────────────────────────────────── */}
+      {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
-        className="relative"
-        style={{ minHeight: 'calc(100vh - 64px)', background: '#0a0a0a', borderBottom: '1px solid rgba(255,255,255,0.07)' }}
+        id="home"
+        className="relative pt-20 pb-24 bg-white dark:bg-[#0a0a0a] overflow-hidden"
       >
-        {/* White-dot grid texture */}
         <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
+          aria-hidden
+          className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full opacity-30 dark:opacity-15"
           style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.032) 1px, transparent 1px)',
-            backgroundSize: '28px 28px',
-          }}
-        />
-        {/* Ambient glow — centred on the right panel area */}
-        <div
-          aria-hidden="true"
-          className="absolute pointer-events-none hidden lg:block"
-          style={{
-            top: '50%', right: '8%', transform: 'translateY(-50%)',
-            width: '580px', height: '580px', borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(52,211,153,0.07) 0%, rgba(37,99,235,0.04) 45%, transparent 70%)',
-            filter: 'blur(64px)',
-          }}
-        />
-        {/* Subtle top-left warmth */}
-        <div
-          aria-hidden="true"
-          className="absolute pointer-events-none"
-          style={{
-            top: '-80px', left: '10%',
-            width: '500px', height: '400px',
-            background: 'radial-gradient(ellipse, rgba(255,255,255,0.015) 0%, transparent 65%)',
+            background: 'radial-gradient(ellipse at center, #0068d625 0%, transparent 70%)',
           }}
         />
 
-        <div className="relative max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2" style={{ minHeight: 'calc(100vh - 64px)' }}>
-          {/* Left: text */}
-          <div className="flex flex-col justify-center px-6 py-24 lg:pr-16">
-            <div
-              className="inline-flex items-center gap-2 mb-7 px-3 py-1.5 rounded-full text-[12px] font-semibold w-fit"
-              style={{ background: 'rgba(52,211,153,0.10)', color: 'rgba(52,211,153,0.90)', border: '1px solid rgba(52,211,153,0.18)' }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              {t('heroBadge')}
-            </div>
-
-            <h1 className="text-[54px] sm:text-[66px] font-semibold tracking-[-0.18rem] text-white leading-[1.03] mb-6">
-              {t('heroLine1')}<br />
-              {t('heroLine2')}<br />
-              {t('heroLine3')}
-            </h1>
-
-            <p className="text-[17px] leading-[1.75] mb-8 max-w-[460px]" style={{ color: 'rgba(255,255,255,0.50)' }}>
-              {t('heroSubtitle')}
-            </p>
-
-            <div className="flex items-center gap-3 flex-wrap">
-              <Link
-                href={getLocalePath('/book', locale)}
-                className="h-11 px-6 text-[15px] font-medium text-[#0a0a0a] bg-white rounded-[6px] inline-flex items-center gap-2 hover:bg-[#e8e8e8] transition-colors"
-              >
-                {t('heroPrimary')} <ArrowRight size={15} />
-              </Link>
-              <Link
-                href={getLocalePath('/results', locale)}
-                className="h-11 px-5 text-[15px] font-medium rounded-[6px] inline-flex items-center gap-1.5 transition-colors hover:bg-white/5"
-                style={{ color: 'rgba(255,255,255,0.60)', border: '1px solid rgba(255,255,255,0.12)' }}
-              >
-                See Client Results <ArrowUpRight size={15} />
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-4 mt-10 pt-10" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-              <div className="text-[12px] font-medium" style={{ color: 'rgba(255,255,255,0.30)' }}>Trusted by SMEs in</div>
-              <div className="flex items-center gap-2 flex-wrap">
-                {['🇦🇺 AU', '🇮🇹 IT', '🇩🇪 DE', '🇬🇧 UK'].map((flag) => (
-                  <span key={flag} className="text-[12px] font-semibold px-2 py-0.5 rounded-full"
-                    style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.55)' }}>
-                    {flag}
-                  </span>
-                ))}
-              </div>
-            </div>
+        <div className="relative max-w-[1200px] mx-auto px-6 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#f0f7ff] dark:bg-[#0068d6]/15 border border-[#cce0ff] dark:border-[#0068d6]/30">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0068d6]" />
+            <span className="text-[12px] font-semibold text-[#0068d6] tracking-wide">
+              Australia&apos;s Leading Digital Marketing Agency
+            </span>
           </div>
 
-          {/* Right: metrics panel */}
-          <div className="hidden lg:flex items-center justify-center relative z-10">
-            <AnimatedMetrics />
+          {/* H1 */}
+          <h1 className="text-[40px] sm:text-[52px] lg:text-[62px] font-bold leading-[1.1] text-[#171717] dark:text-white max-w-[860px] mx-auto mb-6">
+            We Help Brands Reach Their Full Online{' '}
+            <span className="text-[#0068d6]">Digital Marketing Potential.</span>
+          </h1>
+
+          <p className="text-[17px] sm:text-[19px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[620px] mx-auto mb-10">
+            Excel is a performance-first marketing consultancy. We build data-driven,
+            multi-channel strategies that connect your SEO, paid ads, and analytics into a
+            single growth engine — backed by AI, delivered with precision.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+            <a
+              href="https://calendly.com/wali-noorzad12/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-12 px-7 bg-[#0068d6] hover:bg-[#0055b3] text-white font-semibold rounded-[8px] inline-flex items-center gap-2 transition-colors text-[15px]"
+            >
+              Book Your Free Strategy Session
+              <ArrowRight size={16} />
+            </a>
+            <Link
+              href={getLocalePath('/services', locale)}
+              className="h-12 px-7 border border-[#ebebeb] dark:border-[#2a2a2a] hover:bg-[#f5f5f5] dark:hover:bg-white/5 text-[#171717] dark:text-white font-semibold rounded-[8px] inline-flex items-center gap-2 transition-colors text-[15px]"
+            >
+              Explore Our Services
+            </Link>
+          </div>
+
+          {/* Star rating */}
+          <div className="flex items-center justify-center gap-2 mb-16">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={16} className="text-[#f59e0b] fill-[#f59e0b]" />
+              ))}
+            </div>
+            <span className="text-[13px] font-medium text-[#555555] dark:text-[#888888]">
+              4.9 / 5 · Trusted by businesses in 4 countries
+            </span>
+          </div>
+
+          {/* Partners */}
+          <div className="border-t border-[#ebebeb] dark:border-[#2a2a2a] pt-10">
+            <p className="text-[11px] uppercase tracking-widest text-[#aaaaaa] dark:text-[#555555] font-semibold mb-6">
+              Certified Partners &amp; Platform Experts
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-[13px] font-semibold text-[#999999] dark:text-[#555555]">
+              {['Google Partner', 'Meta Business Partner', 'Microsoft Advertising', 'HubSpot Solutions', 'Semrush Certified'].map(
+                (name) => (
+                  <span key={name}>{name}</span>
+                ),
+              )}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── TRUST BAR ────────────────────────────────────────────────────────────── */}
-      <section className="py-12" style={{ background: '#0a0a0a', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+      {/* ── STATS BAR ────────────────────────────────────────────── */}
+      <section className="bg-[#0068d6] py-12">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
-            {stats.map((stat) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            {STATS.map((stat) => (
               <div key={stat.label}>
-                <div className="text-[32px] font-semibold tracking-[-0.10rem] leading-none mb-1.5" style={{ color: 'rgba(255,255,255,0.92)' }}>
-                  {stat.value}
-                </div>
-                <div className="text-[12px] font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>{stat.label}</div>
+                <p className="text-[40px] font-bold leading-none mb-1">{stat.value}</p>
+                <p className="text-[13px] font-medium text-white/70 uppercase tracking-wider">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── PROBLEM / SOLUTION ───────────────────────────────────────────────────── */}
-      <section className="bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <div className="text-[11px] font-semibold uppercase tracking-[0.10em] text-[#808080] mb-4">The Problem</div>
-            <h2 className="text-[36px] font-semibold tracking-[-0.12rem] text-[#0a0a0a] mb-6 leading-[1.15]">
-              Most SMEs have the right tools. They're just not connected.
+      {/* ── SERVICES ─────────────────────────────────────────────── */}
+      <section id="services" className="py-24 bg-[#f5f7fa] dark:bg-[#111111]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-[13px] font-semibold text-[#0068d6] uppercase tracking-wider mb-3">
+              What We Do
+            </p>
+            <h2 className="text-[36px] sm:text-[44px] font-bold text-[#171717] dark:text-white leading-[1.15] mb-4">
+              Full-Service Digital Marketing Solutions
             </h2>
-            <p className="text-[16px] text-[#555555] leading-[1.75]">
-              HubSpot isn't talking to Google Ads. GA4 numbers don't match the CRM. Email sequences fire on the wrong signals. Your data lives in five places and none of it tells a coherent story — so decisions default to gut feel, budgets get wasted, and growth stalls.
+            <p className="text-[17px] text-[#666666] dark:text-[#888888] max-w-[560px] mx-auto leading-[1.7]">
+              We Drive Growth Through a Multi-Channel Digital Marketing Strategy — one that is
+              cohesive, measurable, and built around your business goals.
             </p>
           </div>
 
-          <div>
-            <div className="text-[11px] font-semibold uppercase tracking-[0.10em] text-[#2563eb] mb-4">The Excel Approach</div>
-            <h2 className="text-[36px] font-semibold tracking-[-0.12rem] text-[#0a0a0a] mb-6 leading-[1.15]">
-              We build the infrastructure that connects them.
-            </h2>
-            <p className="text-[16px] text-[#555555] leading-[1.75]">
-              Every engagement starts with a full stack audit — we map what you have, find where data drops off, and build the connections that turn disconnected tools into a working growth system. A marketing setup your team can own, interrogate, and scale.
-            </p>
-          </div>
-        </div>
-      </div>
-      </section>
-
-      {/* ── SERVICES ─────────────────────────────────────────────────────────────── */}
-      <section className="border-t border-[#e8e8e8] bg-[#f7f7f7]">
-        <div className="max-w-[1200px] mx-auto px-6 py-24">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
-            <div>
-              <div className="text-[11px] font-semibold uppercase tracking-[0.10em] text-[#808080] mb-3">Services</div>
-              <h2 className="text-[36px] font-semibold tracking-[-0.12rem] text-[#0a0a0a] leading-[1.12]">
-                {t('servicesHeadline')}
-              </h2>
-            </div>
-            <Link
-              href={getLocalePath('/services', locale)}
-              className="inline-flex items-center gap-1.5 text-[14px] font-medium text-[#2563eb] hover:opacity-70 transition-opacity shrink-0"
-            >
-              View all plans <ArrowRight size={14} />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {services.map((service) => {
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICES.map((service) => {
               const Icon = service.icon;
               return (
                 <div
                   key={service.title}
-                  className="p-6 rounded-[8px] bg-white card-hover"
-                  style={{ boxShadow: '0px 0px 0px 1px rgba(0,0,0,0.08), 0px 2px 2px rgba(0,0,0,0.03)' }}
+                  className="bg-white dark:bg-[#161616] rounded-[14px] border border-[#ebebeb] dark:border-[#2a2a2a] p-7 flex flex-col hover:shadow-md dark:hover:border-[#3a3a3a] transition-all group"
                 >
-                  <div className="flex items-center justify-center w-9 h-9 rounded-[7px] bg-[#0a0a0a] mb-4">
-                    <Icon size={16} className="text-white" />
+                  <div className="w-11 h-11 rounded-[10px] bg-[#f0f7ff] dark:bg-[#0068d6]/15 flex items-center justify-center mb-5 group-hover:bg-[#0068d6]/10 dark:group-hover:bg-[#0068d6]/25 transition-colors">
+                    <Icon size={22} className="text-[#0068d6]" />
                   </div>
-                  <h3 className="text-[15px] font-semibold text-[#0a0a0a] tracking-[-0.02em] mb-2">{service.title}</h3>
-                  <p className="text-[13.5px] text-[#666666] leading-[1.60]">{service.description}</p>
+                  <div className="inline-block px-2.5 py-0.5 bg-[#f5f5f5] dark:bg-white/5 rounded-[5px] text-[11px] font-semibold text-[#666666] dark:text-[#888888] uppercase tracking-wider mb-3 w-fit">
+                    {service.label}
+                  </div>
+                  <h3 className="text-[17px] font-bold text-[#171717] dark:text-white mb-3 leading-[1.3]">
+                    {service.title}
+                  </h3>
+                  <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.7] mb-5 flex-1">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-1.5">
+                    {service.highlights.map((h) => (
+                      <li key={h} className="flex items-center gap-2 text-[13px] text-[#555555] dark:text-[#888888]">
+                        <CheckCircle size={13} className="text-[#0068d6] shrink-0" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               );
             })}
-            {/* CTA card */}
-            <div className="p-6 rounded-[8px] bg-[#0a0a0a] flex flex-col justify-between min-h-[180px]">
-              <div>
-                <div className="w-9 h-9 rounded-[7px] flex items-center justify-center mb-4" style={{ background: 'rgba(255,255,255,0.10)' }}>
-                  <ArrowRight size={16} className="text-white" />
-                </div>
-                <h3 className="text-[15px] font-semibold text-white tracking-[-0.02em] mb-2">Custom stack?</h3>
-                <p className="text-[13.5px] leading-[1.60]" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                  Every business is different. Let's design the right system for yours.
-                </p>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href={getLocalePath('/services', locale)}
+              className="inline-flex items-center gap-2 h-11 px-6 bg-[#0068d6] hover:bg-[#0055b3] text-white font-semibold rounded-[8px] text-[14px] transition-colors"
+            >
+              View All Services
+              <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY EXCEL ────────────────────────────────────────────── */}
+      <section className="py-24 bg-white dark:bg-[#0a0a0a]">
+        <div className="max-w-[1200px] mx-auto px-6">
+
+          {/* Founder callout */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-16 p-7 bg-[#f5f7fa] dark:bg-[#111111] rounded-[16px] border border-[#ebebeb] dark:border-[#2a2a2a]">
+            <Image
+              src="/profile.jpeg"
+              alt="Wali Noorzad — Founder, Excel Consultancy"
+              width={72}
+              height={72}
+              className="rounded-full object-cover shrink-0"
+            />
+            <div>
+              <p className="text-[15px] font-bold text-[#171717] dark:text-white">Wali Noorzad</p>
+              <p className="text-[13px] text-[#0068d6] font-medium mb-2">Founder & Lead Strategist — Excel Consultancy</p>
+              <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.65]">
+                Digital marketing specialist with hands-on experience across SEO, paid media, and AI-driven strategy. I work directly with every client — no account managers, no junior handoffs. When you work with Excel, you work with me.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-[13px] font-semibold text-[#0068d6] uppercase tracking-wider mb-3">
+                Why Excel
+              </p>
+              <h2 className="text-[36px] sm:text-[42px] font-bold text-[#171717] dark:text-white leading-[1.15] mb-5">
+                We are a Full-Service Digital Marketing Agency Built for Results.
+              </h2>
+              <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.75] mb-8">
+                Australian companies of all sizes trust us to manage their digital marketing.
+                We don&apos;t sell meetings or reports — we deliver measurable revenue growth
+                through a performance system where every investment is tracked to outcomes.
+              </p>
+              <div className="space-y-5">
+                {[
+                  ['Flat-fee pricing', 'No percentage of spend. Our incentives are aligned with your results, not your budget size.'],
+                  ['AI-powered operations', 'We leverage machine learning to optimise campaigns, content, and attribution faster than any manual process.'],
+                  ['Full-funnel visibility', 'From first impression to closed deal — we track every touchpoint and attribute revenue correctly.'],
+                  ['GDPR & privacy-first', 'Fully compliant measurement across the Australian Privacy Act and EU GDPR regulations.'],
+                ].map(([title, desc]) => (
+                  <div key={title} className="flex gap-4">
+                    <CheckCircle size={20} className="text-[#0068d6] shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-[15px] font-semibold text-[#171717] dark:text-white">{title}</p>
+                      <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.65]">{desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <Link
-                href={getLocalePath('/book', locale)}
-                className="mt-5 text-[13px] font-medium text-white inline-flex items-center gap-1.5 hover:opacity-60 transition-opacity"
-              >
-                Book a call <ArrowRight size={13} />
-              </Link>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {RESULTS.map((item) => (
+                <div
+                  key={item.label}
+                  className="bg-[#f5f7fa] dark:bg-[#111111] rounded-[14px] border border-[#ebebeb] dark:border-[#2a2a2a] p-6"
+                >
+                  <p className="text-[38px] font-bold text-[#0068d6] leading-none mb-1.5">
+                    {item.value}
+                  </p>
+                  <p className="text-[13px] font-semibold text-[#171717] dark:text-white mb-0.5">
+                    {item.label}
+                  </p>
+                  <p className="text-[12px] text-[#999999] dark:text-[#555555]">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── RESULTS SNAPSHOT ─────────────────────────────────────────────────────── */}
-      <section className="bg-[#0a0a0a]">
-        <div className="max-w-[1200px] mx-auto px-6 py-24">
+      {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
+      <section className="py-24 bg-[#f5f7fa] dark:bg-[#111111]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-14">
+            <p className="text-[13px] font-semibold text-[#0068d6] uppercase tracking-wider mb-3">
+              Client Results
+            </p>
+            <h2 className="text-[36px] sm:text-[42px] font-bold text-[#171717] dark:text-white leading-[1.15]">
+              What Our Clients Say
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6 max-w-[900px] mx-auto">
+            {[
+              {
+                quote: 'Excel is a professional with achievable objectives set, highly recommended.',
+                name: 'Speed Wreckers',
+                title: 'Perth, WA — Automotive',
+                stars: 5,
+              },
+              {
+                quote: 'Excel has great professional services and affordable for any SMEs. Highly recommended.',
+                name: 'Auto Point Car Removal',
+                title: 'Perth, WA — Automotive',
+                stars: 5,
+              },
+            ].map((t) => (
+              <div
+                key={t.name}
+                className="bg-white dark:bg-[#161616] rounded-[16px] border border-[#ebebeb] dark:border-[#2a2a2a] p-8 flex flex-col"
+              >
+                <div className="flex mb-5">
+                  {[...Array(t.stars)].map((_, i) => (
+                    <Star key={i} size={15} className="text-[#f59e0b] fill-[#f59e0b]" />
+                  ))}
+                </div>
+                <p className="text-[16px] text-[#333333] dark:text-[#cccccc] leading-[1.75] mb-6 flex-1 font-medium">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div>
+                  <p className="text-[14px] font-semibold text-[#171717] dark:text-white">{t.name}</p>
+                  <p className="text-[12px] text-[#999999] dark:text-[#555555]">{t.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── AI ───────────────────────────────────────────────────── */}
+      <section id="ai" className="py-24 bg-[#0f172a]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-[13px] font-semibold text-[#60a5fa] uppercase tracking-wider mb-3">
+              AI-Powered Marketing
+            </p>
+            <h2 className="text-[36px] sm:text-[44px] font-bold text-white leading-[1.15] mb-4">
+              Harnessing AI, Machine Learning &amp;{' '}
+              <span className="text-[#60a5fa]">the Latest Technology</span>
+            </h2>
+            <p className="text-[17px] text-white/60 max-w-[580px] mx-auto leading-[1.7]">
+              We embed artificial intelligence into every layer of your digital marketing
+              strategy — delivering smarter results, faster optimisation, and sustainable
+              competitive advantage.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {AI_FEATURES.map((feature) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  key={feature.title}
+                  className="rounded-[14px] border border-white/10 bg-white/5 p-7 hover:bg-white/8 hover:border-white/20 transition-all"
+                >
+                  <div className="w-11 h-11 rounded-[10px] bg-[#0068d6]/20 flex items-center justify-center mb-5">
+                    <Icon size={22} className="text-[#60a5fa]" />
+                  </div>
+                  <h3 className="text-[17px] font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-[14px] text-white/55 leading-[1.7]">{feature.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-14 text-center">
+            <Link
+              href={getLocalePath('/ai', locale)}
+              className="inline-flex items-center gap-2 h-11 px-6 bg-[#0068d6] hover:bg-[#0055b3] text-white font-semibold rounded-[8px] text-[14px] transition-colors"
+            >
+              Explore AI Marketing Solutions
+              <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── BLOG ─────────────────────────────────────────────────── */}
+      <section id="blog" className="py-24 bg-white dark:bg-[#0a0a0a]">
+        <div className="max-w-[1200px] mx-auto px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
             <div>
-              <div className="text-[11px] font-semibold uppercase tracking-[0.10em] mb-3" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                Client Results
-              </div>
-              <h2 className="text-[36px] font-semibold tracking-[-0.12rem] text-white leading-[1.12]">
-                The numbers from real engagements.
+              <p className="text-[13px] font-semibold text-[#0068d6] uppercase tracking-wider mb-3">
+                Resources
+              </p>
+              <h2 className="text-[36px] sm:text-[42px] font-bold text-[#171717] dark:text-white leading-[1.15] mb-3">
+                Marketing Insights &amp; Resources
               </h2>
+              <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.6] max-w-[480px]">
+                Expert guides, case studies, and data-driven strategies from the Excel team.
+              </p>
             </div>
             <Link
-              href={getLocalePath('/results', locale)}
-              className="inline-flex items-center gap-1.5 text-[14px] font-medium text-emerald-400 hover:opacity-70 transition-opacity shrink-0"
+              href={getLocalePath('/blog', locale)}
+              className="shrink-0 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#0068d6] hover:underline"
             >
-              See all case studies <ArrowRight size={14} />
+              View All Articles
+              <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {results.map((r) => (
-              <div
-                key={r.detail}
-                className="p-8 rounded-[10px]"
-                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {recentPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={getLocalePath(`/blog/${post.slug}`, locale)}
+                className="group bg-[#f5f7fa] dark:bg-[#111111] rounded-[14px] border border-[#ebebeb] dark:border-[#2a2a2a] overflow-hidden hover:shadow-md dark:hover:border-[#3a3a3a] transition-all flex flex-col"
               >
-                <div className={`text-[52px] font-semibold tracking-[-0.12rem] leading-none mb-3 ${r.color}`}>
-                  {r.metric}
-                </div>
-                <div className="text-[17px] font-semibold text-white mb-1.5">{r.detail}</div>
-                <div className="text-[13px]" style={{ color: 'rgba(255,255,255,0.40)' }}>{r.context}</div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-8 text-[12px]" style={{ color: 'rgba(255,255,255,0.28)' }}>
-            All metrics from real client engagements. No composite averages. No estimated projections.
-          </p>
-        </div>
-      </section>
-
-      {/* ── HOW IT WORKS ─────────────────────────────────────────────────────────── */}
-      <section className="border-y border-[#e8e8e8]">
-        <div className="max-w-[1200px] mx-auto px-6 py-24">
-          <div className="mb-14">
-            <div className="text-[11px] font-semibold uppercase tracking-[0.10em] text-[#808080] mb-3">Process</div>
-            <h2 className="text-[36px] font-semibold tracking-[-0.12rem] text-[#0a0a0a] leading-[1.12]">
-              How every engagement works.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            {processSteps.map((step) => (
-              <div key={step.number}>
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-full bg-[#0a0a0a] flex items-center justify-center shrink-0">
-                    <span className="text-[12px] font-bold text-white">{step.number}</span>
-                  </div>
-                  <div className="h-px flex-1 bg-[#e8e8e8] md:hidden" />
-                </div>
-                <h3 className="text-[20px] font-semibold text-[#0a0a0a] tracking-[-0.03em] mb-3">{step.title}</h3>
-                <p className="text-[15px] text-[#555555] leading-[1.70]">{step.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-14 pt-10 border-t border-[#e8e8e8] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p className="text-[15px] text-[#555555] max-w-[480px] leading-[1.65]">
-              Every engagement starts with a free 30-minute audit call. We map your current setup and identify the highest-leverage change — no obligation to proceed.
-            </p>
-            <Link
-              href={getLocalePath('/book', locale)}
-              className="shrink-0 h-11 px-6 text-[14px] font-medium text-white bg-[#0a0a0a] rounded-[6px] inline-flex items-center gap-2 hover:opacity-85 transition-opacity"
-            >
-              Book the Audit Call <ArrowRight size={14} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ─────────────────────────────────────────────────────────── */}
-      <section className="border-b border-[#e8e8e8] py-24 bg-[#f7f7f7]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full text-[12px] font-semibold text-[#0a0a0a] bg-white border border-[#e8e8e8]">
-              Client Testimonials
-            </div>
-            <h2 className="text-[34px] font-semibold tracking-[-0.10rem] text-[#0a0a0a] mb-3 leading-[1.15]">
-              {t('testimonialsHeadline')}
-            </h2>
-            <p className="text-[16px] text-[#666666]">Real results. In their own words.</p>
-          </div>
-
-          <div className="flex justify-center gap-5 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[680px] overflow-hidden">
-            <TestimonialsColumn testimonials={firstColumn} duration={16} />
-            <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={20} />
-            <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={18} />
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRICING PREVIEW ──────────────────────────────────────────────────────── */}
-      <section className="border-b border-[#e8e8e8]">
-        <div className="max-w-[1200px] mx-auto px-6 py-24">
-          <div className="text-center mb-14">
-            <div className="text-[11px] font-semibold uppercase tracking-[0.10em] text-[#808080] mb-3">Pricing</div>
-            <h2 className="text-[36px] font-semibold tracking-[-0.12rem] text-[#0a0a0a] mb-4 leading-[1.12]">
-              {t('pricingHeadline')}
-            </h2>
-            <p className="text-[16px] text-[#666666] max-w-[460px] mx-auto leading-[1.65]">
-              {t('pricingSubtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`rounded-[8px] p-6 flex flex-col ${plan.featured ? 'bg-[#0a0a0a]' : 'bg-white'}`}
-                style={{ boxShadow: plan.featured ? 'none' : '0px 0px 0px 1px rgba(0,0,0,0.08), 0px 2px 2px rgba(0,0,0,0.03)' }}
-              >
-                {plan.featured && (
-                  <div className="inline-flex items-center gap-1 mb-4 px-2.5 py-1 rounded-full text-[11px] font-semibold text-[#0a0a0a] bg-white w-fit">
-                    ✦ Most Popular
+                {post.image && (
+                  <div className="relative w-full h-48 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                 )}
-                <div className={`text-[11px] font-semibold uppercase tracking-wider mb-2 ${plan.featured ? 'text-[rgba(255,255,255,0.4)]' : 'text-[#808080]'}`}>
-                  {plan.name}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="mb-4">
+                    <span className="px-2.5 py-0.5 bg-[#f0f7ff] dark:bg-[#0068d6]/15 text-[#0068d6] text-[11px] font-semibold rounded-[5px] uppercase tracking-wider">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h3 className="text-[16px] font-bold text-[#171717] dark:text-white leading-[1.4] mb-3 group-hover:text-[#0068d6] transition-colors flex-1">
+                    {post.title}
+                  </h3>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888] leading-[1.6] mb-5 line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center gap-4 text-[12px] text-[#999999] dark:text-[#555555] mt-auto">
+                    <span className="flex items-center gap-1.5">
+                      <Calendar size={12} />
+                      {new Date(post.date).toLocaleDateString('en-AU', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                      })}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <Clock size={12} />
+                      {post.readTime}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className={`text-[30px] font-semibold tracking-[-0.10rem] ${plan.featured ? 'text-white' : 'text-[#0a0a0a]'}`}>
-                    {plan.price}
-                  </span>
-                  <span className={`text-[13px] ${plan.featured ? 'text-[rgba(255,255,255,0.45)]' : 'text-[#808080]'}`}>
-                    {plan.billing}
-                  </span>
-                </div>
-                <p className={`text-[13px] mt-2 mb-5 leading-[1.55] ${plan.featured ? 'text-[rgba(255,255,255,0.55)]' : 'text-[#666666]'}`}>
-                  {plan.description}
-                </p>
-
-                <ul className="space-y-2 mb-6 flex-1">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle2 size={13} className={`shrink-0 mt-0.5 ${plan.featured ? 'text-emerald-400' : 'text-[#0a0a0a]'}`} />
-                      <span className={`text-[13px] ${plan.featured ? 'text-[rgba(255,255,255,0.70)]' : 'text-[#4d4d4d]'}`}>
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href={getLocalePath('/book', locale)}
-                  className={`h-9 rounded-[6px] text-[13px] font-medium inline-flex items-center justify-center transition-opacity hover:opacity-80 ${
-                    plan.featured ? 'bg-white text-[#0a0a0a]' : 'bg-[#0a0a0a] text-white'
-                  }`}
-                >
-                  {plan.cta}
-                </Link>
-              </div>
+              </Link>
             ))}
           </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href={getLocalePath('/services', locale)}
-              className="text-[14px] font-medium text-[#555555] hover:text-[#0a0a0a] inline-flex items-center gap-1.5 transition-colors"
-            >
-              Compare all plan features <ArrowRight size={14} />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* ── FINAL CTA ────────────────────────────────────────────────────────────── */}
-      <section className="bg-[#0a0a0a]">
-        <div className="max-w-[1200px] mx-auto px-6 py-28 text-center">
-          <div className="inline-flex items-center gap-2 mb-7 px-3 py-1.5 rounded-full text-[12px] font-semibold" style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            Free 30-minute strategy call
-          </div>
-          <h2 className="text-[46px] sm:text-[56px] font-semibold tracking-[-0.15rem] text-white mb-5 max-w-[620px] mx-auto leading-[1.05]">
-            {t('ctaHeadline')}
-          </h2>
-          <p className="text-[17px] mb-10 max-w-[460px] mx-auto leading-[1.65]" style={{ color: 'rgba(255,255,255,0.50)' }}>
-            {t('ctaSubtitle')}
-          </p>
-          <div className="flex items-center justify-center gap-4 flex-wrap">
-            <Link
-              href={getLocalePath('/book', locale)}
-              className="h-12 px-8 text-[15px] font-medium text-[#0a0a0a] bg-white rounded-[6px] inline-flex items-center gap-2 hover:opacity-85 transition-opacity"
-            >
-              {t('ctaPrimary')} <ArrowRight size={15} />
-            </Link>
-            <Link
-              href={getLocalePath('/services', locale)}
-              className="h-12 px-6 text-[15px] font-medium inline-flex items-center gap-1.5 hover:opacity-60 transition-opacity"
-              style={{ color: 'rgba(255,255,255,0.50)' }}
-            >
-              {t('ctaSecondary')} <ArrowRight size={15} />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* ── CONTACT + FAQ ────────────────────────────────────────── */}
+      <ContactSection />
 
     </div>
   );

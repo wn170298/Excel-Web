@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -14,7 +15,8 @@ export const metadata: Metadata = {
     default: 'Excel — Digital Marketing Consultancy',
     template: '%s | Excel',
   },
-  description: 'Excel helps SMEs build high-performance marketing infrastructure — SEO, paid ads, automation, and analytics that actually work together.',
+  description:
+    'Excel helps brands reach their full online digital marketing potential through SEO, PPC, social media advertising, and AI-powered strategies.',
   metadataBase: new URL('https://get-excel.com'),
   openGraph: {
     type: 'website',
@@ -25,9 +27,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="font-sans antialiased bg-white text-[#171717]">
-        {children}
+    <html
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Anti-flash: set dark class before React hydrates */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');if(t==='dark')document.documentElement.classList.add('dark');})();`,
+          }}
+        />
+      </head>
+      <body className="font-sans antialiased bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-white transition-colors duration-200 overflow-x-hidden">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

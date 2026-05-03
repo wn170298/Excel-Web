@@ -4,20 +4,30 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
-import { Menu, X } from 'lucide-react';
-import LanguageToggle from './language-toggle';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from './theme-provider';
 
-function getLocalePath(path: string, locale: string) {
-  if (locale === 'en') return path;
-  return `/${locale}${path}`;
+const NAV_LINKS = [
+  { path: '/services', label: 'Services' },
+  { path: '/ai',       label: 'AI' },
+  { path: '/blog',     label: 'Blog' },
+  { path: '/contact',  label: 'Contact' },
+];
+
+function getPageHref(path: string, locale: string) {
+  return locale === 'en' ? path : `/${locale}${path}`;
+}
+
+function getHomePath(locale: string) {
+  return locale === 'en' ? '/' : `/${locale}`;
 }
 
 export default function Navigation({ locale }: { locale: string }) {
-  const t = useTranslations('nav');
+  const { theme, toggle } = useTheme();
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const isDark = theme === 'dark';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -25,38 +35,67 @@ export default function Navigation({ locale }: { locale: string }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const isActive = (path: string) => {
-    const localePath = getLocalePath(path, locale);
-    return pathname === localePath || pathname.startsWith(localePath + '/');
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileOpen(false);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, []);
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const isHome = pathname === getHomePath(locale);
+    if (isHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
-  const homePath = getLocalePath('/', locale);
-  const isHomepage = pathname === homePath || pathname === '/';
-  const isDark = isHomepage && !scrolled;
+  const isActive = (path: string) => {
+    const href = getPageHref(path, locale);
+    return pathname === href || pathname.startsWith(href + '/');
+  };
 
-  const navLinks = [
-    { href: '/services', label: t('services') },
-    { href: '/results',  label: t('results')  },
-    { href: '/blog',     label: t('resources') },
-    { href: '/about',    label: t('about')     },
-  ];
+  const getLinkClass = (path: string) => {
+    const active = isActive(path);
+    return `px-3.5 py-1.5 rounded-[6px] text-[13.5px] font-medium transition-all ${
+      isDark
+        ? active
+          ? 'text-white bg-white/10'
+          : 'text-white/65 hover:text-white hover:bg-white/10'
+        : active
+          ? 'text-[#0a0a0a] bg-[#f0f0f0]'
+          : 'text-[#555555] hover:text-[#0a0a0a] hover:bg-[#f5f5f5]'
+    }`;
+  };
+
+  const getMobileLinkClass = (path: string) => {
+    const active = isActive(path);
+    return `text-[15px] font-medium py-2.5 px-3 rounded-[6px] transition-colors ${
+      isDark
+        ? active
+          ? 'text-white bg-white/10'
+          : 'text-white/60 hover:text-white hover:bg-white/10'
+        : active
+          ? 'text-[#0a0a0a] bg-[#f0f0f0]'
+          : 'text-[#555555] hover:text-[#0a0a0a] hover:bg-[#f5f5f5]'
+    }`;
+  };
+
+  const navBg = isDark
+    ? scrolled ? 'bg-[#0a0a0a]/95 border-b border-white/10' : 'bg-[#0a0a0a]/85'
+    : scrolled ? 'bg-white/95 border-b border-[#ebebeb]' : 'bg-white/85';
 
   return (
-    <nav
-      className="sticky top-0 z-50 w-full backdrop-blur-md"
-      style={{
-        background: isDark ? 'rgba(10,10,10,0.85)' : 'rgba(255,255,255,0.95)',
-        boxShadow: scrolled
-          ? isDark
-            ? '0px 1px 0px rgba(255,255,255,0.07)'
-            : '0px 1px 0px rgba(0,0,0,0.08)'
-          : 'none',
-        transition: 'background 0.3s ease, box-shadow 0.2s ease',
-      }}
-    >
+    <nav className={`sticky top-0 z-50 w-full backdrop-blur-md transition-all duration-300 ${navBg}`}>
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between gap-8">
+
         {/* Logo */}
-        <Link href={getLocalePath('/', locale)} className="flex items-center shrink-0">
+        <a
+          href={getHomePath(locale)}
+          onClick={handleLogoClick}
+          className="flex items-center shrink-0"
+        >
           <Image
             src="/logo.webp"
             alt="Excel"
@@ -69,90 +108,101 @@ export default function Navigation({ locale }: { locale: string }) {
               transition: 'filter 0.3s ease',
             }}
           />
-        </Link>
+        </a>
 
         {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-0.5 flex-1">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <Link
-              key={link.href}
-              href={getLocalePath(link.href, locale)}
-              className={`px-3.5 py-1.5 rounded-[6px] text-[13.5px] font-medium transition-all ${
-                isActive(link.href)
-                  ? isDark
-                    ? 'text-white bg-white/10'
-                    : 'text-[#0a0a0a] bg-[#f5f5f5]'
-                  : isDark
-                  ? 'text-white/55 hover:text-white hover:bg-white/10'
-                  : 'text-[#555555] hover:text-[#0a0a0a] hover:bg-[#f5f5f5]'
-              }`}
+              key={link.path}
+              href={getPageHref(link.path, locale)}
+              className={getLinkClass(link.path)}
             >
               {link.label}
             </Link>
           ))}
         </div>
 
-        {/* Right side */}
+        {/* Right: theme + CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <LanguageToggle locale={locale} isDark={isDark} />
-          <Link
-            href={getLocalePath('/book', locale)}
-            className={`h-9 px-4 text-[13px] font-medium rounded-[6px] inline-flex items-center hover:opacity-85 transition-opacity ${
-              isDark ? 'text-[#0a0a0a] bg-white' : 'text-white bg-[#0a0a0a]'
+          <button
+            onClick={toggle}
+            aria-label="Toggle theme"
+            className={`p-2 rounded-[6px] transition-colors ${
+              isDark
+                ? 'text-white/65 hover:text-white hover:bg-white/10'
+                : 'text-[#555555] hover:text-[#0a0a0a] hover:bg-[#f5f5f5]'
             }`}
           >
-            {t('bookCta')}
-          </Link>
+            {isDark ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+          <a
+            href="https://calendly.com/wali-noorzad12/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`h-9 px-4 text-[13px] font-semibold rounded-[6px] inline-flex items-center hover:opacity-85 transition-opacity ${
+              isDark ? 'bg-white text-[#0a0a0a]' : 'bg-[#0a0a0a] text-white'
+            }`}
+          >
+            Book a Call
+          </a>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className={`md:hidden p-2 rounded-[6px] transition-colors ${isDark ? 'hover:bg-white/10' : 'hover:bg-[#f5f5f5]'}`}
-          style={{ color: isDark ? 'rgba(255,255,255,0.70)' : '#0a0a0a' }}
-          onClick={() => setMobileOpen(!mobileOpen)}
+          className={`md:hidden p-2 rounded-[6px] transition-colors ${
+            isDark ? 'text-white/70 hover:bg-white/10' : 'text-[#0a0a0a] hover:bg-[#f5f5f5]'
+          }`}
+          onClick={() => setMobileOpen((v) => !v)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile drawer */}
       {mobileOpen && (
         <div
-          className="md:hidden border-t px-6 py-5 flex flex-col gap-1"
-          style={{
-            background: isDark ? '#0a0a0a' : '#ffffff',
-            borderColor: isDark ? 'rgba(255,255,255,0.08)' : '#e8e8e8',
-          }}
+          className={`md:hidden border-t px-6 py-5 flex flex-col gap-1 ${
+            isDark ? 'bg-[#0a0a0a] border-white/10' : 'bg-white border-[#e8e8e8]'
+          }`}
         >
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <Link
-              key={link.href}
-              href={getLocalePath(link.href, locale)}
-              className={`text-[15px] font-medium py-2.5 px-3 rounded-[6px] transition-colors ${
-                isActive(link.href)
-                  ? isDark ? 'text-white bg-white/10' : 'text-[#0a0a0a] bg-[#f5f5f5]'
-                  : isDark ? 'text-white/60' : 'text-[#555555]'
-              }`}
+              key={link.path}
+              href={getPageHref(link.path, locale)}
               onClick={() => setMobileOpen(false)}
+              className={getMobileLinkClass(link.path)}
             >
               {link.label}
             </Link>
           ))}
           <div
-            className="pt-3 flex items-center justify-between border-t mt-2"
-            style={{ borderColor: isDark ? 'rgba(255,255,255,0.08)' : '#e8e8e8' }}
+            className={`pt-3 flex items-center justify-between border-t mt-2 ${
+              isDark ? 'border-white/10' : 'border-[#e8e8e8]'
+            }`}
           >
-            <LanguageToggle locale={locale} isDark={isDark} />
-            <Link
-              href={getLocalePath('/book', locale)}
-              className={`h-9 px-4 text-[13px] font-medium rounded-[6px] inline-flex items-center ${
-                isDark ? 'text-[#0a0a0a] bg-white' : 'text-white bg-[#0a0a0a]'
+            <button
+              onClick={toggle}
+              aria-label="Toggle theme"
+              className={`p-2 rounded-[6px] transition-colors ${
+                isDark ? 'text-white/65 hover:bg-white/10' : 'text-[#555555] hover:bg-[#f5f5f5]'
               }`}
-              onClick={() => setMobileOpen(false)}
             >
-              {t('bookCta')}
-            </Link>
+              {isDark ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+            <a
+              href="https://calendly.com/wali-noorzad12/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className={`h-9 px-4 text-[13px] font-semibold rounded-[6px] inline-flex items-center ${
+                isDark ? 'bg-white text-[#0a0a0a]' : 'bg-[#0a0a0a] text-white'
+              }`}
+            >
+              Book a Call
+            </a>
           </div>
         </div>
       )}

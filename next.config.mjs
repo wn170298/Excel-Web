@@ -4,12 +4,15 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
-    remotePatterns: [
-      { protocol: 'https', hostname: 'randomuser.me' },
-    ],
+    deviceSizes: [390, 640, 768, 1024, 1280, 1440],
   },
 };
 
