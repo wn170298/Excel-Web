@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '12 min read',
     date: '2025-04-27',
     author: 'Wali Nori',
-    image: '/blog-procurement-pivot.png',
+    image: '/blog-procurement-pivot.webp',
     seoTitle: 'The Procurement Pivot: Stop Marketing, Start Buying Customers',
     seoDescription: 'Learn how high-ticket SMEs can treat digital marketing as a procurement system — with unit economics, real budget ranges, and a framework to calculate ad spend that actually works.',
     keywords: ['digital marketing ROI', 'performance marketing', 'customer acquisition cost', 'lead generation', 'ad spend calculator', 'procurement marketing'],
