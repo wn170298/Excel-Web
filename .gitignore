@@ -4,3 +4,14 @@ node_modules
 .env.local
 .env*.local
 .secrets
+
+# macOS metadata
+.DS_Store
+
+# Business/research docs (not part of the website)
+*.docx
+OMG/
+blogpost_image*.png
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
