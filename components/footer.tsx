@@ -9,12 +9,12 @@ function getLocalePath(path: string, locale: string) {
 
 export default function Footer({ locale }: { locale: string }) {
   const services = [
-    { href: getLocalePath('/services', locale), label: 'SEO & Content' },
-    { href: getLocalePath('/services', locale), label: 'Paid Advertising (PPC)' },
-    { href: getLocalePath('/services', locale), label: 'Social Media Advertising' },
-    { href: getLocalePath('/services', locale), label: 'Web Design & Development' },
-    { href: getLocalePath('/services', locale), label: 'Marketing Automation' },
-    { href: getLocalePath('/services', locale), label: 'Analytics & Attribution' },
+    { href: `${getLocalePath('/services', locale)}#seo`,        label: 'Search Engine Optimisation' },
+    { href: `${getLocalePath('/services', locale)}#ppc`,        label: 'Paid Advertising (PPC)' },
+    { href: `${getLocalePath('/services', locale)}#social`,     label: 'Social Media Advertising' },
+    { href: `${getLocalePath('/services', locale)}#web`,        label: 'Web Design & Development' },
+    { href: `${getLocalePath('/services', locale)}#automation`, label: 'Marketing Automation' },
+    { href: `${getLocalePath('/services', locale)}#analytics`,  label: 'Analytics & Attribution' },
   ];
 
   const resources = [

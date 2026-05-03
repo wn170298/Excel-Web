@@ -28,9 +28,10 @@ function getLocalePath(path: string, locale: string) {
 const CATEGORIES = [
   { label: 'All Articles', slug: null },
   { label: 'Performance Marketing', slug: 'performance' },
-  { label: 'SEO', slug: 'seo' },
   { label: 'Privacy & Attribution', slug: 'privacy' },
-  { label: 'Email & Automation', slug: 'email' },
+  { label: 'Sales & Marketing', slug: 'sales' },
+  { label: 'Data Attribution', slug: 'attribution' },
+  { label: 'Platform & Infrastructure', slug: 'platform' },
 ];
 
 export default function BlogPage({ params: { locale } }: { params: { locale: string } }) {

@@ -2,23 +2,45 @@ import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/blog-data';
 
 const BASE = 'https://get-excel.com';
+const LOCALES = ['it', 'de'] as const;
+
+const staticPaths = [
+  { path: '',         changeFrequency: 'weekly'  as const, priority: 1.0 },
+  { path: '/services',changeFrequency: 'monthly' as const, priority: 0.9 },
+  { path: '/ai',      changeFrequency: 'monthly' as const, priority: 0.8 },
+  { path: '/blog',    changeFrequency: 'weekly'  as const, priority: 0.8 },
+  { path: '/contact', changeFrequency: 'monthly' as const, priority: 0.9 },
+  { path: '/privacy', changeFrequency: 'yearly'  as const, priority: 0.3 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: BASE,               lastModified: new Date(), changeFrequency: 'weekly',  priority: 1.0 },
-    { url: `${BASE}/services`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE}/ai`,       lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE}/blog`,     lastModified: new Date(), changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE}/contact`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE}/privacy`,  lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.3 },
-  ];
+  const now = new Date();
 
-  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${BASE}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: 'monthly',
-    priority: 0.7,
+  const enRoutes: MetadataRoute.Sitemap = staticPaths.map(({ path, changeFrequency, priority }) => ({
+    url: `${BASE}${path}`,
+    lastModified: now,
+    changeFrequency,
+    priority,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const localeRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
+    staticPaths.map(({ path, changeFrequency, priority }) => ({
+      url: `${BASE}/${locale}${path}`,
+      lastModified: now,
+      changeFrequency,
+      priority: priority * 0.9,
+    }))
+  );
+
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.flatMap((post) => [
+    { url: `${BASE}/blog/${post.slug}`,    lastModified: new Date(post.date), changeFrequency: 'monthly' as const, priority: 0.7 },
+    ...LOCALES.map((locale) => ({
+      url: `${BASE}/${locale}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ]);
+
+  return [...enRoutes, ...localeRoutes, ...blogRoutes];
 }

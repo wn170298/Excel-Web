@@ -21,8 +21,8 @@ const FAQS = [
     a: 'We treat digital marketing as a procurement system — every euro spent must generate a measurable return. We use AI-driven tools, flat-fee pricing, and full-funnel attribution tracking. No vanity metrics, no bloated retainers — just growth that shows up in your bottom line.',
   },
   {
-    q: 'Do you work with businesses outside Australia?',
-    a: 'Absolutely. We serve clients across Australia, the UK, continental Europe, and the UAE. Our strategies are built for international scalability, and we are fully GDPR and Australian Privacy Act compliant.',
+    q: 'Do you work with businesses outside Europe?',
+    a: 'Absolutely. Based in Rome, Italy, we serve clients across Europe, the UK, Australia, the UAE, and beyond. Our strategies are built for international scalability, and we are fully GDPR compliant.',
   },
 ];
 
@@ -117,7 +117,7 @@ export default function ContactSection() {
               Free Strategy Session
             </p>
             <h2 className="text-[36px] sm:text-[42px] font-bold leading-[1.15] text-[#171717] dark:text-white mb-5">
-              Work With Australia&apos;s Most Reputable Digital Agency.{' '}
+              Work With a Results-Driven Digital Marketing Agency.{' '}
               <span className="text-[#0068d6]">Get Your Free Audit.</span>
             </h2>
             <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.7] mb-6">

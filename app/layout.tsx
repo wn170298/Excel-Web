@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import Script from 'next/script';
 import { ThemeProvider } from '@/components/theme-provider';
+import CookieConsent from '@/components/cookie-consent';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
+      lang="en"
       className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
@@ -39,18 +41,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');if(t==='dark')document.documentElement.classList.add('dark');})();`,
           }}
         />
+        {/* GA4 Consent Mode v2 — defaults to denied until user accepts */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});`,
+          }}
+        />
       </head>
       <body className="font-sans antialiased bg-[#fdf9f5] dark:bg-[#080808] text-[#171717] dark:text-white transition-colors duration-200 overflow-x-hidden">
         <ThemeProvider>
           <div className="grain-overlay" aria-hidden />
           {children}
+          <CookieConsent />
         </ThemeProvider>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-22V9SS61ZH"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-22V9SS61ZH');`}
+          {`gtag('js',new Date());gtag('config','G-22V9SS61ZH',{'anonymize_ip':true});`}
         </Script>
       </body>
     </html>

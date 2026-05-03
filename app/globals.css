@@ -84,6 +84,16 @@ body {
 .prose code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: var(--font-geist-mono); font-size: 0.875em; color: #0a0a0a; border: 1px solid #e8e8e8; }
 .prose blockquote { border-left: 3px solid #e8e8e8; padding-left: 1.25rem; color: #666; font-style: italic; margin: 1.5rem 0; }
 
+/* Dark mode prose */
+.dark .prose h2 { color: #f0f0f0; }
+.dark .prose h3 { color: #f0f0f0; }
+.dark .prose p  { color: #a0a0a0; }
+.dark .prose li { color: #a0a0a0; }
+.dark .prose strong { color: #f0f0f0; }
+.dark .prose a  { color: #60a5fa; }
+.dark .prose code { background: #1e1e1e; color: #e0e0e0; border-color: #2a2a2a; }
+.dark .prose blockquote { border-left-color: #3a3a3a; color: #888888; }
+
 /* ── LOADER SPINNER ────────────────────────────────────────────────────────── */
 .loader {
   width: 40px; height: 40px;

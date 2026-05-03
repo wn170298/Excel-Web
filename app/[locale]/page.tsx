@@ -398,7 +398,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 >
                   {stat.value}
                 </p>
-                <p className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.16em]">
+                <p className="text-[10px] font-semibold text-white/65 uppercase tracking-[0.16em]">
                   {stat.label}
                 </p>
               </div>
