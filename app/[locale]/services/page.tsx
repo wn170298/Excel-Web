@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     'Full-service digital marketing solutions: SEO, PPC, social media advertising, web design, marketing automation, and analytics. Data-driven strategies built around your business goals.',
   keywords: [
     'digital marketing services',
-    'SEO agency Perth',
-    'PPC management Australia',
+    'international SEO agency',
+    'global PPC management',
     'social media advertising',
     'web design development',
     'marketing automation',
@@ -185,7 +185,7 @@ const SERVICES = [
 
 const PROOF_POINTS = [
   { icon: Award, label: 'Google Premier Partner', desc: 'Certified at the highest tier of the Google Partner programme.' },
-  { icon: Users, label: '4 Countries Served', desc: 'Clients across Australia, the UK, continental Europe, and the UAE.' },
+  { icon: Users, label: 'Global Clientele', desc: 'Clients across Europe, the UK, the Middle East, and beyond.' },
   { icon: TrendingUp, label: '91% Campaign Success Rate', desc: 'Across all active client campaigns over the past 12 months.' },
   { icon: Clock, label: 'Flat-Fee Pricing', desc: 'No percentage of ad spend. Our incentives align with your results.' },
 ];
@@ -196,7 +196,7 @@ const FAQS = [
   { q: 'What social media platforms do you advertise on?', a: 'We run paid campaigns on Meta (Facebook & Instagram), LinkedIn, and TikTok. Platform selection depends on where your audience spends time and which formats drive the best cost-per-outcome for your offer.' },
   { q: 'Do you build websites on a specific platform?', a: 'We build on Next.js for performance-critical projects and WordPress/Webflow for content-heavy sites. Every project includes Core Web Vitals optimisation, mobile-first design, and integrated analytics from day one.' },
   { q: 'What does "flat-fee pricing" mean in practice?', a: 'You pay a fixed monthly management fee regardless of how much you spend in ads. Traditional agencies charge 10–20% of ad spend, which creates an incentive to inflate your budget. Our flat fee means our only incentive is to improve your results.' },
-  { q: 'Are you GDPR and Privacy Act compliant?', a: 'Yes. We implement Consent Mode v2, server-side tagging, and privacy-first measurement infrastructure that fully complies with GDPR, the Australian Privacy Act, and other applicable regulations in the markets we serve.' },
+  { q: 'Are you GDPR compliant?', a: 'Yes. We implement Consent Mode v2, server-side tagging, and privacy-first measurement infrastructure that fully complies with GDPR and other applicable privacy regulations in the markets we serve.' },
 ];
 
 export default function ServicesPage({ params: { locale } }: { params: { locale: string } }) {

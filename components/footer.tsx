@@ -61,7 +61,7 @@ export default function Footer({ locale }: { locale: string }) {
               </a>
               <div className="flex items-center gap-2 text-[13px] text-[#666666] dark:text-[#888888]">
                 <MapPin size={13} />
-                Perth, Australia · serving globally
+                Rome, Italy · serving globally
               </div>
               <a
                 href="https://www.linkedin.com/in/walinoorzad/"
@@ -123,7 +123,7 @@ export default function Footer({ locale }: { locale: string }) {
           <div className="flex items-center gap-1.5">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
             <p className="text-[12px] text-[#999999] dark:text-[#555555]">
-              GDPR &amp; Australian Privacy Act compliant.
+              GDPR compliant. Serving clients worldwide.
             </p>
           </div>
         </div>

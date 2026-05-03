@@ -27,10 +27,10 @@ import JsonLd from '@/components/json-ld';
 export const metadata: Metadata = {
   title: 'Excel — Full-Service Digital Marketing Agency',
   description:
-    'Excel helps brands reach their full online digital marketing potential through SEO, PPC, social media advertising, and AI-powered strategies. Trusted by businesses in Australia and Europe.',
+    'Excel helps brands reach their full online digital marketing potential through SEO, PPC, social media advertising, and AI-powered strategies. Trusted by businesses worldwide.',
   keywords: [
-    'digital marketing agency Australia',
-    'SEO agency Perth',
+    'global digital marketing agency',
+    'international SEO agency',
     'PPC management',
     'social media advertising',
     'AI marketing',
@@ -156,8 +156,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     url: 'https://get-excel.com',
     logo: 'https://get-excel.com/logo.webp',
     email: 'hello@get-excel.com',
-    address: { '@type': 'PostalAddress', addressLocality: 'Perth', addressRegion: 'WA', addressCountry: 'AU' },
-    areaServed: ['AU', 'GB', 'DE', 'IT', 'AE'],
+    address: { '@type': 'PostalAddress', addressLocality: 'Rome', addressRegion: 'Lazio', addressCountry: 'IT' },
+    areaServed: 'Worldwide',
     description: 'Full-service digital marketing agency specialising in SEO, PPC, social media advertising, web design, marketing automation, and AI-powered analytics.',
     sameAs: ['https://www.linkedin.com/in/walinoorzad/'],
   };
@@ -169,7 +169,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       { '@type': 'Question', name: 'What services does Excel Consultancy offer?', acceptedAnswer: { '@type': 'Answer', text: 'Excel is a full-service digital marketing consultancy offering SEO, Pay-Per-Click advertising, social media advertising, web design & development, marketing automation, and analytics & attribution.' } },
       { '@type': 'Question', name: 'How much does digital marketing cost?', acceptedAnswer: { '@type': 'Answer', text: 'Our managed plans start from €1,200/month using flat-fee pricing — no percentage of ad spend. Book a free consultation for a tailored recommendation.' } },
       { '@type': 'Question', name: 'How long before I see results?', acceptedAnswer: { '@type': 'Answer', text: 'PPC campaigns can drive qualified leads within days. SEO compounds over 3–6 months and continues growing long-term.' } },
-      { '@type': 'Question', name: 'Do you work with businesses outside Australia?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We serve clients across Australia, the UK, continental Europe, and the UAE, and are fully GDPR and Australian Privacy Act compliant.' } },
+      { '@type': 'Question', name: 'Do you work with businesses outside of your country?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We work with clients worldwide — regardless of country, industry, or company size. We are fully GDPR compliant and operate remotely across all time zones.' } },
     ],
   };
 
@@ -196,7 +196,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-[#f0f7ff] dark:bg-[#0068d6]/15 border border-[#cce0ff] dark:border-[#0068d6]/30">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0068d6]" />
             <span className="text-[12px] font-semibold text-[#0068d6] tracking-wide">
-              Australia&apos;s Leading Digital Marketing Agency
+              Global Digital Marketing Agency
             </span>
           </div>
 
@@ -367,7 +367,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 We are a Full-Service Digital Marketing Agency Built for Results.
               </h2>
               <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.75] mb-8">
-                Australian companies of all sizes trust us to manage their digital marketing.
+                Businesses of all sizes and industries trust us to manage their digital marketing.
                 We don&apos;t sell meetings or reports — we deliver measurable revenue growth
                 through a performance system where every investment is tracked to outcomes.
               </p>
@@ -376,7 +376,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   ['Flat-fee pricing', 'No percentage of spend. Our incentives are aligned with your results, not your budget size.'],
                   ['AI-powered operations', 'We leverage machine learning to optimise campaigns, content, and attribution faster than any manual process.'],
                   ['Full-funnel visibility', 'From first impression to closed deal — we track every touchpoint and attribute revenue correctly.'],
-                  ['GDPR & privacy-first', 'Fully compliant measurement across the Australian Privacy Act and EU GDPR regulations.'],
+                  ['GDPR & privacy-first', 'Fully compliant measurement built for global privacy regulations — no compromises.'],
                 ].map(([title, desc]) => (
                   <div key={title} className="flex gap-4">
                     <CheckCircle size={20} className="text-[#0068d6] shrink-0 mt-0.5" />

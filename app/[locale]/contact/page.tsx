@@ -11,31 +11,31 @@ export const metadata: Metadata = {
     'book free strategy session',
     'digital marketing consultation',
     'Excel Consultancy contact',
-    'Perth digital marketing agency',
+    'global digital marketing agency',
   ],
 };
 
 const OFFICES = [
   {
-    city: 'Perth',
-    country: 'Australia',
-    flag: '🇦🇺',
-    detail: 'Western Australia · Primary Office',
-    serving: 'Serving all of Australia',
+    city: 'Rome',
+    country: 'Italy',
+    flag: '🇮🇹',
+    detail: 'Italy · Base of Operations',
+    serving: 'Serving clients globally',
   },
   {
     city: 'Europe',
     country: 'Remote',
     flag: '🇪🇺',
-    detail: 'UK, Italy, Germany & beyond',
-    serving: 'Serving the EU & UK',
+    detail: 'UK, Germany, France & beyond',
+    serving: 'Serving all of Europe',
   },
   {
-    city: 'UAE',
+    city: 'Worldwide',
     country: 'Remote',
-    flag: '🇦🇪',
-    detail: 'Dubai & Abu Dhabi',
-    serving: 'Serving the Middle East',
+    flag: '🌍',
+    detail: 'Americas, Middle East, Asia-Pacific',
+    serving: 'No borders. No limits.',
   },
 ];
 

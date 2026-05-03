@@ -111,13 +111,13 @@ const AI_CAPABILITIES = [
     title: 'Privacy-Safe Measurement',
     tagline: 'Full measurement accuracy without compromising compliance.',
     description:
-      'Third-party cookies are disappearing, consent rates are declining, and regulatory frameworks like GDPR and the Australian Privacy Act have fundamentally changed what data you can collect and how. Excel builds measurement infrastructure that operates correctly in this constrained environment — using server-side tagging, consent mode v2, and AI-enhanced conversion modelling to recover the measurement signal lost to consent restrictions. You stay fully compliant while maintaining the data quality needed to run high-performing campaigns.',
+      'Third-party cookies are disappearing, consent rates are declining, and global privacy regulations like GDPR have fundamentally changed what data you can collect and how. Excel builds measurement infrastructure that operates correctly in this constrained environment — using server-side tagging, consent mode v2, and AI-enhanced conversion modelling to recover the measurement signal lost to consent restrictions. You stay fully compliant while maintaining the data quality needed to run high-performing campaigns.',
     bullets: [
       'Server-side Google Tag Manager implementation',
       'Consent Mode v2 configuration and compliance audit',
       'AI-enhanced conversion modelling for unconsented traffic',
       'First-party data strategy and customer data platform setup',
-      'GDPR and Australian Privacy Act compliance verification',
+      'GDPR and global privacy regulation compliance verification',
     ],
   },
 ];
@@ -210,7 +210,7 @@ export default function AIPage({ params: { locale } }: { params: { locale: strin
                 { value: '10×', label: 'Faster content production', desc: 'vs. manual workflows' },
                 { value: '40%', label: 'Lower CPA on average', desc: 'with AI bid strategies' },
                 { value: '3×', label: 'More conversion signal', desc: 'via server-side tracking' },
-                { value: '100%', label: 'Privacy compliant', desc: 'GDPR & Australian Privacy Act' },
+                { value: '100%', label: 'Privacy compliant', desc: 'GDPR & global privacy regulations' },
               ].map((item) => (
                 <div key={item.label} className="bg-[#f5f7fa] dark:bg-[#111111] rounded-[14px] border border-[#ebebeb] dark:border-[#2a2a2a] p-6">
                   <p className="text-[38px] font-bold text-[#0068d6] leading-none mb-1.5">{item.value}</p>
