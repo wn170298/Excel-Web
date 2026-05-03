@@ -71,25 +71,29 @@ export default function ContactSection() {
     }
     setSubmitting(true);
     try {
-      await fetch('https://formsubmit.co/ajax/hello@get-excel.com', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
+          access_key: 'd72a364d-db1d-482c-ad9b-0735a4bb98c0',
+          subject: 'New Strategy Session Request — Excel Consultancy',
+          from_name: 'Excel Website',
+          replyto: form.email,
           name: form.name,
           email: form.email,
           phone: form.phone || 'Not provided',
           company: form.company || 'Not provided',
           message: form.message,
-          _subject: 'New Strategy Session Request — Excel Consultancy',
-          _replyto: form.email,
         }),
       });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message);
+      setSubmitted(true);
     } catch {
-      // Network error — still show success to avoid frustrating the user;
-      // formsubmit.co will retry delivery automatically.
+      // Show a user-facing error without crashing the form
+      setErrors({ message: 'Something went wrong. Please try again or email us directly.' });
     } finally {
       setSubmitting(false);
-      setSubmitted(true);
     }
   };
 
