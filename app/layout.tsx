@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import Script from 'next/script';
 import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
@@ -41,6 +42,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-sans antialiased bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-white transition-colors duration-200 overflow-x-hidden">
         <ThemeProvider>{children}</ThemeProvider>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-22V9SS61ZH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-22V9SS61ZH');`}
+        </Script>
       </body>
     </html>
   );
