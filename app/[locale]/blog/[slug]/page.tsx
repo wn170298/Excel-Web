@@ -56,7 +56,7 @@ export default function BlogPostPage({
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 lg:gap-16">
         {/* Article */}
         <article>
           {/* Back link */}
@@ -193,7 +193,7 @@ export default function BlogPostPage({
               Book a free 30-minute call and get a direct answer about your specific marketing setup.
             </p>
             <Link
-              href={getLocalePath('/book', locale)}
+              href={getLocalePath('/contact', locale)}
               className="w-full h-9 rounded-[6px] text-[13px] font-medium text-[#171717] bg-white inline-flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               Book Free Consultation

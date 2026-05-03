@@ -62,7 +62,7 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
           <div className="max-w-[1200px] mx-auto px-6">
             <Link
               href={getLocalePath(`/blog/${featured.slug}`, locale)}
-              className="group grid md:grid-cols-2 gap-0 rounded-[20px] border border-[#ebebeb] dark:border-[#2a2a2a] overflow-hidden hover:shadow-lg dark:hover:border-[#3a3a3a] transition-all bg-[#f5f7fa] dark:bg-[#111111]"
+              className="group grid lg:grid-cols-2 gap-0 rounded-[20px] border border-[#ebebeb] dark:border-[#2a2a2a] overflow-hidden hover:shadow-lg dark:hover:border-[#3a3a3a] transition-all bg-[#f5f7fa] dark:bg-[#111111]"
             >
               {featured.image && (
                 <div className="relative h-64 md:h-auto overflow-hidden">

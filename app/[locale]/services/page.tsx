@@ -264,7 +264,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
               { value: '6', label: 'Core Service Areas' },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-[40px] font-bold leading-none mb-1">{stat.value}</p>
+                <p className="text-[32px] sm:text-[40px] font-bold leading-none mb-1">{stat.value}</p>
                 <p className="text-[13px] font-medium text-white/70 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
@@ -341,7 +341,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
 
                   {/* Result stat */}
                   <div className="rounded-[14px] bg-[#0068d6]/8 dark:bg-[#0068d6]/15 border border-[#0068d6]/20 p-6">
-                    <p className="text-[42px] font-bold text-[#0068d6] leading-none mb-1">{service.stat.value}</p>
+                    <p className="text-[34px] sm:text-[42px] font-bold text-[#0068d6] leading-none mb-1">{service.stat.value}</p>
                     <p className="text-[14px] text-[#555555] dark:text-[#888888]">{service.stat.label}</p>
                   </div>
                 </div>

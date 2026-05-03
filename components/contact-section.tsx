@@ -168,6 +168,7 @@ export default function ContactSection() {
                         <input
                           type="text"
                           placeholder="Your name *"
+                          aria-label="Your name"
                           value={form.name}
                           onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                           className={inputClass}
@@ -180,6 +181,7 @@ export default function ContactSection() {
                         <input
                           type="email"
                           placeholder="Email address *"
+                          aria-label="Email address"
                           value={form.email}
                           onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                           className={inputClass}
@@ -193,6 +195,7 @@ export default function ContactSection() {
                       <input
                         type="tel"
                         placeholder="Phone number"
+                        aria-label="Phone number"
                         value={form.phone}
                         onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                         className={inputClass}
@@ -200,6 +203,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         placeholder="Company name"
+                        aria-label="Company name"
                         value={form.company}
                         onChange={(e) => setForm((f) => ({ ...f, company: e.target.value }))}
                         className={inputClass}
@@ -208,6 +212,7 @@ export default function ContactSection() {
                     <div>
                       <textarea
                         placeholder="Tell us about your goals and current challenges *"
+                        aria-label="Your message"
                         rows={5}
                         value={form.message}
                         onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
