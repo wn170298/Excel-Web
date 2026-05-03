@@ -40,8 +40,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="font-sans antialiased bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-white transition-colors duration-200 overflow-x-hidden">
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="font-sans antialiased bg-[#fdf9f5] dark:bg-[#080808] text-[#171717] dark:text-white transition-colors duration-200 overflow-x-hidden">
+        <ThemeProvider>
+          <div className="grain-overlay" aria-hidden />
+          {children}
+        </ThemeProvider>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-22V9SS61ZH"
           strategy="afterInteractive"
