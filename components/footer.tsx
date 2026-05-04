@@ -46,11 +46,11 @@ export default function Footer({ locale }: { locale: string }) {
             </p>
             <div className="space-y-2">
               <a
-                href="mailto:wali@theexcelagency.com"
+                href="mailto:excel@theexcelagency.com"
                 className="flex items-center gap-2 text-[13px] text-[#666666] dark:text-[#888888] hover:text-[#0a0a0a] dark:hover:text-white transition-colors"
               >
                 <Mail size={13} />
-                wali@theexcelagency.com
+                excel@theexcelagency.com
               </a>
               <a
                 href="tel:+393444424021"
