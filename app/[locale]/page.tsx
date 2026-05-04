@@ -159,7 +159,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     address: { '@type': 'PostalAddress', addressLocality: 'Rome', addressRegion: 'Lazio', addressCountry: 'IT' },
     areaServed: 'Worldwide',
     description: 'Full-service digital marketing agency specialising in SEO, PPC, social media advertising, web design, marketing automation, and AI-powered analytics.',
-    sameAs: ['https://www.linkedin.com/in/walinoorzad/'],
+    sameAs: ['https://www.linkedin.com/in/wali-nori/'],
   };
 
   const faqSchema = {

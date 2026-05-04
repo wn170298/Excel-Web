@@ -139,7 +139,7 @@ export default function BlogPostPage({
                 Founder of Excel Consultancy. Digital marketing and marketing operations specialist with 3 years building automation systems and tracking infrastructure for SMEs across Australia and Europe.
               </div>
               <a
-                href="https://www.linkedin.com/in/walinoorzad/"
+                href="https://www.linkedin.com/in/wali-nori/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[13px] text-[#0072f5] underline"

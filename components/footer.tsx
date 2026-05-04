@@ -64,7 +64,7 @@ export default function Footer({ locale }: { locale: string }) {
                 Rome, Italy · serving globally
               </div>
               <a
-                href="https://www.linkedin.com/in/walinoorzad/"
+                href="https://www.linkedin.com/in/wali-nori/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-[13px] text-[#666666] dark:text-[#888888] hover:text-[#0a0a0a] dark:hover:text-white transition-colors"

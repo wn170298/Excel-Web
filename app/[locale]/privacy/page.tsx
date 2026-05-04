@@ -32,8 +32,8 @@ export default function PrivacyPage() {
           <strong>Data Controller:</strong> Wali Nori, trading as Excel<br />
           <strong>Contact:</strong> hello@get-excel.com<br />
           <strong>LinkedIn:</strong>{' '}
-          <a href="https://www.linkedin.com/in/walinoorzad/" target="_blank" rel="noopener noreferrer">
-            linkedin.com/in/walinoorzad
+          <a href="https://www.linkedin.com/in/wali-nori/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/wali-nori
           </a>
         </p>
 
@@ -152,7 +152,7 @@ export default function PrivacyPage() {
         </p>
         <ul>
           <li>Email: <a href="mailto:hello@get-excel.com">hello@get-excel.com</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/walinoorzad/" target="_blank" rel="noopener noreferrer">linkedin.com/in/walinoorzad</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/wali-nori/" target="_blank" rel="noopener noreferrer">linkedin.com/in/wali-nori</a></li>
         </ul>
       </div>
 
