@@ -42,7 +42,7 @@ const OFFICES = [
 const QUICK_LINKS = [
   { icon: CalendarDays, label: 'Book instantly', value: 'Book a 30-min strategy call', href: 'https://calendly.com/wali-noorzad12/30min' },
   { icon: Phone, label: 'Call us directly', value: '+39 344 442 4021', href: 'tel:+393444424021' },
-  { icon: Mail, label: 'Email us', value: 'hello@get-excel.com', href: 'mailto:hello@get-excel.com' },
+  { icon: Mail, label: 'Email us', value: 'wali@theexcelagency.com', href: 'mailto:wali@theexcelagency.com' },
   { icon: Linkedin, label: 'Connect on LinkedIn', value: 'linkedin.com/in/wali-nori', href: 'https://www.linkedin.com/in/wali-nori/' },
 ];
 

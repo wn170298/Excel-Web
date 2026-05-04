@@ -155,7 +155,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     name: 'Excel Consultancy',
     url: 'https://get-excel.com',
     logo: 'https://get-excel.com/logo.webp',
-    email: 'hello@get-excel.com',
+    email: 'wali@theexcelagency.com',
     address: { '@type': 'PostalAddress', addressLocality: 'Rome', addressRegion: 'Lazio', addressCountry: 'IT' },
     areaServed: 'Worldwide',
     description: 'Full-service digital marketing agency specialising in SEO, PPC, social media advertising, web design, marketing automation, and AI-powered analytics.',

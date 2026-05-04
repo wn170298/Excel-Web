@@ -30,7 +30,7 @@ export default function PrivacyPage() {
         </p>
         <p>
           <strong>Data Controller:</strong> Wali Nori, trading as Excel<br />
-          <strong>Contact:</strong> hello@get-excel.com<br />
+          <strong>Contact:</strong> wali@theexcelagency.com<br />
           <strong>LinkedIn:</strong>{' '}
           <a href="https://www.linkedin.com/in/wali-nori/" target="_blank" rel="noopener noreferrer">
             linkedin.com/in/wali-nori
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
         </ul>
         <p>
           To exercise any of these rights, contact us at{' '}
-          <a href="mailto:hello@get-excel.com">hello@get-excel.com</a>. We will respond within 30 days.
+          <a href="mailto:wali@theexcelagency.com">wali@theexcelagency.com</a>. We will respond within 30 days.
         </p>
         <p>
           If you believe we have not handled your data correctly, you have the right to lodge a complaint with your national data protection authority. In Germany, this is the Bundesdatenschutzbeauftragter (BfDI); in Italy, the Garante per la protezione dei dati personali.
@@ -133,7 +133,7 @@ export default function PrivacyPage() {
         <h2>9. Your Rights (Australian Privacy Act)</h2>
         <p>
           If you are in Australia, you have rights under the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs), including the right to access and correct your personal information. To make a request, contact{' '}
-          <a href="mailto:hello@get-excel.com">hello@get-excel.com</a>.
+          <a href="mailto:wali@theexcelagency.com">wali@theexcelagency.com</a>.
         </p>
 
         <h2>10. Security</h2>
@@ -151,7 +151,7 @@ export default function PrivacyPage() {
           For any privacy-related questions, requests, or complaints:
         </p>
         <ul>
-          <li>Email: <a href="mailto:hello@get-excel.com">hello@get-excel.com</a></li>
+          <li>Email: <a href="mailto:wali@theexcelagency.com">wali@theexcelagency.com</a></li>
           <li>LinkedIn: <a href="https://www.linkedin.com/in/wali-nori/" target="_blank" rel="noopener noreferrer">linkedin.com/in/wali-nori</a></li>
         </ul>
       </div>
