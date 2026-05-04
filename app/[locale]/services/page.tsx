@@ -17,7 +17,7 @@ import {
 import JsonLd from '@/components/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services — Excel Consultancy',
+  title: 'Digital Marketing Services | Excel Consultancy',
   description:
     'Full-service digital marketing solutions: SEO, PPC, social media advertising, web design, marketing automation, and analytics. Data-driven strategies built around your business goals.',
   keywords: [
@@ -44,14 +44,14 @@ const SERVICES = [
     title: 'Search Engine Optimisation',
     tagline: 'Sustainable organic growth that compounds month over month.',
     description:
-      'Organic search is the highest-ROI channel available to most businesses — but only when done correctly. Excel builds SEO strategies grounded in technical excellence, semantic authority, and content that earns rankings rather than renting them. We compound your visibility over time so that your growth curve keeps bending upward even when ad budgets stay flat.',
+      'Organic search is the highest-ROI channel available to most businesses, but only when done correctly. Excel builds SEO strategies grounded in technical excellence, semantic authority, and content that earns rankings rather than renting them. We compound your visibility over time so that your growth curve keeps bending upward even when ad budgets stay flat.',
     highlights: [
       { label: 'Technical SEO Audits', desc: 'Crawlability, Core Web Vitals, structured data, and indexation health checks.' },
-      { label: 'Keyword & Intent Strategy', desc: 'Map the full search journey — from awareness queries to high-intent buying signals.' },
+      { label: 'Keyword & Intent Strategy', desc: 'Map the full search journey, from awareness queries to high-intent buying signals.' },
       { label: 'Content Optimisation', desc: 'Existing pages restructured and enhanced to outrank competitors for target terms.' },
       { label: 'Link Building', desc: 'White-hat authority acquisition from relevant, high-DA publications.' },
       { label: 'Local SEO', desc: 'Google Business Profile optimisation, citation building, and map pack dominance.' },
-      { label: 'Enterprise SEO', desc: 'Scalable frameworks for large sites — faceted navigation, international hreflang, and programmatic optimisation.' },
+      { label: 'Enterprise SEO', desc: 'Scalable frameworks for large sites: faceted navigation, international hreflang, and programmatic optimisation.' },
     ],
     process: [
       { step: '01', title: 'Audit & Baseline', desc: 'Full technical and content audit to benchmark where you stand and identify quick wins.' },
@@ -66,19 +66,19 @@ const SERVICES = [
     icon: MousePointerClick,
     label: 'PPC',
     title: 'Pay-Per-Click Advertising',
-    tagline: 'Every euro treated as a procurement investment — not an expense.',
+    tagline: 'Every euro treated as a procurement investment, not an expense.',
     description:
       'PPC done wrong is a money furnace. PPC done right is a customer-buying machine. Excel manages paid search across Google, Microsoft Bing, and ChatGPT Ads with a single focus: generating qualified leads and sales at a cost-per-acquisition that makes your business more profitable. We use Google Premier Partner-level strategy, AI-assisted bid management, and relentless negative keyword discipline to eliminate wasted spend from day one.',
     highlights: [
       { label: 'Google Search & Shopping', desc: 'High-intent keyword targeting with advanced match types and smart bidding strategies.' },
-      { label: 'Microsoft Bing Ads', desc: 'Lower CPCs, higher average order values — a frequently overlooked channel.' },
+      { label: 'Microsoft Bing Ads', desc: 'Lower CPCs, higher average order values, a frequently overlooked channel.' },
       { label: 'ChatGPT Ads (Emerging)', desc: 'Early access to AI-native ad placements as the landscape evolves.' },
       { label: 'Remarketing', desc: 'Re-engage warm audiences across display, YouTube, and search with precision segmentation.' },
       { label: 'Google Shopping', desc: 'Feed optimisation and PMAX campaigns for e-commerce revenue growth.' },
       { label: 'Conversion Rate Optimisation', desc: 'Landing page testing and copy experimentation to improve post-click performance.' },
     ],
     process: [
-      { step: '01', title: 'Account Audit', desc: 'Forensic analysis of existing campaigns — wasted spend identified within the first week.' },
+      { step: '01', title: 'Account Audit', desc: 'Forensic analysis of existing campaigns, wasted spend identified within the first week.' },
       { step: '02', title: 'Campaign Architecture', desc: 'Intent-based campaign structures with airtight negative keyword lists.' },
       { step: '03', title: 'Launch & Learn', desc: 'Controlled launch with aggressive data collection to validate assumptions fast.' },
       { step: '04', title: 'Scale & Optimise', desc: 'Budget shifted toward proven performers; losers cut ruthlessly. Weekly reporting.' },
@@ -92,9 +92,9 @@ const SERVICES = [
     title: 'Social Media Advertising',
     tagline: 'Precision targeting to build brand and generate high-quality leads.',
     description:
-      'Social media advertising bridges the gap between brand awareness and bottom-funnel demand capture. Excel runs paid social across Meta (Facebook & Instagram), LinkedIn, and TikTok — selecting the right mix based on where your audience actually spends time and what creative formats drive the best cost-per-outcome for your specific offer. Creative strategy, audience segmentation, and conversion tracking are all built in-house.',
+      'Social media advertising bridges the gap between brand awareness and bottom-funnel demand capture. Excel runs paid social across Meta (Facebook & Instagram), LinkedIn, and TikTok, selecting the right mix based on where your audience actually spends time and what creative formats drive the best cost-per-outcome for your specific offer. Creative strategy, audience segmentation, and conversion tracking are all built in-house.',
     highlights: [
-      { label: 'Facebook & Instagram Ads', desc: 'Full-funnel campaigns — from broad awareness to retargeting warm website visitors.' },
+      { label: 'Facebook & Instagram Ads', desc: 'Full-funnel campaigns, from broad awareness to retargeting warm website visitors.' },
       { label: 'LinkedIn Ads', desc: 'B2B lead generation targeting by job title, company size, industry, and seniority.' },
       { label: 'TikTok Ads', desc: 'Native-feel video creative that performs at scale for younger, high-engagement audiences.' },
       { label: 'Creative Strategy', desc: 'Ad concepts, copy frameworks, and creative direction aligned to platform best practices.' },
@@ -116,18 +116,18 @@ const SERVICES = [
     title: 'Web Design & Development',
     tagline: 'High-converting websites and landing pages built for performance.',
     description:
-      'Your website is your highest-leverage conversion asset. Excel designs and builds websites and landing pages on fast, scalable infrastructure — prioritising conversion rate, page speed, and mobile experience above all else. Whether you need a campaign-specific landing page or a full site rebuild, every design decision is tested against one question: does this help more visitors become customers?',
+      'Your website is your highest-leverage conversion asset. Excel designs and builds websites and landing pages on fast, scalable infrastructure, prioritising conversion rate, page speed, and mobile experience above all else. Whether you need a campaign-specific landing page or a full site rebuild, every design decision is tested against one question: does this help more visitors become customers?',
     highlights: [
       { label: 'Landing Page Design', desc: 'Campaign-specific pages built to convert traffic from paid ads, SEO, and email.' },
       { label: 'Full Website Builds', desc: 'Scalable Next.js sites with CMS integration, fast load times, and clean architecture.' },
       { label: 'Conversion Optimisation', desc: 'CRO audits, heatmap analysis, and structured A/B testing programmes.' },
-      { label: 'Performance Engineering', desc: 'Core Web Vitals optimisation — sub-2s load times, high Lighthouse scores.' },
+      { label: 'Performance Engineering', desc: 'Core Web Vitals optimisation, sub-2s load times, high Lighthouse scores.' },
       { label: 'Mobile-First Design', desc: 'Every design is built mobile-first, tested across devices before launch.' },
       { label: 'Analytics Integration', desc: 'GA4, Tag Manager, and conversion tracking configured correctly from day one.' },
     ],
     process: [
       { step: '01', title: 'Discovery & Wireframe', desc: 'Map the user journey, define conversion goals, and produce annotated wireframes.' },
-      { step: '02', title: 'Design & Copy', desc: 'High-fidelity designs with conversion-focused copy — reviewed and approved before build.' },
+      { step: '02', title: 'Design & Copy', desc: 'High-fidelity designs with conversion-focused copy, reviewed and approved before build.' },
       { step: '03', title: 'Build & QA', desc: 'Development on proven stack; cross-browser, cross-device QA before launch.' },
       { step: '04', title: 'Launch & Optimise', desc: 'Tracked launch with post-go-live CRO analysis and iterative improvements.' },
     ],
@@ -140,7 +140,7 @@ const SERVICES = [
     title: 'Marketing Automation',
     tagline: 'Nurture leads at scale without adding headcount.',
     description:
-      'Most businesses lose warm leads to silence — the enquiry comes in, life gets busy, and the prospect goes cold. Marketing automation builds the infrastructure that ensures every lead is followed up correctly, every time, regardless of your team\'s capacity. Excel designs and implements email sequences, CRM workflows, and lead scoring systems that keep your pipeline full and your conversion rates consistent.',
+      'Most businesses lose warm leads to silence, the enquiry comes in, life gets busy, and the prospect goes cold. Marketing automation builds the infrastructure that ensures every lead is followed up correctly, every time, regardless of your team\'s capacity. Excel designs and implements email sequences, CRM workflows, and lead scoring systems that keep your pipeline full and your conversion rates consistent.',
     highlights: [
       { label: 'Email Sequences', desc: 'Behaviour-triggered nurture sequences that guide prospects from interest to purchase.' },
       { label: 'CRM Integration', desc: 'HubSpot, ActiveCampaign, and Salesforce configuration aligned to your sales process.' },
@@ -162,19 +162,19 @@ const SERVICES = [
     icon: BarChart3,
     label: 'Analytics',
     title: 'Analytics & Attribution',
-    tagline: 'Know exactly where your revenue comes from — down to the channel and keyword.',
+    tagline: 'Know exactly where your revenue comes from, down to the channel and keyword.',
     description:
-      'Bad data leads to bad decisions. Most businesses are running campaigns blind — last-click attribution in Google Ads while GA4 is misconfigured and half their conversions go untracked. Excel builds full-funnel tracking and attribution infrastructure that gives you accurate, consent-compliant data across every channel. With clean measurement, you can confidently scale what works and cut what doesn\'t.',
+      'Bad data leads to bad decisions. Most businesses are running campaigns blind: last-click attribution in Google Ads while GA4 is misconfigured and half their conversions go untracked. Excel builds full-funnel tracking and attribution infrastructure that gives you accurate, consent-compliant data across every channel. With clean measurement, you can confidently scale what works and cut what doesn\'t.',
     highlights: [
       { label: 'GA4 Setup & Audit', desc: 'Correct event taxonomy, enhanced e-commerce tracking, and cross-domain configuration.' },
-      { label: 'Conversion Tracking', desc: 'Every goal tracked accurately — calls, forms, purchases, and micro-conversions.' },
+      { label: 'Conversion Tracking', desc: 'Every goal tracked accurately, calls, forms, purchases, and micro-conversions.' },
       { label: 'Multi-Touch Attribution', desc: 'Data-driven attribution models that reveal the true influence of each channel.' },
-      { label: 'Custom Dashboards', desc: 'Looker Studio dashboards showing the metrics that matter — revenue, CPA, ROAS.' },
+      { label: 'Custom Dashboards', desc: 'Looker Studio dashboards showing the metrics that matter, revenue, CPA, ROAS.' },
       { label: 'GDPR & Privacy Compliance', desc: 'Consent mode v2, server-side tagging, and cookieless measurement strategies.' },
-      { label: 'Monthly Reporting', desc: 'Clear, concise reports focused on business outcomes — not vanity metrics.' },
+      { label: 'Monthly Reporting', desc: 'Clear, concise reports focused on business outcomes, not vanity metrics.' },
     ],
     process: [
-      { step: '01', title: 'Tracking Audit', desc: 'Full review of current analytics setup — find what\'s missing, duplicated, or wrong.' },
+      { step: '01', title: 'Tracking Audit', desc: 'Full review of current analytics setup, find what\'s missing, duplicated, or wrong.' },
       { step: '02', title: 'Implementation', desc: 'Clean GA4 configuration, Tag Manager setup, and conversion tracking via server-side.' },
       { step: '03', title: 'Attribution Modelling', desc: 'Data-driven attribution applied across channels with cross-channel de-duplication.' },
       { step: '04', title: 'Dashboard & Cadence', desc: 'Live reporting dashboard and monthly strategic review with actionable recommendations.' },
@@ -192,7 +192,7 @@ const PROOF_POINTS = [
 
 const FAQS = [
   { q: 'How long does it take to see results from SEO?', a: 'Initial improvements in rankings and organic traffic typically appear within 60–90 days. Significant, compounding growth happens at the 6-month mark as domain authority builds. We set transparent expectations from day one and share a 90-day roadmap so you always know what is coming.' },
-  { q: 'Do you manage Google Ads for businesses of all sizes?', a: 'Yes. We work with businesses spending from $1,500/month in ad budget up to $50,000+/month. Our flat-fee model means our advice is the same regardless of your budget — we have no incentive to inflate spend.' },
+  { q: 'Do you manage Google Ads for businesses of all sizes?', a: 'Yes. We work with businesses spending from $1,500/month in ad budget up to $50,000+/month. Our flat-fee model means our advice is the same regardless of your budget, we have no incentive to inflate spend.' },
   { q: 'What social media platforms do you advertise on?', a: 'We run paid campaigns on Meta (Facebook & Instagram), LinkedIn, and TikTok. Platform selection depends on where your audience spends time and which formats drive the best cost-per-outcome for your offer.' },
   { q: 'Do you build websites on a specific platform?', a: 'We build on Next.js for performance-critical projects and WordPress/Webflow for content-heavy sites. Every project includes Core Web Vitals optimisation, mobile-first design, and integrated analytics from day one.' },
   { q: 'What does "flat-fee pricing" mean in practice?', a: 'You pay a fixed monthly management fee regardless of how much you spend in ads. Traditional agencies charge 10–20% of ad spend, which creates an incentive to inflate your budget. Our flat fee means our only incentive is to improve your results.' },
@@ -231,7 +231,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
             <span className="text-[#0068d6]">Multi-Channel Digital Marketing Strategy.</span>
           </h1>
           <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[600px] mb-10">
-            Every service we offer is designed to work together — SEO, PPC, social media, web development, automation, and analytics — as a single, cohesive growth engine built around your business goals.
+            Every service we offer is designed to work together: SEO, PPC, social media, web development, automation, and analytics, as a single, cohesive growth engine built around your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -414,7 +414,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
             Ready to grow your business with digital marketing that actually works?
           </h2>
           <p className="text-[17px] text-[#555555] dark:text-[#888888] leading-[1.7] mb-10">
-            Book a free 30-minute strategy session. We&apos;ll audit your current digital presence, identify your biggest growth levers, and give you a clear plan — no commitment required.
+            Book a free 30-minute strategy session. We&apos;ll audit your current digital presence, identify your biggest growth levers, and give you a clear plan, no commitment required.
           </p>
           <a
             href="https://calendly.com/wali-noorzad12/30min"

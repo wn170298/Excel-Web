@@ -6,11 +6,11 @@ import { Send, CheckCircle2, ChevronDown } from 'lucide-react';
 const FAQS = [
   {
     q: 'What services does Excel Consultancy offer?',
-    a: 'Excel is a full-service digital marketing consultancy. We specialise in SEO, Pay-Per-Click advertising, social media advertising, web design & development, marketing automation, and analytics & attribution — all designed to work together as a single growth engine.',
+    a: 'Excel is a full-service digital marketing consultancy. We specialise in SEO, Pay-Per-Click advertising, social media advertising, web design & development, marketing automation, and analytics & attribution, all designed to work together as a single growth engine.',
   },
   {
     q: 'How much does digital marketing cost?',
-    a: 'Investment varies based on your goals and scale. Our managed plans start from €1,200/month. We use flat-fee pricing — no percentage of ad spend — so our incentives are aligned with your results, not your budget size. Book a free consultation and we\'ll recommend the right approach.',
+    a: 'Investment varies based on your goals and scale. Our managed plans start from €1,200/month. We use flat-fee pricing (no percentage of ad spend) so our incentives are aligned with your results, not your budget size. Book a free consultation and we\'ll recommend the right approach.',
   },
   {
     q: 'How long before I see results?',
@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: 'What makes Excel different from other agencies?',
-    a: 'We treat digital marketing as a procurement system — every euro spent must generate a measurable return. We use AI-driven tools, flat-fee pricing, and full-funnel attribution tracking. No vanity metrics, no bloated retainers — just growth that shows up in your bottom line.',
+    a: 'We treat digital marketing as a procurement system: every euro spent must generate a measurable return. We use AI-driven tools, flat-fee pricing, and full-funnel attribution tracking. No vanity metrics, no bloated retainers, just growth that shows up in your bottom line.',
   },
   {
     q: 'Do you work with businesses outside Europe?',
@@ -76,7 +76,7 @@ export default function ContactSection() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: 'd72a364d-db1d-482c-ad9b-0735a4bb98c0',
-          subject: 'New Strategy Session Request — Excel Consultancy',
+          subject: 'New Strategy Session Request, Excel Consultancy',
           from_name: 'Excel Website',
           replyto: form.email,
           name: form.name,
@@ -111,7 +111,7 @@ export default function ContactSection() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
 
-          {/* Left — headline + FAQ */}
+          {/* Left, headline + FAQ */}
           <div>
             <p className="text-[13px] font-semibold text-[#0068d6] uppercase tracking-wider mb-3">
               Free Strategy Session
@@ -121,7 +121,7 @@ export default function ContactSection() {
               <span className="text-[#0068d6]">Get Your Free Audit.</span>
             </h2>
             <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.7] mb-6">
-              Book a free 30-minute strategy call — valued at $2,000. We&apos;ll audit your current
+              Book a free 30-minute strategy call, valued at $2,000. We&apos;ll audit your current
               digital presence, identify your biggest growth opportunities, and give you a clear,
               actionable plan. No commitment. No sales pitch.
             </p>
@@ -129,7 +129,7 @@ export default function ContactSection() {
               {[
                 'Full audit of your current SEO, paid ads & analytics',
                 'Identification of your 3 biggest untapped growth levers',
-                'A clear 90-day action plan you can use — with or without us',
+                'A clear 90-day action plan you can use, with or without us',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <CheckCircle2 size={17} className="text-[#0068d6] shrink-0 mt-0.5" />
@@ -148,7 +148,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right, form */}
           <div>
             <div className="bg-white dark:bg-[#161616] rounded-[16px] border border-[#ebebeb] dark:border-[#2a2a2a] p-8">
               {submitted ? (

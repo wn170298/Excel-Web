@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Excel — Digital Marketing Consultancy',
+    default: 'Excel | Digital Marketing Consultancy',
     template: '%s | Excel',
   },
   description:

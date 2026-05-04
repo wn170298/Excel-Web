@@ -16,9 +16,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Digital Marketing — Excel Consultancy',
+  title: 'AI-Powered Digital Marketing | Excel Consultancy',
   description:
-    'We embed artificial intelligence into every layer of your digital marketing strategy — AI-driven SEO, smart PPC bidding, automated content, predictive analytics, and privacy-safe measurement.',
+    'We embed artificial intelligence into every layer of your digital marketing strategy: AI-driven SEO, smart PPC bidding, automated content, predictive analytics, and privacy-safe measurement.',
   keywords: [
     'AI digital marketing',
     'AI SEO',
@@ -41,12 +41,12 @@ const AI_CAPABILITIES = [
     title: 'AI-Driven SEO',
     tagline: 'Machine learning at the scale of Google itself.',
     description:
-      'Modern SEO is no longer about keywords and backlinks alone. Google\'s ranking algorithms now incorporate hundreds of AI-driven signals — and beating them requires AI-driven strategy. Excel uses machine learning models to analyse search patterns at scale, surface semantic content gaps competitors miss, identify entity relationships that improve topical authority, and optimise for AI-powered search features including Google\'s AI Overviews and SGE. We also ensure your content is well-positioned for AI discovery tools like ChatGPT and Perplexity, which are reshaping how people find information online.',
+      'Modern SEO is no longer about keywords and backlinks alone. Google\'s ranking algorithms now incorporate hundreds of AI-driven signals, and beating them requires AI-driven strategy. Excel uses machine learning models to analyse search patterns at scale, surface semantic content gaps competitors miss, identify entity relationships that improve topical authority, and optimise for AI-powered search features including Google\'s AI Overviews and SGE. We also ensure your content is well-positioned for AI discovery tools like ChatGPT and Perplexity, which are reshaping how people find information online.',
     bullets: [
       'Semantic content gap analysis across thousands of queries',
       'Entity-based optimisation for topical authority',
       'AI Overview and Search Generative Experience optimisation',
-      'LLM discoverability — ChatGPT, Perplexity, and Gemini visibility',
+      'LLM discoverability, ChatGPT, Perplexity, and Gemini visibility',
       'Automated rank tracking and content decay alerts',
     ],
   },
@@ -55,7 +55,7 @@ const AI_CAPABILITIES = [
     title: 'Smart PPC Bidding',
     tagline: 'Real-time bid optimisation no human can match.',
     description:
-      'Google\'s Smart Bidding has fundamentally changed PPC management. The opportunity is no longer in manual bid adjustments — it\'s in feeding the algorithm the highest-quality signals possible. Excel\'s AI bid strategy layer works with Google\'s machine learning to provide enriched conversion data, proper audience segmentation, and the campaign structure that helps smart bidding models reach their full potential faster. The result is a cost-per-acquisition curve that trends downward as the model learns, rather than plateauing at an inefficient baseline.',
+      'Google\'s Smart Bidding has fundamentally changed PPC management. The opportunity is no longer in manual bid adjustments, it\'s in feeding the algorithm the highest-quality signals possible. Excel\'s AI bid strategy layer works with Google\'s machine learning to provide enriched conversion data, proper audience segmentation, and the campaign structure that helps smart bidding models reach their full potential faster. The result is a cost-per-acquisition curve that trends downward as the model learns, rather than plateauing at an inefficient baseline.',
     bullets: [
       'Conversion data enrichment for smarter algorithm training',
       'Target CPA and Target ROAS strategy by campaign type',
@@ -69,7 +69,7 @@ const AI_CAPABILITIES = [
     title: 'Automated Content at Scale',
     tagline: 'AI-assisted content that maintains quality and brand voice.',
     description:
-      'Content at scale is no longer optional for competitive SEO — but quality cannot be sacrificed for volume. Excel uses AI-assisted content workflows to dramatically reduce time-to-publish for SEO content programmes while maintaining editorial standards. Our process uses AI for research, outline generation, and first-draft production, with human editors responsible for fact-checking, brand voice alignment, and final quality review. The result is 3–5× the content output at the same or lower cost, without the quality drop that pure AI content generates.',
+      'Content at scale is no longer optional for competitive SEO, but quality cannot be sacrificed for volume. Excel uses AI-assisted content workflows to dramatically reduce time-to-publish for SEO content programmes while maintaining editorial standards. Our process uses AI for research, outline generation, and first-draft production, with human editors responsible for fact-checking, brand voice alignment, and final quality review. The result is 3–5× the content output at the same or lower cost, without the quality drop that pure AI content generates.',
     bullets: [
       'AI-assisted research and outline generation',
       'Templated content frameworks for high-volume programmatic pages',
@@ -83,7 +83,7 @@ const AI_CAPABILITIES = [
     title: 'Predictive Analytics',
     tagline: 'Anticipate opportunities and risks before they materialise.',
     description:
-      'Reactive marketing is expensive. By the time you notice a trend in your data, a competitor may already be capitalising on it. Excel\'s predictive analytics layer surfaces leading indicators — seasonal demand shifts, competitor activity patterns, audience behaviour changes — weeks before they show up in standard reports. We build custom models calibrated to your specific business and market, giving you the ability to pre-position campaigns, adjust budgets, and capture demand as it builds rather than chasing it after the fact.',
+      'Reactive marketing is expensive. By the time you notice a trend in your data, a competitor may already be capitalising on it. Excel\'s predictive analytics layer surfaces leading indicators, seasonal demand shifts, competitor activity patterns, audience behaviour changes, weeks before they show up in standard reports. We build custom models calibrated to your specific business and market, giving you the ability to pre-position campaigns, adjust budgets, and capture demand as it builds rather than chasing it after the fact.',
     bullets: [
       'Seasonal demand forecasting for budget pre-positioning',
       'Churn risk scoring for existing customer retention campaigns',
@@ -97,7 +97,7 @@ const AI_CAPABILITIES = [
     title: 'Intelligent Attribution',
     tagline: 'Cut through last-click bias to see what\'s truly driving revenue.',
     description:
-      'Last-click attribution is a lie that has cost businesses billions in misallocated marketing spend. It credits the final touchpoint before conversion while ignoring every impression, search, and piece of content that built the intent to buy. Excel implements ML-powered data-driven attribution models that analyse the actual conversion paths of your customers — giving each touchpoint credit proportional to its measurable influence on the decision. The result is a truer picture of channel ROI, which leads to dramatically better budget allocation decisions.',
+      'Last-click attribution is a lie that has cost businesses billions in misallocated marketing spend. It credits the final touchpoint before conversion while ignoring every impression, search, and piece of content that built the intent to buy. Excel implements ML-powered data-driven attribution models that analyse the actual conversion paths of your customers, giving each touchpoint credit proportional to its measurable influence on the decision. The result is a truer picture of channel ROI, which leads to dramatically better budget allocation decisions.',
     bullets: [
       'GA4 data-driven attribution model implementation',
       'Cross-channel de-duplication of conversion credit',
@@ -111,7 +111,7 @@ const AI_CAPABILITIES = [
     title: 'Privacy-Safe Measurement',
     tagline: 'Full measurement accuracy without compromising compliance.',
     description:
-      'Third-party cookies are disappearing, consent rates are declining, and global privacy regulations like GDPR have fundamentally changed what data you can collect and how. Excel builds measurement infrastructure that operates correctly in this constrained environment — using server-side tagging, consent mode v2, and AI-enhanced conversion modelling to recover the measurement signal lost to consent restrictions. You stay fully compliant while maintaining the data quality needed to run high-performing campaigns.',
+      'Third-party cookies are disappearing, consent rates are declining, and global privacy regulations like GDPR have fundamentally changed what data you can collect and how. Excel builds measurement infrastructure that operates correctly in this constrained environment, using server-side tagging, consent mode v2, and AI-enhanced conversion modelling to recover the measurement signal lost to consent restrictions. You stay fully compliant while maintaining the data quality needed to run high-performing campaigns.',
     bullets: [
       'Server-side Google Tag Manager implementation',
       'Consent Mode v2 configuration and compliance audit',
@@ -136,7 +136,7 @@ const HOW_IT_WORKS = [
   {
     icon: Zap,
     title: 'AI Layer Activation',
-    desc: 'AI bidding, content workflows, predictive models, and attribution are activated in stages — measured against baselines to confirm lift.',
+    desc: 'AI bidding, content workflows, predictive models, and attribution are activated in stages, measured against baselines to confirm lift.',
   },
   {
     icon: LineChart,
@@ -167,7 +167,7 @@ export default function AIPage({ params: { locale } }: { params: { locale: strin
             for Your Business.
           </h1>
           <p className="text-[18px] text-white/60 leading-[1.7] max-w-[620px] mb-10">
-            We embed artificial intelligence into every layer of your digital marketing strategy — delivering smarter results, faster optimisation, and sustainable competitive advantage that compounds over time.
+            We embed artificial intelligence into every layer of your digital marketing strategy, delivering smarter results, faster optimisation, and sustainable competitive advantage that compounds over time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -199,10 +199,10 @@ export default function AIPage({ params: { locale } }: { params: { locale: strin
                 The agencies that do not adopt AI will be left behind. We will not let that happen to your business.
               </h2>
               <p className="text-[16px] text-[#555555] dark:text-[#888888] leading-[1.75] mb-6">
-                AI is not a trend in digital marketing — it is the new infrastructure. Google&apos;s ad algorithms, search ranking systems, and audience targeting tools are all AI-native. Running campaigns without AI-aligned strategy means operating at a permanent disadvantage against competitors who have embraced it.
+                AI is not a trend in digital marketing, it is the new infrastructure. Google&apos;s ad algorithms, search ranking systems, and audience targeting tools are all AI-native. Running campaigns without AI-aligned strategy means operating at a permanent disadvantage against competitors who have embraced it.
               </p>
               <p className="text-[16px] text-[#555555] dark:text-[#888888] leading-[1.75]">
-                At Excel, every service we deliver is AI-augmented. Not because it is a selling point, but because it produces measurably better results — faster optimisation, more accurate attribution, and content that scales without sacrificing quality.
+                At Excel, every service we deliver is AI-augmented. Not because it is a selling point, but because it produces measurably better results: faster optimisation, more accurate attribution, and content that scales without sacrificing quality.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -232,7 +232,7 @@ export default function AIPage({ params: { locale } }: { params: { locale: strin
               Six AI-Powered Marketing Capabilities
             </h2>
             <p className="text-[17px] text-[#666666] dark:text-[#888888] max-w-[560px] mx-auto leading-[1.7]">
-              Each capability is a layer of intelligence applied to your marketing — individually powerful, exponentially effective when combined.
+              Each capability is a layer of intelligence applied to your marketing, individually powerful, exponentially effective when combined.
             </p>
           </div>
 
@@ -330,7 +330,7 @@ export default function AIPage({ params: { locale } }: { params: { locale: strin
               <div>
                 <p className="text-[13px] font-semibold text-[#0068d6] uppercase tracking-wider mb-3">AI Across All Services</p>
                 <h2 className="text-[30px] sm:text-[36px] font-bold text-[#171717] dark:text-white leading-[1.2] mb-4">
-                  Every service we deliver is AI-augmented — not as an add-on, but by design.
+                  Every service we deliver is AI-augmented, not as an add-on, but by design.
                 </h2>
                 <p className="text-[15px] text-[#555555] dark:text-[#888888] leading-[1.75]">
                   Our SEO, PPC, social advertising, web development, automation, and analytics services all incorporate AI tooling at the execution layer. This is what lets a lean team achieve results that would normally require a large in-house marketing department.

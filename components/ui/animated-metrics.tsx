@@ -94,7 +94,7 @@ export function AnimatedMetrics() {
               }}
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="text-[11px] font-medium" style={{ color: 'rgba(255,255,255,0.38)' }}>Organic Traffic — 30 days</div>
+                <div className="text-[11px] font-medium" style={{ color: 'rgba(255,255,255,0.38)' }}>Organic Traffic, 30 days</div>
                 <div className="text-[11px] font-semibold text-emerald-400 px-2 py-0.5 rounded-full" style={{ background: 'rgba(16,185,129,0.12)' }}>+67% MoM</div>
               </div>
               <svg viewBox="0 0 340 64" className="w-full" style={{ overflow: 'visible' }}>

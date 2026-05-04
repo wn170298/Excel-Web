@@ -6,7 +6,7 @@ import { blogPosts } from '@/lib/blog-data';
 import BlogCategoryFilter from '@/components/blog-category-filter';
 
 export const metadata: Metadata = {
-  title: 'Marketing Insights & Resources — Excel Consultancy',
+  title: 'Marketing Insights & Resources | Excel Consultancy',
   description:
     'Expert guides, case studies, and data-driven marketing strategies from the Excel team. Deep-dive articles on SEO, PPC, attribution, privacy, and AI-powered marketing.',
   keywords: [
@@ -52,7 +52,7 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
             Marketing Insights &amp; Expert Resources
           </h1>
           <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[580px]">
-            Deep-dive guides, case studies, and data-driven strategies from the Excel team — covering SEO, PPC, attribution, privacy, and AI-powered marketing.
+            Deep-dive guides, case studies, and data-driven strategies from the Excel team, covering SEO, PPC, attribution, privacy, and AI-powered marketing.
           </p>
         </div>
       </section>

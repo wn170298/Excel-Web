@@ -25,7 +25,7 @@ import ContactSection from '@/components/contact-section';
 import JsonLd from '@/components/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Excel — Full-Service Digital Marketing Agency',
+  title: 'Excel | Full-Service Digital Marketing Agency',
   description:
     'Excel helps brands reach their full online digital marketing potential through SEO, PPC, social media advertising, and AI-powered strategies. Trusted by businesses worldwide.',
   keywords: [
@@ -56,7 +56,7 @@ const SERVICES = [
     title: 'Pay-Per-Click (PPC)',
     label: 'PPC',
     description:
-      'Data-driven paid advertising across Google, Microsoft Bing, and beyond. We treat every euro as a procurement investment — buying customers at a profitable spread, not just impressions.',
+      'Data-driven paid advertising across Google, Microsoft Bing, and beyond. We treat every euro as a procurement investment, buying customers at a profitable spread, not just impressions.',
     highlights: ['Google Ads', 'Microsoft Bing Ads', 'Google Shopping', 'Remarketing', 'Smart Bidding', 'ChatGPT Ads'],
   },
   {
@@ -110,7 +110,7 @@ const AI_FEATURES = [
     icon: Sparkles,
     title: 'Automated Content',
     description:
-      'AI-assisted content creation and optimisation at scale — maintaining quality and brand voice while dramatically reducing time-to-publish for SEO content programmes.',
+      'AI-assisted content creation and optimisation at scale, maintaining quality and brand voice while dramatically reducing time-to-publish for SEO content programmes.',
   },
   {
     icon: TrendingUp,
@@ -128,7 +128,7 @@ const AI_FEATURES = [
     icon: ShieldCheck,
     title: 'Privacy-Safe Measurement',
     description:
-      'AI-enhanced conversion modelling recovers measurement lost to consent restrictions — keeping your data GDPR-compliant without sacrificing bidding signal quality.',
+      'AI-enhanced conversion modelling recovers measurement lost to consent restrictions, keeping your data GDPR-compliant without sacrificing bidding signal quality.',
   },
 ];
 
@@ -167,9 +167,9 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What services does Excel Consultancy offer?', acceptedAnswer: { '@type': 'Answer', text: 'Excel is a full-service digital marketing consultancy offering SEO, Pay-Per-Click advertising, social media advertising, web design & development, marketing automation, and analytics & attribution.' } },
-      { '@type': 'Question', name: 'How much does digital marketing cost?', acceptedAnswer: { '@type': 'Answer', text: 'Our managed plans start from €1,200/month using flat-fee pricing — no percentage of ad spend. Book a free consultation for a tailored recommendation.' } },
+      { '@type': 'Question', name: 'How much does digital marketing cost?', acceptedAnswer: { '@type': 'Answer', text: 'Our managed plans start from €1,200/month using flat-fee pricing, no percentage of ad spend. Book a free consultation for a tailored recommendation.' } },
       { '@type': 'Question', name: 'How long before I see results?', acceptedAnswer: { '@type': 'Answer', text: 'PPC campaigns can drive qualified leads within days. SEO compounds over 3–6 months and continues growing long-term.' } },
-      { '@type': 'Question', name: 'Do you work with businesses outside of your country?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We work with clients worldwide — regardless of country, industry, or company size. We are fully GDPR compliant and operate remotely across all time zones.' } },
+      { '@type': 'Question', name: 'Do you work with businesses outside of your country?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We work with clients worldwide, regardless of country, industry, or company size. We are fully GDPR compliant and operate remotely across all time zones.' } },
     ],
   };
 
@@ -225,7 +225,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <p className="text-[17px] sm:text-[18px] text-[#555555] dark:text-[#888888] leading-[1.8] max-w-[540px] mb-10">
                 Excel is a performance-first marketing consultancy. We build data-driven,
                 multi-channel strategies that connect your SEO, paid ads, and analytics into a
-                single growth engine — backed by AI, delivered with precision.
+                single growth engine, backed by AI, delivered with precision.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-3 mb-12">
@@ -259,7 +259,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </div>
             </div>
 
-            {/* Right column — analytics dashboard graphic */}
+            {/* Right column, analytics dashboard graphic */}
             <div className="hidden lg:flex flex-col gap-3">
 
               {/* Chart card */}
@@ -421,7 +421,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               Full-Service Digital Marketing Solutions
             </h2>
             <p className="text-[17px] text-[#666666] dark:text-[#888888] leading-[1.75]">
-              We Drive Growth Through a Multi-Channel Digital Marketing Strategy — one that is
+              We Drive Growth Through a Multi-Channel Digital Marketing Strategy, one that is
               cohesive, measurable, and built around your business goals.
             </p>
           </div>
@@ -485,7 +485,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-16 p-7 bg-[#fdf9f5] dark:bg-[#0d0d0d] rounded-[20px] border border-[#e8e0d8] dark:border-[#1e1e1e]">
             <Image
               src="/profile.jpeg"
-              alt="Wali Nori — Founder, Excel Consultancy"
+              alt="Wali Nori, Founder of Excel Consultancy"
               width={72}
               height={72}
               loading="lazy"
@@ -494,9 +494,9 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             />
             <div>
               <p className="text-[15px] font-bold text-[#171717] dark:text-white">Wali Nori</p>
-              <p className="text-[13px] text-[#0068d6] font-medium mb-2">Founder & Lead Strategist — Excel Consultancy</p>
+              <p className="text-[13px] text-[#0068d6] font-medium mb-2">Founder & Lead Strategist at Excel Consultancy</p>
               <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.7]">
-                Digital marketing specialist with hands-on experience across SEO, paid media, and AI-driven strategy. I work directly with every client — no account managers, no junior handoffs. When you work with Excel, you work with me.
+                Digital marketing specialist with hands-on experience across SEO, paid media, and AI-driven strategy. I work directly with every client, no account managers, no junior handoffs. When you work with Excel, you work with me.
               </p>
             </div>
           </div>
@@ -514,15 +514,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </h2>
               <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8] mb-8">
                 Businesses of all sizes and industries trust us to manage their digital marketing.
-                We don&apos;t sell meetings or reports — we deliver measurable revenue growth
+                We don&apos;t sell meetings or reports, we deliver measurable revenue growth
                 through a performance system where every investment is tracked to outcomes.
               </p>
               <div className="space-y-0">
                 {[
                   ['Flat-fee pricing', 'No percentage of spend. Our incentives are aligned with your results, not your budget size.'],
                   ['AI-powered operations', 'We leverage machine learning to optimise campaigns, content, and attribution faster than any manual process.'],
-                  ['Full-funnel visibility', 'From first impression to closed deal — we track every touchpoint and attribute revenue correctly.'],
-                  ['GDPR & privacy-first', 'Fully compliant measurement built for global privacy regulations — no compromises.'],
+                  ['Full-funnel visibility', 'From first impression to closed deal, we track every touchpoint and attribute revenue correctly.'],
+                  ['GDPR & privacy-first', 'Fully compliant measurement built for global privacy regulations, no compromises.'],
                 ].map(([title, desc]) => (
                   <div key={title} className="flex gap-4 py-5 border-b border-[#f0ebe4] dark:border-[#181818] last:border-0">
                     <div className="w-[3px] rounded-full bg-[#0068d6] shrink-0 self-stretch opacity-50" />
@@ -586,13 +586,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               {
                 quote: 'Excel is a professional with achievable objectives set, highly recommended.',
                 name: 'Speed Wreckers',
-                title: 'Perth, WA — Automotive',
+                title: 'Perth, WA · Automotive',
                 stars: 5,
               },
               {
                 quote: 'Excel has great professional services and affordable for any SMEs. Highly recommended.',
                 name: 'Auto Point Car Removal',
-                title: 'Perth, WA — Automotive',
+                title: 'Perth, WA · Automotive',
                 stars: 5,
               },
             ].map((t) => (
@@ -652,7 +652,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </h2>
             <p className="text-[17px] text-white/55 leading-[1.8]">
               We embed artificial intelligence into every layer of your digital marketing
-              strategy — delivering smarter results, faster optimisation, and sustainable
+              strategy, delivering smarter results, faster optimisation, and sustainable
               competitive advantage.
             </p>
           </div>

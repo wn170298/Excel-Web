@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy & GDPR Compliance — Excel Consultancy',
+  title: 'Privacy & GDPR Compliance | Excel Consultancy',
   description: 'How Excel collects, processes, and protects your data. Compliant with GDPR (EU) and the Australian Privacy Act.',
 };
 
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           Privacy & Compliance
         </h1>
         <p className="text-[16px] text-[#666666] leading-[1.65]">
-          How we collect, process, and protect your data — in full compliance with GDPR (EU Regulation 2016/679) and the Australian Privacy Act 1988.
+          How we collect, process, and protect your data, in full compliance with GDPR (EU Regulation 2016/679) and the Australian Privacy Act 1988.
         </p>
         <p className="text-[13px] text-[#808080] mt-4">Last updated: April 2026</p>
       </div>
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
           <li>Device type and operating system</li>
         </ul>
         <p>
-          This data is collected via Google Analytics 4 with IP anonymisation enabled. We implement Google Consent Mode v2 — analytics only run with your explicit consent where required by law.
+          This data is collected via Google Analytics 4 with IP anonymisation enabled. We implement Google Consent Mode v2, analytics only run with your explicit consent where required by law.
         </p>
 
         <h2>3. Legal Basis for Processing (GDPR)</h2>
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
         <ul>
           <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For analytics cookies and marketing communications</li>
           <li><strong>Contract performance (Art. 6(1)(b) GDPR):</strong> For processing enquiries and delivering services</li>
-          <li><strong>Legitimate interests (Art. 6(1)(f) GDPR):</strong> For security, fraud prevention, and service improvement — where not overridden by your rights</li>
+          <li><strong>Legitimate interests (Art. 6(1)(f) GDPR):</strong> For security, fraud prevention, and service improvement, where not overridden by your rights</li>
           <li><strong>Legal obligation (Art. 6(1)(c) GDPR):</strong> Where processing is required by applicable law</li>
         </ul>
 
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
         <p>We use Google Analytics 4 to understand how visitors interact with our website. These cookies are only set after you have given explicit consent via our cookie banner. You may withdraw consent at any time.</p>
 
         <h3>5.3 Marketing Cookies (Consent Required)</h3>
-        <p>Where applicable, advertising pixels (Google Ads, Meta) may be loaded after consent. These are subject to Google Consent Mode v2 — no data is sent to advertising platforms without valid consent.</p>
+        <p>Where applicable, advertising pixels (Google Ads, Meta) may be loaded after consent. These are subject to Google Consent Mode v2, no data is sent to advertising platforms without valid consent.</p>
 
         <h3>5.4 Managing Cookies</h3>
         <p>You can manage your cookie preferences at any time by clicking the "Cookie Settings" link in the footer, or by adjusting your browser settings. Please note that disabling analytics cookies will not affect your ability to use the website.</p>

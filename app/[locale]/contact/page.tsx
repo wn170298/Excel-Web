@@ -3,9 +3,9 @@ import { Mail, MapPin, Linkedin, ArrowUpRight, Phone, CalendarDays } from 'lucid
 import ContactSection from '@/components/contact-section';
 
 export const metadata: Metadata = {
-  title: 'Contact Excel Consultancy — Book a Free Strategy Session',
+  title: 'Contact Excel Consultancy | Book a Free Strategy Session',
   description:
-    'Book a free 30-minute digital marketing strategy session. We\'ll audit your current digital presence, identify growth opportunities, and give you a clear action plan — no commitment required.',
+    'Book a free 30-minute digital marketing strategy session. We\'ll audit your current digital presence, identify growth opportunities, and give you a clear action plan, no commitment required.',
   keywords: [
     'contact digital marketing agency',
     'book free strategy session',
@@ -61,7 +61,7 @@ export default function ContactPage() {
             Talk to a Digital Marketing Expert Today.
           </h1>
           <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[580px] mb-8">
-            Book a free 30-minute strategy session — valued at $2,000. No sales pitch. Just a clear audit of your digital marketing and an honest action plan to grow your business.
+            Book a free 30-minute strategy session, valued at $2,000. No sales pitch. Just a clear audit of your digital marketing and an honest action plan to grow your business.
           </p>
           <a
             href="https://calendly.com/wali-noorzad12/30min"
@@ -70,7 +70,7 @@ export default function ContactPage() {
             className="inline-flex items-center gap-2 h-12 px-7 bg-[#0068d6] hover:bg-[#0055b3] text-white font-semibold rounded-[8px] text-[15px] transition-colors"
           >
             <CalendarDays size={16} />
-            Book Your Free Session — Instant Scheduling
+            Book Your Free Session, Instant Scheduling
           </a>
         </div>
       </section>
