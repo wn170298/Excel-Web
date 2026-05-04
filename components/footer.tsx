@@ -42,7 +42,7 @@ export default function Footer({ locale }: { locale: string }) {
               />
             </Link>
             <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.65] max-w-[240px] mb-5">
-              Digital marketing infrastructure for businesses that mean business.
+              Helping ambitious brands grow through smarter digital marketing.
             </p>
             <div className="space-y-2">
               <a
