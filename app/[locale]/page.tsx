@@ -496,43 +496,19 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             The Problem
           </p>
           <h2
-            className="text-[36px] sm:text-[44px] font-bold leading-[1.15] text-[#171717] dark:text-white mb-8"
+            className="text-[32px] sm:text-[40px] font-bold leading-[1.2] text-[#171717] dark:text-white mb-6"
             style={{ letterSpacing: '-0.03em' }}
           >
             Most businesses aren&apos;t losing to competitors. They&apos;re losing to their own marketing stack.
           </h2>
-          <div className="text-left space-y-5 mb-10">
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              You hire an SEO agency. A separate PPC freelancer. A social media manager. Maybe a web
-              developer too. Each one optimizes their own channel and reports their own numbers &mdash; and
-              none of them talk to each other.
+          <div className="text-left space-y-4 mb-8">
+            <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7]">
+              You hire an SEO agency. A separate PPC freelancer. A social media manager. Each optimizes their own channel&mdash;and none talk to each other. SEO keywords never make it into ad campaigns. Attribution becomes guessing. Five invoices, five vendors, no accountability.
             </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                Your SEO keywords never make it into your ad campaigns.
-              </span>{' '}
-              Your best organic content never gets promoted. Nobody connects the dots between what&apos;s
-              working and where you&apos;re spending.
-            </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                Attribution becomes a guessing game.
-              </span>{' '}
-              Every vendor claims credit for the same conversion. You can&apos;t tell what&apos;s actually
-              driving revenue, so you can&apos;t confidently cut what isn&apos;t.
-            </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                And managing five different vendors becomes a part-time job.
-              </span>{' '}
-              Five invoices, five reporting formats, five points of contact &mdash; and no single person
-              accountable for the outcome.
+            <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7]">
+              That&apos;s not a marketing problem. It&apos;s a coordination problem&mdash;and it&apos;s costing you money every day.
             </p>
           </div>
-          <p className="text-[17px] sm:text-[18px] font-semibold text-[#171717] dark:text-white leading-[1.7]">
-            That&apos;s not a marketing problem. That&apos;s a coordination problem &mdash; and it&apos;s
-            costing you money every single day.
-          </p>
         </div>
       </section>
 
@@ -543,63 +519,19 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             The Solution
           </p>
           <h2
-            className="text-[36px] sm:text-[44px] font-bold leading-[1.15] text-[#171717] dark:text-white mb-8"
+            className="text-[32px] sm:text-[40px] font-bold leading-[1.2] text-[#171717] dark:text-white mb-6"
             style={{ letterSpacing: '-0.03em' }}
           >
-            You don&apos;t need five vendors. You need one system that talks to itself.
+            One integrated system beats five broken vendors.
           </h2>
-          <div className="text-left space-y-5 mb-10">
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              That&apos;s the entire premise Excel is built on. One team runs your SEO, your ads,
-              your website, and your automation together, so every channel makes the others work
-              harder instead of quietly competing for the same credit.
+          <div className="text-left space-y-4 mb-8">
+            <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7]">
+              SEO research feeds directly into paid campaigns. Analytics reveal which visitors convert. Pages are built to maximize traffic you&apos;re already paying for. Automation nurtures leads. AI optimizes everything in real-time.
             </p>
-            <p className="text-[17px] sm:text-[18px] font-bold text-[#171717] dark:text-white leading-[1.7]">
-              We connect everything.
-            </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                Your SEO research feeds directly into your paid campaigns.
-              </span>{' '}
-              We bid on keywords already proven to convert organically, instead of guessing with
-              your ad budget.
-            </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                Analytics reveal exactly which visitors become customers.
-              </span>{' '}
-              That data shapes where we push retargeting, which pages we rebuild, and where the
-              next dollar of spend goes.
-            </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                Every page we build compounds the value of your ad spend.
-              </span>{' '}
-              Instead of paying to send traffic to a slow, generic landing page, we build pages
-              designed to convert the exact traffic your campaigns are already paying for.
-            </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                Automation nurtures every lead, even the ones not ready to buy today.
-              </span>{' '}
-              Follow-up sequences keep your pipeline warm without adding another task to your
-              plate.
-            </p>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
-              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
-                AI runs underneath all of it.
-              </span>{' '}
-              It&apos;s what makes real-time coordination possible, reading performance across
-              every channel at once and flagging where a dollar is being wasted before it drains
-              your budget. That&apos;s not something five vendors looking at five separate
-              dashboards can do.
+            <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7]">
+              One team. One system. Every dollar tracked. That&apos;s the Excel difference.
             </p>
           </div>
-          <p className="text-[17px] sm:text-[18px] font-semibold text-[#171717] dark:text-white leading-[1.7]">
-            The result: you stop wasting money on channels that look good on a report but
-            don&apos;t drive revenue. Every dollar works toward the same goal, tracked by one
-            system, owned by one team.
-          </p>
         </div>
       </section>
 
@@ -611,15 +543,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               See It In Action
             </p>
             <h2
-              className="text-[36px] sm:text-[44px] font-bold leading-[1.15] text-[#171717] dark:text-white mb-6"
+              className="text-[32px] sm:text-[40px] font-bold leading-[1.2] text-[#171717] dark:text-white mb-4"
               style={{ letterSpacing: '-0.03em' }}
             >
-              Speed Wreckers went from 66 conversions to 787.67. Here&apos;s the actual math.
+              Speed Wreckers: 66 → 787.67 conversions.
             </h2>
-            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8] max-w-[620px] mx-auto">
-              Speed Wreckers, a Perth auto removal business, came to us running one disconnected
-              ad account. Fifteen months later, with SEO, paid media, and analytics working as
-              one system instead of five, the numbers speak for themselves.
+            <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7] max-w-[620px] mx-auto">
+              Perth auto removal, one disconnected ad account. Fifteen months with integrated SEO, paid, and analytics. Here&apos;s what happened.
             </p>
           </div>
 
@@ -784,14 +714,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               What We Do
             </p>
             <h2
-              className="text-[42px] sm:text-[52px] font-bold leading-[1.08] text-[#171717] dark:text-white mb-5"
+              className="text-[32px] sm:text-[40px] font-bold leading-[1.2] text-[#171717] dark:text-white mb-4"
               style={{ letterSpacing: '-0.035em' }}
             >
-              Full-Service Digital Marketing Solutions
+              Full-Service Digital Marketing
             </h2>
-            <p className="text-[17px] text-[#666666] dark:text-[#888888] leading-[1.75]">
-              We Drive Growth Through a Multi-Channel Digital Marketing Strategy, one that is
-              cohesive, measurable, and built around your business goals.
+            <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7]">
+              Cohesive, measurable, built around your goals.
             </p>
           </div>
 
@@ -865,7 +794,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <p className="text-[15px] font-bold text-[#171717] dark:text-white">Wali Nori</p>
               <p className="text-[13px] text-[#0068d6] font-medium mb-2">Founder & Lead Strategist at Excel Consultancy</p>
               <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.7]">
-                I built Excel because I was tired of watching smart businesses hire broken agencies. Most agencies specialize in one channel, hide behind reports, and hand you off to a junior coordinator. That&apos;s not partnership—that&apos;s waste. So I do it differently. I work directly with every client. I run your strategy. I&apos;m in your account. I&apos;m accountable for your growth—not hiding behind dashboards and account manager layers. When you work with Excel, you get someone who actually knows what they&apos;re doing, who cares about your results, and who won&apos;t disappear when things get complex.
+                I built Excel because I was tired of agencies that specialize in one channel, hide behind reports, and hand you off to a junior coordinator. I work directly with every client, run strategy, and stay accountable. When you work with Excel, you get someone who knows what they're doing.
               </p>
             </div>
           </div>
@@ -876,15 +805,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 Why Excel
               </p>
               <h2
-                className="text-[40px] sm:text-[50px] font-bold leading-[1.08] text-[#171717] dark:text-white mb-6"
+                className="text-[32px] sm:text-[40px] font-bold leading-[1.2] text-[#171717] dark:text-white mb-4"
                 style={{ letterSpacing: '-0.035em' }}
               >
-                We are a Full-Service Digital Marketing Agency Built for Results.
+                Why Excel
               </h2>
-              <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8] mb-8">
-                Businesses of all sizes and industries trust us to manage their digital marketing.
-                We don&apos;t sell meetings or reports, we deliver measurable revenue growth
-                through a performance system where every investment is tracked to outcomes.
+              <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7] mb-8">
+                We deliver measurable revenue growth where every investment is tracked to outcomes.
               </p>
               <div className="space-y-0">
                 {[
