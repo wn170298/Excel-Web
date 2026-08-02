@@ -49,10 +49,10 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
             <span className="text-[12px] font-semibold text-[#0068d6] tracking-wide">Resources &amp; Insights</span>
           </div>
           <h1 className="text-[40px] sm:text-[52px] font-bold leading-[1.1] text-[#171717] dark:text-white max-w-[700px] mb-5">
-            Marketing Insights &amp; Expert Resources
+            Knowledge That Compounds Your Advantage
           </h1>
           <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[580px]">
-            Deep-dive guides, case studies, and data-driven strategies from the Excel team, covering SEO, PPC, attribution, privacy, and AI-powered marketing.
+            Guides, case studies, and strategies from the Excel team. Deep dives into SEO, PPC, attribution, privacy, and AI-powered marketing—designed to level up your knowledge and shorten your path to results.
           </p>
         </div>
       </section>
