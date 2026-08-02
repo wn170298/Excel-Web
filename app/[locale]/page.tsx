@@ -235,10 +235,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What services does Excel Consultancy offer?', acceptedAnswer: { '@type': 'Answer', text: 'Excel is a full-service digital marketing consultancy offering SEO, Pay-Per-Click advertising, social media advertising, web design & development, marketing automation, and analytics & attribution.' } },
-      { '@type': 'Question', name: 'How much does digital marketing cost?', acceptedAnswer: { '@type': 'Answer', text: 'Our managed plans start from €1,200/month using flat-fee pricing, no percentage of ad spend. Book a free consultation for a tailored recommendation.' } },
-      { '@type': 'Question', name: 'How long before I see results?', acceptedAnswer: { '@type': 'Answer', text: 'PPC campaigns can drive qualified leads within days. SEO compounds over 3–6 months and continues growing long-term.' } },
-      { '@type': 'Question', name: 'Do you work with businesses outside of your country?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We work with clients worldwide, regardless of country, industry, or company size. We are fully GDPR compliant and operate remotely across all time zones.' } },
+      { '@type': 'Question', name: 'How is Excel different from other digital marketing agencies?', acceptedAnswer: { '@type': 'Answer', text: "Most agencies specialize in one channel and hand you fragmented reports. Excel connects SEO, paid ads, web design, analytics, and automation into one integrated system. We're founder-led (you work directly with Wali), use flat-fee pricing (no percentage of spend), and layer AI throughout for real optimization—not buzzwords." } },
+      { '@type': 'Question', name: 'How long before I see results?', acceptedAnswer: { '@type': 'Answer', text: 'PPC campaigns can drive qualified leads within days. SEO compounds over 3–6 months. Most clients see meaningful improvement within 30–60 days once strategy is live.' } },
+      { '@type': 'Question', name: "What's the pricing model?", acceptedAnswer: { '@type': 'Answer', text: 'We use flat-fee pricing based on scope and complexity. No percentage of ad spend. This aligns our incentives with your growth, not your budget size. Most managed plans start from €1,200/month. Book a free strategy session for a custom quote.' } },
+      { '@type': 'Question', name: 'Do you work with businesses outside Europe?', acceptedAnswer: { '@type': 'Answer', text: "We work with clients worldwide—any industry, any size. We're fully GDPR-compliant and operate across time zones. Whether you're in Perth, Europe, or beyond, we can help." } },
+      { '@type': 'Question', name: 'Will I work directly with Wali?', acceptedAnswer: { '@type': 'Answer', text: "Yes. Wali works on strategy for every client and is involved in key decisions. You won't be handed off to a junior coordinator or account manager." } },
+      { '@type': 'Question', name: 'What is the minimum commitment?', acceptedAnswer: { '@type': 'Answer', text: "We recommend a 3-month minimum to see meaningful results. That said, let's talk about your situation in a strategy session—we can discuss what makes sense for you." } },
     ],
   };
 
