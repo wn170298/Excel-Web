@@ -226,11 +226,11 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0068d6]" />
             <span className="text-[12px] font-semibold text-[#0068d6] tracking-wide">Full-Service Digital Marketing</span>
           </div>
-          <h1 className="text-[40px] sm:text-[52px] lg:text-[60px] font-bold leading-[1.1] text-[#171717] dark:text-white max-w-[800px] mb-6">
+          <h1 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold leading-[1.15] text-[#171717] dark:text-white max-w-[800px] mb-6">
             We Drive Growth Through a{' '}
             <span className="text-[#0068d6]">Multi-Channel Digital Marketing Strategy.</span>
           </h1>
-          <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[600px] mb-10">
+          <p className="text-[15px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[600px] mb-10">
             Every service we offer is designed to work together: SEO, PPC, social media, web development, automation, and analytics, as a single, cohesive growth engine built around your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

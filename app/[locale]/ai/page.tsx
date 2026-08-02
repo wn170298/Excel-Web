@@ -161,12 +161,12 @@ export default function AIPage({ params: { locale } }: { params: { locale: strin
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#60a5fa]" />
             <span className="text-[12px] font-semibold text-[#60a5fa] tracking-wide">AI-Powered Marketing</span>
           </div>
-          <h1 className="text-[40px] sm:text-[52px] lg:text-[62px] font-bold leading-[1.1] text-white max-w-[820px] mb-6">
+          <h1 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold leading-[1.15] text-white max-w-[820px] mb-6">
             Harnessing AI, Machine Learning &amp;{' '}
             <span className="text-[#60a5fa]">the Latest Technology</span>{' '}
             for Your Business.
           </h1>
-          <p className="text-[18px] text-white/60 leading-[1.7] max-w-[620px] mb-10">
+          <p className="text-[15px] text-white/60 leading-[1.7] max-w-[620px] mb-10">
             We embed artificial intelligence into every layer of your digital marketing strategy, delivering smarter results, faster optimisation, and sustainable competitive advantage that compounds over time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

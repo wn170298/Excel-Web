@@ -48,10 +48,10 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#0068d6]" />
             <span className="text-[12px] font-semibold text-[#0068d6] tracking-wide">Resources &amp; Insights</span>
           </div>
-          <h1 className="text-[40px] sm:text-[52px] font-bold leading-[1.1] text-[#171717] dark:text-white max-w-[700px] mb-5">
+          <h1 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold leading-[1.15] text-[#171717] dark:text-white max-w-[700px] mb-5">
             Knowledge That Compounds Your Advantage
           </h1>
-          <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[580px]">
+          <p className="text-[15px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[580px]">
             Guides, case studies, and strategies from the Excel team. Deep dives into SEO, PPC, attribution, privacy, and AI-powered marketing—designed to level up your knowledge and shorten your path to results.
           </p>
         </div>
