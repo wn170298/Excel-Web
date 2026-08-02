@@ -25,16 +25,40 @@ import ContactSection from '@/components/contact-section';
 import JsonLd from '@/components/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Excel | Full-Service Digital Marketing Agency',
+  title: 'Excel | Full-Service Digital Marketing Agency & AI Consultancy',
   description:
-    'Excel helps brands reach their full online digital marketing potential through SEO, PPC, social media advertising, and AI-powered strategies. Trusted by businesses worldwide.',
+    'Full-stack digital marketing agency: SEO, PPC, social media, web design, marketing automation & AI-powered optimization. Founded by Wali Nori. Trusted by growing businesses worldwide.',
   keywords: [
-    'global digital marketing agency',
-    'international SEO agency',
+    'digital marketing agency',
+    'SEO agency',
     'PPC management',
     'social media advertising',
     'AI marketing',
+    'full-service marketing',
+    'marketing consultancy',
+    'conversion optimization',
   ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Excel | Full-Service Digital Marketing Agency',
+    description: 'Integrated SEO, PPC, web design, and AI-powered marketing. Real results: 8.4× clicks, 12× conversions for Speed Wreckers.',
+    type: 'website',
+    url: 'https://www.theexcelagency.com',
+    siteName: 'Excel Consultancy',
+    images: [{ url: '/logo.webp', width: 1200, height: 630, alt: 'Excel Consultancy Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Excel | Full-Service Digital Marketing Agency',
+    description: 'Integrated SEO, PPC, web design, and AI-powered marketing.',
+    images: ['/logo.webp'],
+  },
+  alternates: {
+    canonical: 'https://www.theexcelagency.com',
+  },
 };
 
 function getLocalePath(path: string, locale: string) {
@@ -222,13 +246,26 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     '@context': 'https://schema.org',
     '@type': ['Organization', 'LocalBusiness'],
     name: 'Excel Consultancy',
-    url: 'https://get-excel.com',
-    logo: 'https://get-excel.com/logo.webp',
+    url: 'https://www.theexcelagency.com',
+    logo: 'https://www.theexcelagency.com/logo.webp',
     email: 'excel@theexcelagency.com',
-    address: { '@type': 'PostalAddress', addressLocality: 'Rome', addressRegion: 'Lazio', addressCountry: 'IT' },
-    areaServed: 'Worldwide',
-    description: 'Full-service digital marketing agency specialising in SEO, PPC, social media advertising, web design, marketing automation, and AI-powered analytics.',
-    sameAs: ['https://www.linkedin.com/in/wali-nori/'],
+    phone: '+39 06 123 4567',
+    address: { '@type': 'PostalAddress', addressLocality: 'Rome', addressRegion: 'Lazio', postalCode: '00100', addressCountry: 'IT' },
+    areaServed: ['Worldwide', 'EU', 'IT', 'US', 'AU'],
+    description: 'Full-service digital marketing consultancy specializing in integrated SEO, PPC, social media, web design, marketing automation, and AI-powered optimization. Founded by Wali Nori.',
+    founder: { '@type': 'Person', name: 'Wali Nori' },
+    sameAs: ['https://www.linkedin.com/in/wali-nori/', 'https://www.instagram.com/wali.nori/', 'https://twitter.com/wali'],
+    serviceArea: 'Worldwide',
+    knowsAbout: ['SEO', 'PPC Advertising', 'Social Media Marketing', 'Web Design', 'Marketing Automation', 'AI Marketing', 'Digital Strategy', 'Analytics', 'Conversion Optimization'],
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.theexcelagency.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.theexcelagency.com/services' },
+    ],
   };
 
   const faqSchema = {
@@ -248,6 +285,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     <div>
       <JsonLd data={organizationSchema} />
       <JsonLd data={faqSchema} />
+      <JsonLd data={breadcrumbSchema} />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section
