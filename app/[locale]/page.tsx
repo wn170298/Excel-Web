@@ -48,48 +48,48 @@ const SERVICES = [
     title: 'Search Engine Optimisation',
     label: 'SEO',
     description:
-      'Drive sustainable organic growth with technical excellence, strategic content, and authority building. We help ambitious brands dominate search results and compound their traffic month over month.',
-    highlights: ['Technical SEO Audits', 'Keyword Strategy', 'Content Optimisation', 'Link Building', 'Local SEO', 'Enterprise SEO'],
+      'Build authority through technical SEO, strategic content, and link building—your organic foundation for paid amplification.',
+    highlights: ['Technical Foundation', 'Authority Building', 'Organic Momentum', 'Keyword Strategy', 'Content Integration', 'Link Building'],
   },
   {
     icon: MousePointerClick,
     title: 'Pay-Per-Click (PPC)',
     label: 'PPC',
     description:
-      'Data-driven paid advertising across Google, Microsoft Bing, and beyond. We treat every euro as a procurement investment, buying customers at a profitable spread, not just impressions.',
-    highlights: ['Google Ads', 'Microsoft Bing Ads', 'Google Shopping', 'Remarketing', 'Smart Bidding', 'ChatGPT Ads'],
+      'Scale proven organic keywords with paid ads. AI-powered bidding eliminates waste and maximizes return on every pound spent.',
+    highlights: ['Smart Bidding', 'Keyword Scaling', 'ROI Maximization', 'Waste Elimination', 'AI-Powered Optimization', 'Performance Tracking'],
   },
   {
     icon: Share2,
     title: 'Social Media Advertising',
     label: 'Social',
     description:
-      'Precision targeting on Meta, LinkedIn, and TikTok to build brand awareness and generate high-quality leads from your ideal audience segments.',
-    highlights: ['Facebook & Instagram Ads', 'LinkedIn Ads', 'TikTok Ads', 'Creative Strategy', 'Audience Targeting', 'Retargeting'],
+      'Reach your ideal customers where they are—Meta, LinkedIn, TikTok—with precision targeting and strategic creative.',
+    highlights: ['Precision Targeting', 'Strategic Creative', 'Audience Segments', 'Lead Generation', 'Brand Awareness', 'Multi-Platform'],
   },
   {
     icon: Globe,
     title: 'Web Design & Development',
     label: 'Web Dev',
     description:
-      'High-converting landing pages and websites built on fast, scalable infrastructure. Every page is designed with one goal: turning traffic into revenue.',
-    highlights: ['Landing Page Design', 'Conversion Optimisation', 'Performance Engineering', 'Mobile-First', 'A/B Testing', 'CRO Audits'],
+      'Fast, high-converting websites built to turn traffic into revenue. Every page optimized for your goals.',
+    highlights: ['Conversion Optimization', 'Performance Engineering', 'Mobile-First Design', 'Revenue-Focused', 'A/B Testing', 'User Experience'],
   },
   {
     icon: Zap,
     title: 'Marketing Automation',
     label: 'Automation',
     description:
-      'Nurture leads at scale with intelligent email sequences, CRM integration, and automated workflows that keep your pipeline full without manual effort.',
-    highlights: ['Email Sequences', 'CRM Integration', 'Lead Scoring', 'Behavioural Triggers', 'Drip Campaigns', 'Sales Enablement'],
+      'Nurture leads automatically through intelligent email, CRM workflows, and behavioral triggers. Never lose a warm lead.',
+    highlights: ['Email Sequences', 'CRM Integration', 'Behavioral Triggers', 'Lead Nurturing', 'Warm Lead Capture', 'Sales Enablement'],
   },
   {
     icon: BarChart3,
     title: 'Analytics & Attribution',
     label: 'Analytics',
     description:
-      'Know exactly where your revenue comes from. Full-funnel tracking, consent-compliant measurement, and clear dashboards that show what is actually working.',
-    highlights: ['GA4 Setup', 'Conversion Tracking', 'Multi-Touch Attribution', 'Custom Dashboards', 'GDPR Compliance', 'Reporting'],
+      'Know exactly where your revenue comes from. Full-funnel tracking, GDPR-compliant, no black boxes.',
+    highlights: ['Full-Funnel Tracking', 'Conversion Attribution', 'Revenue Clarity', 'GDPR-Compliant', 'Custom Dashboards', 'Actionable Insights'],
   },
 ];
 
