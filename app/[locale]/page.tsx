@@ -863,7 +863,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <p className="text-[15px] font-bold text-[#171717] dark:text-white">Wali Nori</p>
               <p className="text-[13px] text-[#0068d6] font-medium mb-2">Founder & Lead Strategist at Excel Consultancy</p>
               <p className="text-[14px] text-[#666666] dark:text-[#888888] leading-[1.7]">
-                Digital marketing specialist with hands-on experience across SEO, paid media, and AI-driven strategy. I work directly with every client, no account managers, no junior handoffs. When you work with Excel, you work with me.
+                I built Excel because I was tired of watching smart businesses hire broken agencies. Most agencies specialize in one channel, hide behind reports, and hand you off to a junior coordinator. That&apos;s not partnership—that&apos;s waste. So I do it differently. I work directly with every client. I run your strategy. I&apos;m in your account. I&apos;m accountable for your growth—not hiding behind dashboards and account manager layers. When you work with Excel, you get someone who actually knows what they&apos;re doing, who cares about your results, and who won&apos;t disappear when things get complex.
               </p>
             </div>
           </div>
@@ -886,10 +886,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </p>
               <div className="space-y-0">
                 {[
-                  ['Flat-fee pricing', 'No percentage of spend. Our incentives are aligned with your results, not your budget size.'],
-                  ['AI-powered operations', 'We leverage machine learning to optimise campaigns, content, and attribution faster than any manual process.'],
-                  ['Full-funnel visibility', 'From first impression to closed deal, we track every touchpoint and attribute revenue correctly.'],
-                  ['GDPR & privacy-first', 'Fully compliant measurement built for global privacy regulations, no compromises.'],
+                  ['Flat-Fee, Aligned Pricing', 'Our incentives aligned with your results, not budget size. Only win when you grow.'],
+                  ['Full-Stack Integration', 'Connect SEO, paid, web, analytics, automation into one system. No silos.'],
+                  ['AI-Powered Optimization', 'ML handles bidding, content scoring, attribution at scale. Faster, smarter than manual.'],
+                  ['Founder-Led, Client-Focused', 'Wali works on every client. No junior coordinator handoffs.'],
                 ].map(([title, desc]) => (
                   <div key={title} className="flex gap-4 py-5 border-b border-[#f0ebe4] dark:border-[#181818] last:border-0">
                     <div className="w-[3px] rounded-full bg-[#0068d6] shrink-0 self-stretch opacity-50" />
