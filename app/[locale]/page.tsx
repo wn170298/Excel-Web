@@ -938,13 +938,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-14">
             <p className="text-[11px] font-semibold text-[#0068d6] uppercase tracking-[0.15em] mb-4">
-              Client Results
+              Client Testimonials
             </p>
             <h2
               className="text-[40px] sm:text-[50px] font-bold text-[#171717] dark:text-white"
               style={{ letterSpacing: '-0.035em' }}
             >
-              What Our Clients Say
+              Trusted by Growing Businesses
             </h2>
           </div>
 
