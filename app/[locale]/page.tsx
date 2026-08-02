@@ -287,14 +287,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 className="text-[50px] sm:text-[66px] lg:text-[76px] leading-[1.0] text-[#171717] dark:text-white mb-8"
                 style={{ fontWeight: 800, letterSpacing: '-0.04em' }}
               >
-                We Help Brands Reach Their Full Online{' '}
-                <span className="text-[#0068d6]">Digital Marketing Potential.</span>
+                Most agencies optimize one channel.{' '}
+                <span className="text-[#0068d6]">We deliver growth across all of them.</span>
               </h1>
 
               <p className="text-[17px] sm:text-[18px] text-[#555555] dark:text-[#888888] leading-[1.8] max-w-[540px] mb-10">
-                Excel is a performance-first marketing consultancy. We build data-driven,
-                multi-channel strategies that connect your SEO, paid ads, and analytics into a
-                single growth engine, backed by AI, delivered with precision.
+                Siloed marketing wastes time and money. You need a growth partner who connects
+                every touchpoint, measures what actually matters, and scales what works. That's
+                Excel.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-3 mb-12">
