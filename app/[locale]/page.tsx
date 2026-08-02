@@ -286,15 +286,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </div>
 
               <h1
-                className="text-[40px] sm:text-[52px] lg:text-[64px] leading-[1.0] text-[#171717] dark:text-white mb-6"
-                style={{ fontWeight: 800, letterSpacing: '-0.04em' }}
+                className="text-[32px] sm:text-[40px] lg:text-[48px] leading-[1.15] text-[#171717] dark:text-white mb-5"
+                style={{ fontWeight: 700, letterSpacing: '-0.02em' }}
               >
                 Most agencies optimize one channel.{' '}
                 <span className="text-[#0068d6]">We deliver growth across all.</span>
               </h1>
 
-              <p className="text-[15px] sm:text-[16px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[520px] mb-10">
-                Siloed marketing wastes money. You need a partner who connects every touchpoint, measures what matters, and scales what works. That's Excel.
+              <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.7] max-w-[500px] mb-10">
+                Siloed marketing wastes money. You need a partner who connects every touchpoint, measures what matters, and scales what works.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start gap-3 mb-12">
