@@ -42,9 +42,9 @@ const SERVICES = [
     icon: Search,
     label: 'SEO',
     title: 'Search Engine Optimisation',
-    tagline: 'Sustainable organic growth that compounds month over month.',
+    tagline: 'Organic traffic that keeps growing while ad budgets stay flat.',
     description:
-      'Organic search is the highest-ROI channel available to most businesses, but only when done correctly. Excel builds SEO strategies grounded in technical excellence, semantic authority, and content that earns rankings rather than renting them. We compound your visibility over time so that your growth curve keeps bending upward even when ad budgets stay flat.',
+      'Most businesses waste money on ads because their organic presence is invisible. We build SEO strategies that earn rankings through technical excellence and authority, compounding your visibility month over month. When rankings lock in, the channel becomes your cheapest customer acquisition.',
     highlights: [
       { label: 'Technical SEO Audits', desc: 'Crawlability, Core Web Vitals, structured data, and indexation health checks.' },
       { label: 'Keyword & Intent Strategy', desc: 'Map the full search journey, from awareness queries to high-intent buying signals.' },
@@ -66,9 +66,9 @@ const SERVICES = [
     icon: MousePointerClick,
     label: 'PPC',
     title: 'Pay-Per-Click Advertising',
-    tagline: 'Every euro treated as a procurement investment, not an expense.',
+    tagline: 'Every ad dollar measured, tracked, and optimized for ROI.',
     description:
-      'PPC done wrong is a money furnace. PPC done right is a customer-buying machine. Excel manages paid search across Google, Microsoft Bing, and ChatGPT Ads with a single focus: generating qualified leads and sales at a cost-per-acquisition that makes your business more profitable. We use Google Premier Partner-level strategy, AI-assisted bid management, and relentless negative keyword discipline to eliminate wasted spend from day one.',
+      'Most PPC campaigns burn money on waste. We treat each euro as a customer acquisition investment, not an expense. Using Google Premier Partner strategy, AI bid management, and ruthless negative keyword discipline, we eliminate waste from day one and keep your cost-per-acquisition trending downward.',
     highlights: [
       { label: 'Google Search & Shopping', desc: 'High-intent keyword targeting with advanced match types and smart bidding strategies.' },
       { label: 'Microsoft Bing Ads', desc: 'Lower CPCs, higher average order values, a frequently overlooked channel.' },
@@ -90,9 +90,9 @@ const SERVICES = [
     icon: Share2,
     label: 'Social Ads',
     title: 'Social Media Advertising',
-    tagline: 'Precision targeting to build brand and generate high-quality leads.',
+    tagline: 'Brand awareness and lead generation, one platform at a time.',
     description:
-      'Social media advertising bridges the gap between brand awareness and bottom-funnel demand capture. Excel runs paid social across Meta (Facebook & Instagram), LinkedIn, and TikTok, selecting the right mix based on where your audience actually spends time and what creative formats drive the best cost-per-outcome for your specific offer. Creative strategy, audience segmentation, and conversion tracking are all built in-house.',
+      'Social bridges the gap between cold audiences and ready-to-buy customers. We run paid social across Meta, LinkedIn, and TikTok, matching creative and targeting to where your audience actually hangs out. In-house creative strategy means faster iteration, better results, lower costs.',
     highlights: [
       { label: 'Facebook & Instagram Ads', desc: 'Full-funnel campaigns, from broad awareness to retargeting warm website visitors.' },
       { label: 'LinkedIn Ads', desc: 'B2B lead generation targeting by job title, company size, industry, and seniority.' },
@@ -114,9 +114,9 @@ const SERVICES = [
     icon: Globe,
     label: 'Web Dev',
     title: 'Web Design & Development',
-    tagline: 'High-converting websites and landing pages built for performance.',
+    tagline: 'Websites built to convert, not just to exist.',
     description:
-      'Your website is your highest-leverage conversion asset. Excel designs and builds websites and landing pages on fast, scalable infrastructure, prioritising conversion rate, page speed, and mobile experience above all else. Whether you need a campaign-specific landing page or a full site rebuild, every design decision is tested against one question: does this help more visitors become customers?',
+      'Your website is your strongest sales tool. We design and build sites that look sharp, load fast, and guide visitors toward your offer. Every element serves conversion—from copy to layout to performance. The result: a site that pulls its weight in your marketing mix.',
     highlights: [
       { label: 'Landing Page Design', desc: 'Campaign-specific pages built to convert traffic from paid ads, SEO, and email.' },
       { label: 'Full Website Builds', desc: 'Scalable Next.js sites with CMS integration, fast load times, and clean architecture.' },
@@ -138,9 +138,9 @@ const SERVICES = [
     icon: Zap,
     label: 'Automation',
     title: 'Marketing Automation',
-    tagline: 'Nurture leads at scale without adding headcount.',
+    tagline: 'Automate the follow-up, capture more revenue.',
     description:
-      'Most businesses lose warm leads to silence, the enquiry comes in, life gets busy, and the prospect goes cold. Marketing automation builds the infrastructure that ensures every lead is followed up correctly, every time, regardless of your team\'s capacity. Excel designs and implements email sequences, CRM workflows, and lead scoring systems that keep your pipeline full and your conversion rates consistent.',
+      'Your best customers are already in your database. Marketing automation lets you nurture them at scale without tying up your team. We build workflows that deliver the right message at the right time, turning leads into customers without manual work.',
     highlights: [
       { label: 'Email Sequences', desc: 'Behaviour-triggered nurture sequences that guide prospects from interest to purchase.' },
       { label: 'CRM Integration', desc: 'HubSpot, ActiveCampaign, and Salesforce configuration aligned to your sales process.' },
