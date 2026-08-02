@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Consultancy — Brand Guidelines 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:   #0068d6;
+  --dark:   #171717;
+  --cream:  #fdf9f5;
+  --amber:  #f59e0b;
+  --teal:   #00c8b4;
+  --deep:   #060d1f;
+  --muted:  #666666;
+  --subtle: #aaaaaa;
+  --border: #e8e8e8;
+  --surface:#fafafa;
+  --white:  #ffffff;
+
+  --doc-bg: #080808;
+  --doc-border: #161616;
+  --doc-surface: #0d0d0d;
+  --doc-muted: #303030;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--doc-bg);
+  color: #c8c8c8;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── SHARED LAYOUT ───────────────────────── */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+.section { padding: 100px 0; border-top: 1px solid var(--doc-border); }
+.section:first-of-type { border-top: none; }
+
+/* ── EYEBROW ─────────────────────────────── */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 28px;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block; width: 20px; height: 1px;
+  background: var(--blue);
+}
+
+/* ── SECTION TITLE ───────────────────────── */
+.section-title {
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  color: #f0f0f0;
+  margin-bottom: 16px;
+}
+.section-desc {
+  font-size: 15px;
+  color: #404040;
+  line-height: 1.75;
+  max-width: 560px;
+  margin-bottom: 60px;
+}
+
+/* ── COVER ───────────────────────────────── */
+#cover {
+  min-height: 100vh;
+  background: var(--doc-bg);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 48px;
+  position: relative;
+  overflow: hidden;
+}
+#cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 75% 20%, rgba(0,104,214,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(0,200,180,0.05) 0%, transparent 55%);
+  pointer-events: none;
+}
+.cover-wordmark {
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(80px, 14vw, 180px);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+.cover-wordmark span { color: var(--blue); }
+.cover-meta {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  flex-wrap: wrap; gap: 24px;
+  position: relative; z-index: 1;
+  border-top: 1px solid #161616;
+  padding-top: 32px;
+}
+.cover-tagline {
+  font-size: 15px; font-weight: 400; color: #303030;
+  max-width: 420px; line-height: 1.6;
+}
+.cover-info {
+  display: flex; flex-direction: column; gap: 4px; text-align: right;
+}
+.cover-info span {
+  font-size: 11px; color: #222; letter-spacing: 0.12em;
+  font-family: 'JetBrains Mono', monospace;
+}
+/* Cover large grid */
+.cover-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,104,214,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,104,214,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.cover-index {
+  position: absolute; top: 80px; right: 48px; z-index: 1;
+  display: flex; flex-direction: column; gap: 10px; text-align: right;
+}
+.cover-index a {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #1e1e1e; text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  transition: color 0.2s;
+}
+.cover-index a:hover { color: var(--blue); }
+
+/* ── OVERVIEW ────────────────────────────── */
+#overview { background: var(--doc-bg); }
+.pillars {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--doc-border); border: 1px solid var(--doc-border);
+  border-radius: 12px; overflow: hidden;
+}
+.pillar {
+  background: var(--doc-bg); padding: 36px 28px;
+}
+.pillar-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--blue);
+  letter-spacing: 0.2em; margin-bottom: 20px;
+}
+.pillar-word {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 26px; font-weight: 800;
+  letter-spacing: -0.03em; color: #f0f0f0;
+  margin-bottom: 10px;
+}
+.pillar-desc { font-size: 12px; color: #333; line-height: 1.65; }
+
+.mission-box {
+  margin-top: 48px;
+  padding: 44px 48px;
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 16px;
+  position: relative; overflow: hidden;
+}
+.mission-box::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: var(--blue);
+}
+.mission-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 16px;
+}
+.mission-text {
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 500; color: #e8e8e8;
+  letter-spacing: -0.02em; line-height: 1.5;
+}
+
+/* ── LOGO ────────────────────────────────── */
+#logo-section { background: var(--doc-bg); }
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.logo-tile {
+  border-radius: 12px; padding: 40px 32px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+.logo-tile .logo-img {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 30px; font-weight: 900;
+  letter-spacing: -0.05em;
+}
+.logo-tile .tile-label {
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-family: 'JetBrains Mono', monospace;
+}
+.lt-light { background: var(--cream); }
+.lt-light .logo-img { color: var(--dark); }
+.lt-light .tile-label { color: #aaaaaa; }
+.lt-dark { background: var(--dark); }
+.lt-dark .logo-img { color: #ffffff; }
+.lt-dark .tile-label { color: #404040; }
+.lt-blue { background: var(--blue); }
+.lt-blue .logo-img { color: #ffffff; }
+.lt-blue .tile-label { color: rgba(255,255,255,0.4); }
+
+.logo-clearspace {
+  margin-top: 12px; grid-column: span 3;
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 12px; padding: 36px 32px;
+  display: flex; align-items: center; gap: 48px;
+  flex-wrap: wrap;
+}
+.clearspace-diagram {
+  position: relative; display: inline-flex;
+  align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cs-inner {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 28px; font-weight: 900;
+  letter-spacing: -0.05em; color: #f0f0f0;
+  padding: 16px;
+  border: 1px dashed var(--blue);
+  position: relative;
+}
+.cs-outer {
+  position: absolute; inset: -16px;
+  border: 1px dashed #222;
+}
+.cs-label {
+  position: absolute; top: 50%;
+  transform: translateY(-50%);
+  font-size: 9px; color: var(--blue);
+  letter-spacing: 0.14em;
+  font-family: 'JetBrains Mono', monospace;
+}
+.cs-label.left { right: calc(100% + 6px); white-space: nowrap; }
+.cs-label.right { left: calc(100% + 6px); white-space: nowrap; }
+.cs-text { flex: 1; }
+.cs-text h4 { font-size: 13px; font-weight: 600; color: #e8e8e8; margin-bottom: 8px; }
+.cs-text p { font-size: 12px; color: #333; line-height: 1.65; }
+
+.logo-dont {
+  margin-top: 12px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+}
+.dont-tile {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 10px; padding: 24px 20px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 14px;
+  position: relative; overflow: hidden;
+}
+.dont-tile::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    -45deg, transparent, transparent 8px,
+    rgba(220,38,38,0.04) 8px, rgba(220,38,38,0.04) 9px
+  );
+  pointer-events: none;
+}
+.dont-logo {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 22px; font-weight: 900;
+  letter-spacing: -0.05em;
+}
+.dont-label {
+  font-size: 10px; text-align: center; color: #2a2a2a; line-height: 1.4;
+}
+.dont-x {
+  position: absolute; top: 10px; right: 10px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(220,38,38,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; color: rgba(220,38,38,0.7); font-weight: 700;
+}
+
+/* ── COLOUR SYSTEM ───────────────────────── */
+#colour { background: var(--doc-bg); }
+.colour-grid { display: grid; grid-template-columns: repeat(3, 1fr) repeat(3, 1fr); gap: 12px; }
+.colour-card {
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--doc-border);
+}
+.swatch-large { height: 160px; }
+.swatch-small { height: 100px; }
+.swatch { width: 100%; }
+.colour-meta { background: var(--doc-surface); padding: 18px 20px; }
+.colour-name { font-size: 12px; font-weight: 700; color: #e8e8e8; margin-bottom: 6px; }
+.colour-hex {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--blue); letter-spacing: 0.08em; display: block;
+}
+.colour-usage { font-size: 10px; color: #282828; margin-top: 4px; }
+
+.colour-row-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #252525;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 36px; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 12px;
+}
+.colour-row-label::after {
+  content: ''; flex: 1; height: 1px; background: var(--doc-border);
+}
+.neutral-row {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px;
+}
+.neutral-chip {
+  border-radius: 8px; padding: 14px 14px;
+  border: 1px solid var(--doc-border);
+}
+.neutral-swatch { height: 36px; border-radius: 5px; margin-bottom: 10px; }
+.neutral-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; color: #282828; display: block;
+}
+.neutral-lbl { font-size: 10px; color: #1e1e1e; display: block; margin-top: 2px; }
+
+/* ── TYPOGRAPHY ──────────────────────────── */
+#typography { background: var(--doc-bg); }
+.type-specimen {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 16px; overflow: hidden; margin-bottom: 12px;
+}
+.type-meta-bar {
+  padding: 16px 28px; border-bottom: 1px solid var(--doc-border);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.type-meta-name { font-size: 11px; font-weight: 700; color: #e8e8e8; letter-spacing: 0.06em; }
+.type-meta-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.type-tag {
+  padding: 2px 10px; border-radius: 4px;
+  background: #101010; border: 1px solid var(--doc-border);
+  font-size: 9px; font-family: 'JetBrains Mono', monospace;
+  color: var(--blue); letter-spacing: 0.08em;
+}
+.type-preview { padding: 40px 28px; }
+
+.type-scale {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 16px; overflow: hidden;
+}
+.scale-row {
+  display: flex; align-items: baseline; gap: 24px;
+  padding: 22px 28px; border-bottom: 1px solid #0e0e0e;
+}
+.scale-row:last-child { border-bottom: none; }
+.scale-label {
+  font-size: 9px; font-family: 'JetBrains Mono', monospace;
+  color: #252525; letter-spacing: 0.14em; width: 90px; flex-shrink: 0;
+}
+.scale-sample { font-family: 'Inter', sans-serif; color: #f0f0f0; letter-spacing: -0.03em; }
+.scale-info {
+  margin-left: auto; font-size: 9px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #1e1e1e; text-align: right; flex-shrink: 0;
+}
+
+.type-combo {
+  margin-top: 12px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.combo-tile {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 14px; padding: 32px 28px;
+}
+.combo-light {
+  background: var(--cream);
+}
+.combo-dark {
+  background: var(--deep);
+}
+
+/* ── VOICE & TONE ────────────────────────── */
+#voice { background: var(--doc-bg); }
+.voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.voice-tile {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 14px; padding: 32px 28px;
+}
+.voice-tile-title {
+  font-size: 13px; font-weight: 700; color: #e8e8e8; margin-bottom: 4px;
+}
+.voice-tile-sub { font-size: 11px; color: #252525; margin-bottom: 20px; }
+.word-pairs { display: flex; flex-direction: column; gap: 10px; }
+.word-pair {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px;
+  background: #090909;
+  border: 1px solid var(--doc-border);
+  border-radius: 8px;
+}
+.word-do { font-size: 12px; font-weight: 600; color: #22c55e; flex: 1; }
+.word-arrow { color: #1e1e1e; font-size: 11px; }
+.word-dont { font-size: 12px; color: #333; flex: 1; text-align: right; text-decoration: line-through; }
+
+.headlines-box {
+  margin-top: 12px;
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 14px; padding: 36px 36px;
+}
+.headline-item {
+  padding: 20px 0; border-bottom: 1px solid #0e0e0e;
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.headline-item:last-child { border-bottom: none; }
+.headline-type {
+  font-size: 9px; font-family: 'JetBrains Mono', monospace;
+  color: var(--blue); letter-spacing: 0.16em; text-transform: uppercase;
+  flex-shrink: 0; padding-top: 4px; width: 80px;
+}
+.headline-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em; color: #f0f0f0;
+}
+
+/* ── COMPONENTS ──────────────────────────── */
+#components { background: var(--doc-bg); }
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.comp-tile {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 14px; overflow: hidden;
+}
+.comp-tile-header {
+  padding: 16px 24px; border-bottom: 1px solid var(--doc-border);
+  font-size: 10px; font-weight: 700; color: #252525;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+.comp-tile-body { padding: 32px 24px; }
+
+/* Buttons */
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600; font-size: 14px;
+  border-radius: 10px; padding: 0 22px; height: 44px;
+  border: none; cursor: pointer; transition: all 0.15s;
+  text-decoration: none;
+}
+.btn-primary { background: var(--blue); color: #fff; box-shadow: 0 2px 20px rgba(0,104,214,0.28); }
+.btn-secondary { background: var(--dark); color: #fff; }
+.btn-ghost {
+  background: transparent; color: var(--dark);
+  border: 1.5px solid #d0c8c0;
+}
+.btn-sm { height: 36px; padding: 0 16px; font-size: 13px; border-radius: 8px; }
+.btn-arrow { font-size: 16px; }
+
+/* Metric cards */
+.metric-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.metric-mini {
+  border-radius: 12px; padding: 18px 18px;
+}
+.metric-mini-blue { background: var(--blue); }
+.metric-mini-surface { background: #090909; border: 1px solid var(--doc-border); }
+.metric-mini-amber { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.15); }
+.metric-mini-teal { background: rgba(0,200,180,0.07); border: 1px solid rgba(0,200,180,0.12); }
+.metric-mini-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px; }
+.metric-mini-val { font-size: 36px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; margin-bottom: 2px; }
+.metric-mini-sub { font-size: 10px; }
+.on-blue .metric-mini-lbl { color: rgba(255,255,255,0.5); }
+.on-blue .metric-mini-val { color: #fff; }
+.on-blue .metric-mini-sub { color: rgba(255,255,255,0.4); }
+.on-dark .metric-mini-lbl { color: #252525; }
+.on-dark .metric-mini-val { color: var(--blue); }
+.on-dark .metric-mini-sub { color: #1e1e1e; }
+.on-amber .metric-mini-lbl { color: var(--amber); }
+.on-amber .metric-mini-val { color: var(--amber); }
+.on-amber .metric-mini-sub { color: rgba(245,158,11,0.5); }
+.on-teal .metric-mini-lbl { color: var(--teal); }
+.on-teal .metric-mini-val { color: var(--teal); }
+.on-teal .metric-mini-sub { color: rgba(0,200,180,0.4); }
+
+/* Service card */
+.service-card {
+  background: #090909;
+  border: 1px solid var(--doc-border);
+  border-radius: 14px; padding: 24px;
+}
+.service-icon {
+  width: 40px; height: 40px; border-radius: 9px;
+  background: rgba(0,104,214,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 16px;
+}
+.service-label {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  background: rgba(0,104,214,0.1); color: var(--blue);
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.service-title { font-size: 15px; font-weight: 700; color: #e8e8e8; margin-bottom: 6px; }
+.service-desc { font-size: 12px; color: #252525; line-height: 1.65; }
+
+/* Badge types */
+.badges-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge {
+  padding: 4px 12px; border-radius: 999px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.badge-blue { background: rgba(0,104,214,0.12); color: var(--blue); border: 1px solid rgba(0,104,214,0.25); }
+.badge-amber { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.2); }
+.badge-teal { background: rgba(0,200,180,0.1); color: var(--teal); border: 1px solid rgba(0,200,180,0.2); }
+.badge-green { background: rgba(34,197,94,0.1); color: #22c55e; border: 1px solid rgba(34,197,94,0.2); }
+.badge-dark { background: #101010; color: #404040; border: 1px solid var(--doc-border); }
+
+/* Nav preview */
+.nav-preview {
+  background: var(--cream);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.nav-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid #e8e0d8;
+  background: rgba(253,249,245,0.8);
+  backdrop-filter: blur(8px);
+}
+.nav-logo-w {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 17px; font-weight: 900;
+  letter-spacing: -0.04em; color: var(--dark);
+}
+.nav-links { display: flex; gap: 20px; }
+.nav-link { font-size: 13px; font-weight: 500; color: #555; }
+.nav-cta {
+  background: var(--blue); color: #fff;
+  padding: 7px 16px; border-radius: 8px;
+  font-size: 12px; font-weight: 600;
+}
+
+/* ── MOTION ──────────────────────────────── */
+#motion { background: var(--doc-bg); }
+.motion-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.motion-tile {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 14px; padding: 32px 24px;
+}
+.motion-preview {
+  height: 80px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.anim-box {
+  width: 56px; height: 56px; border-radius: 12px;
+  background: var(--blue);
+}
+.anim-fade-up { animation: demoFadeUp 2s ease infinite; }
+@keyframes demoFadeUp {
+  0%, 100% { opacity: 0; transform: translateY(16px); }
+  30%, 70% { opacity: 1; transform: translateY(0); }
+}
+.anim-fade-in { animation: demoFadeIn 2s ease infinite; }
+@keyframes demoFadeIn {
+  0%, 100% { opacity: 0; }
+  30%, 70% { opacity: 1; }
+}
+.anim-hover {
+  animation: demoHover 2.5s ease infinite;
+  cursor: pointer;
+}
+@keyframes demoHover {
+  0%, 100% { transform: translateY(0); box-shadow: none; }
+  40%, 60% { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,104,214,0.3); }
+}
+
+.motion-name { font-size: 13px; font-weight: 700; color: #e8e8e8; margin-bottom: 6px; }
+.motion-spec {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--blue); margin-bottom: 8px;
+}
+.motion-desc { font-size: 11px; color: #252525; line-height: 1.6; }
+
+.motion-principles { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mp-tile {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 12px; padding: 24px;
+}
+.mp-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: #1e1e1e; margin-bottom: 12px;
+}
+.mp-title { font-size: 13px; font-weight: 700; color: #e8e8e8; margin-bottom: 6px; }
+.mp-desc { font-size: 11px; color: #252525; line-height: 1.6; }
+
+/* ── IMAGERY ─────────────────────────────── */
+#imagery { background: var(--doc-bg); }
+.imagery-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.imagery-tile {
+  border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--doc-border);
+}
+.imagery-mock {
+  height: 160px; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.imagery-mock-do {
+  background: linear-gradient(135deg, #0d1625 0%, #0a0f20 50%, #060d1f 100%);
+}
+.imagery-mock-do::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.imagery-mock-dont1 {
+  background: linear-gradient(135deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff);
+}
+.imagery-mock-dont2 {
+  background: #d0d0d0;
+}
+.imagery-icon { font-size: 32px; position: relative; z-index: 1; }
+.imagery-meta { background: var(--doc-surface); padding: 18px 20px; }
+.imagery-status {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.imagery-status.do { color: #22c55e; }
+.imagery-status.dont { color: rgba(220,38,38,0.7); }
+.imagery-desc { font-size: 11px; color: #252525; line-height: 1.5; }
+
+.image-rules {
+  margin-top: 12px; grid-column: span 3;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--doc-border);
+  border: 1px solid var(--doc-border);
+  border-radius: 12px; overflow: hidden;
+}
+.img-rule {
+  background: var(--doc-surface); padding: 24px 24px;
+}
+.img-rule-icon { font-size: 20px; margin-bottom: 12px; }
+.img-rule-title { font-size: 12px; font-weight: 700; color: #e8e8e8; margin-bottom: 6px; }
+.img-rule-desc { font-size: 11px; color: #252525; line-height: 1.6; }
+
+/* ── BUSINESS CARDS ──────────────────────── */
+#cards { background: var(--doc-bg); }
+.cards-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.card-concept {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  border-radius: 14px; overflow: hidden;
+}
+.card-concept-preview {
+  height: 200px; display: flex; align-items: center; justify-content: center;
+  font-family: 'Epilogue', sans-serif;
+  position: relative; overflow: hidden;
+}
+.cc1 { background: #fff; }
+.cc2 { background: #0a0a0a; }
+.cc3 { background: #060608; }
+.cc-inner {
+  padding: 20px 22px; width: 200px; height: 130px;
+  border-radius: 6px; display: flex; flex-direction: column;
+  justify-content: space-between; box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+.cc-inner-1 { background: #fff; }
+.cc-inner-2 {
+  background: #0a0a0a;
+  border: 1px solid rgba(0,104,214,0.2);
+  background-image:
+    linear-gradient(rgba(0,104,214,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,104,214,0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+  position: relative;
+}
+.cc-inner-2::before {
+  content: ''; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, var(--blue) 0%, transparent 100%);
+}
+.cc-inner-3 { background: #060608; }
+.cc-inner-3::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 85% 15%, rgba(0,200,180,0.1) 0%, transparent 55%);
+}
+.cc-logo { font-size: 13px; font-weight: 900; letter-spacing: -0.04em; }
+.cc-logo-1 { color: var(--dark); }
+.cc-logo-2 { color: #fff; }
+.cc-logo-3 { color: #888; }
+.cc-name { font-size: 14px; font-weight: 700; letter-spacing: -0.03em; }
+.cc-name-1 { color: var(--dark); }
+.cc-name-2 { color: #fff; font-family: 'Epilogue', sans-serif; }
+.cc-name-3 { color: #f2f0ec; font-style: italic; font-weight: 300; }
+.cc-title { font-size: 7px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+.cc-title-1 { color: var(--muted); }
+.cc-title-2 { color: var(--blue); font-family: 'JetBrains Mono', monospace; }
+.cc-title-3 { color: #2a2a2a; }
+.cc-rule { width: 18px; height: 2px; margin-bottom: 7px; }
+.cc-rule-1 { background: var(--blue); }
+.cc-rule-3 { background: var(--teal); box-shadow: 0 0 6px var(--teal); }
+
+.card-concept-meta { padding: 22px 22px; }
+.cc-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--blue); margin-bottom: 8px;
+}
+.cc-name-meta { font-size: 13px; font-weight: 700; color: #e8e8e8; margin-bottom: 4px; }
+.cc-tag { font-size: 10px; color: #252525; margin-bottom: 12px; }
+.cc-finish {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; color: #1e1e1e;
+  padding-top: 10px; border-top: 1px solid var(--doc-border);
+}
+
+/* ── FOOTER ──────────────────────────────── */
+#guide-footer {
+  padding: 80px 0 80px;
+  border-top: 1px solid var(--doc-border);
+  background: var(--doc-bg);
+}
+.footer-inner {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  flex-wrap: wrap; gap: 32px;
+}
+.footer-brand {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 42px; font-weight: 900;
+  letter-spacing: -0.05em; color: #f0f0f0;
+}
+.footer-brand span { color: var(--blue); }
+.footer-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: #1a1a1a;
+  line-height: 1.8; text-align: right;
+}
+
+/* ── SIDEBAR NAV ─────────────────────────── */
+.side-nav {
+  position: fixed; top: 50%; left: 32px;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 16px;
+  z-index: 99;
+}
+.side-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #1e1e1e; cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.side-dot.active, .side-dot:hover { background: var(--blue); transform: scale(1.5); }
+.side-dot-label {
+  position: absolute; left: 18px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #1e1e1e; white-space: nowrap; pointer-events: none;
+  font-family: 'JetBrains Mono', monospace;
+  transition: color 0.2s;
+}
+.side-dot-wrap {
+  position: relative;
+  display: flex; align-items: center;
+}
+.side-dot-wrap:hover .side-dot-label { color: var(--blue); }
+
+@media (max-width: 900px) {
+  .side-nav { display: none; }
+  .wrap { padding: 0 24px; }
+  .pillars { grid-template-columns: 1fr 1fr; }
+  .logo-grid { grid-template-columns: 1fr 1fr; }
+  .logo-clearspace { grid-column: span 2; }
+  .logo-dont { grid-template-columns: 1fr 1fr; }
+  .colour-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .neutral-row { grid-template-columns: 1fr 1fr 1fr; }
+  .motion-grid { grid-template-columns: 1fr 1fr; }
+  .imagery-grid { grid-template-columns: 1fr 1fr; }
+  .image-rules { grid-template-columns: 1fr 1fr; }
+  .image-rules .img-rule:last-child { display: none; }
+  .cards-row { grid-template-columns: 1fr; }
+  .comp-grid { grid-template-columns: 1fr; }
+  .type-combo { grid-template-columns: 1fr; }
+  .motion-principles { grid-template-columns: 1fr; }
+  .voice-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── SIDEBAR NAV ── -->
+<nav class="side-nav" id="sideNav">
+  <div class="side-dot-wrap"><div class="side-dot active" onclick="scrollTo('cover')"></div><span class="side-dot-label">Cover</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('overview')"></div><span class="side-dot-label">Overview</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('logo-section')"></div><span class="side-dot-label">Logo</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('colour')"></div><span class="side-dot-label">Colour</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('typography')"></div><span class="side-dot-label">Type</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('voice')"></div><span class="side-dot-label">Voice</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('components')"></div><span class="side-dot-label">UI</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('motion')"></div><span class="side-dot-label">Motion</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('imagery')"></div><span class="side-dot-label">Imagery</span></div>
+  <div class="side-dot-wrap"><div class="side-dot" onclick="scrollTo('cards')"></div><span class="side-dot-label">Cards</span></div>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     01 — COVER
+════════════════════════════════════════════ -->
+<section id="cover">
+  <div class="cover-grid"></div>
+
+  <nav class="cover-index">
+    <a href="#overview">01 Brand Overview</a>
+    <a href="#logo-section">02 Logo System</a>
+    <a href="#colour">03 Colour System</a>
+    <a href="#typography">04 Typography</a>
+    <a href="#voice">05 Voice &amp; Tone</a>
+    <a href="#components">06 UI Components</a>
+    <a href="#motion">07 Motion</a>
+    <a href="#imagery">08 Imagery</a>
+    <a href="#cards">09 Business Cards</a>
+  </nav>
+
+  <div style="position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#1a1a1a;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:32px;">
+      Excel Consultancy · Brand Guidelines · 2026
+    </div>
+    <div class="cover-wordmark">EXCEL<span>.</span></div>
+    <div class="cover-meta">
+      <p class="cover-tagline">
+        Digital marketing infrastructure for<br>businesses that mean business.
+      </p>
+      <div class="cover-info">
+        <span>Version 1.0</span>
+        <span>theexcelagency.com</span>
+        <span>Confidential</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     02 — BRAND OVERVIEW
+════════════════════════════════════════════ -->
+<section id="overview" class="section">
+  <div class="wrap">
+    <div class="eyebrow">01 — Brand Overview</div>
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-desc">Excel is a performance-first digital marketing consultancy. We build data-driven, multi-channel strategies backed by AI and delivered with precision — for businesses that treat marketing as infrastructure, not expense.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01 /</div>
+        <div class="pillar-word">Precise</div>
+        <div class="pillar-desc">Every euro tracked. Every channel measured. We move with surgical accuracy, not guesswork.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02 /</div>
+        <div class="pillar-word">Bold</div>
+        <div class="pillar-desc">Direct in our language, ambitious in our targets. We don't hedge results — we deliver them.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03 /</div>
+        <div class="pillar-word">Intelligent</div>
+        <div class="pillar-desc">AI-powered at every layer. We leverage machine learning to outpace manual approaches.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04 /</div>
+        <div class="pillar-word">Human</div>
+        <div class="pillar-desc">No account managers. No handoffs. The founder works directly with every client, every time.</div>
+      </div>
+    </div>
+
+    <div class="mission-box">
+      <div class="mission-label">Brand Mission</div>
+      <div class="mission-text">
+        "We help ambitious brands reach their full online digital marketing potential — through data-driven strategy, AI-powered execution, and relentless focus on measurable revenue growth."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     03 — LOGO SYSTEM
+════════════════════════════════════════════ -->
+<section id="logo-section" class="section">
+  <div class="wrap">
+    <div class="eyebrow">02 — Logo System</div>
+    <h2 class="section-title">Logo Usage</h2>
+    <p class="section-desc">The Excel wordmark is our primary brand identifier. It should appear clearly on every surface — always legible, always given adequate breathing room.</p>
+
+    <div class="logo-grid">
+      <div class="logo-tile lt-light">
+        <div class="logo-img" style="color:#171717;">EXCEL</div>
+        <div class="tile-label" style="color:#aaaaaa;">On Cream / Light — Primary</div>
+      </div>
+      <div class="logo-tile lt-dark">
+        <div class="logo-img">EXCEL</div>
+        <div class="tile-label">On Dark — Reversed</div>
+      </div>
+      <div class="logo-tile lt-blue">
+        <div class="logo-img">EXCEL</div>
+        <div class="tile-label">On Excel Blue — Campaign Use</div>
+      </div>
+
+      <!-- Clear space -->
+      <div class="logo-clearspace">
+        <div class="clearspace-diagram">
+          <div class="cs-outer"></div>
+          <div class="cs-inner">
+            EXCEL
+            <span class="cs-label left">X</span>
+            <span class="cs-label right">X</span>
+          </div>
+        </div>
+        <div class="cs-text">
+          <h4>Clear Space Rule</h4>
+          <p>Always maintain a minimum clear space equal to the cap-height of the "X" in the wordmark on all four sides. No graphics, text, or brand elements should enter this zone.<br><br>
+          On campaign materials, increase to 2× the X-height for maximum impact. On small applications (favicon, watermark), 0.5× is the minimum acceptable.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Don'ts -->
+    <div style="margin-top: 36px;">
+      <div class="colour-row-label">Logo Don'ts</div>
+      <div class="logo-dont">
+        <div class="dont-tile">
+          <div class="dont-x">✕</div>
+          <div class="dont-logo" style="color:#0068d6;">EXCEL</div>
+          <div class="dont-label">Don't render the wordmark in any colour other than the approved palette</div>
+        </div>
+        <div class="dont-tile">
+          <div class="dont-x">✕</div>
+          <div class="dont-logo" style="color:#fff;letter-spacing:0.2em;transform:scaleY(1.4);display:block;font-size:18px;">EXCEL</div>
+          <div class="dont-label">Don't stretch, condense, or distort the proportions</div>
+        </div>
+        <div class="dont-tile">
+          <div class="dont-x">✕</div>
+          <div class="dont-logo" style="opacity:0.2;color:#f0f0f0;">EXCEL</div>
+          <div class="dont-label">Don't place on low-contrast backgrounds that reduce legibility</div>
+        </div>
+        <div class="dont-tile">
+          <div class="dont-x">✕</div>
+          <div style="position:relative;">
+            <div class="dont-logo" style="color:#f0f0f0;">EXCEL</div>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-15deg);font-size:28px;opacity:0.4;">🌟</div>
+          </div>
+          <div class="dont-label">Don't add shadows, outlines, gradients, or decorative effects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     04 — COLOUR SYSTEM
+════════════════════════════════════════════ -->
+<section id="colour" class="section">
+  <div class="wrap">
+    <div class="eyebrow">03 — Colour System</div>
+    <h2 class="section-title">Colour System</h2>
+    <p class="section-desc">A restrained, purposeful palette. Excel Blue leads — authoritative and electric. Cream grounds us in warmth. Near-black provides weight. Amber and teal appear as earned rewards, not decoration.</p>
+
+    <div class="colour-row-label">Primary Palette</div>
+    <div class="colour-grid">
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#0068d6;"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Excel Blue</div>
+          <span class="colour-hex">#0068D6</span>
+          <span class="colour-hex" style="color:#404040;">RGB 0, 104, 214</span>
+          <div class="colour-usage">Primary CTA · Accents · Links · Icons</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#171717;"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Excel Dark</div>
+          <span class="colour-hex">#171717</span>
+          <span class="colour-hex" style="color:#404040;">RGB 23, 23, 23</span>
+          <div class="colour-usage">Headlines · CTA backgrounds · Body on light</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#fdf9f5;border:1px solid #e8e8e8;border-bottom:none;"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Excel Cream</div>
+          <span class="colour-hex">#FDF9F5</span>
+          <span class="colour-hex" style="color:#404040;">RGB 253, 249, 245</span>
+          <div class="colour-usage">Page backgrounds · Cards on light mode</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="colour-row-label">Secondary Palette</div>
+    <div class="colour-grid">
+      <div class="colour-card">
+        <div class="swatch swatch-small" style="background:#f59e0b;"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Amber</div>
+          <span class="colour-hex">#F59E0B</span>
+          <div class="colour-usage">Stars · Success · Wasted spend metric · Zap icon</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-small" style="background:#00c8b4;"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Teal</div>
+          <span class="colour-hex">#00C8B4</span>
+          <div class="colour-usage">Premium / Futuristic contexts · AI accent</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-small" style="background:#060d1f;"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Deep Dark</div>
+          <span class="colour-hex">#060D1F</span>
+          <div class="colour-usage">AI section backgrounds · Hero dark mode</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="colour-row-label">Neutral Palette</div>
+    <div class="neutral-row">
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#ffffff;border:1px solid #e8e8e8;"></div>
+        <span class="neutral-val">#FFFFFF</span>
+        <span class="neutral-lbl">White</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#fafafa;border:1px solid #e8e8e8;"></div>
+        <span class="neutral-val">#FAFAFA</span>
+        <span class="neutral-lbl">Surface</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#e8e8e8;"></div>
+        <span class="neutral-val">#E8E8E8</span>
+        <span class="neutral-lbl">Border</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#666666;"></div>
+        <span class="neutral-val">#666666</span>
+        <span class="neutral-lbl">Muted Text</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#aaaaaa;"></div>
+        <span class="neutral-val">#AAAAAA</span>
+        <span class="neutral-lbl">Subtle Text</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#0a0a0a;"></div>
+        <span class="neutral-val">#0A0A0A</span>
+        <span class="neutral-lbl">Near Black</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     05 — TYPOGRAPHY
+════════════════════════════════════════════ -->
+<section id="typography" class="section">
+  <div class="wrap">
+    <div class="eyebrow">04 — Typography</div>
+    <h2 class="section-title">Typography</h2>
+    <p class="section-desc">Geist Sans is our primary typeface — geometric, legible, and confident. Tight negative tracking at display sizes signals precision. Geist Mono carries data, labels, and technical metadata.</p>
+
+    <div class="type-specimen">
+      <div class="type-meta-bar">
+        <span class="type-meta-name">Geist Sans — Primary Typeface</span>
+        <div class="type-meta-tags">
+          <span class="type-tag">font-family: 'Geist Sans'</span>
+          <span class="type-tag">Weights: 300 400 500 600 700 800 900</span>
+        </div>
+      </div>
+      <div class="type-preview">
+        <div style="font-family:'Inter',sans-serif;font-size:clamp(40px,6vw,88px);font-weight:900;letter-spacing:-0.05em;line-height:0.95;color:#f0f0f0;margin-bottom:20px;">
+          Digital<br><span style="color:var(--blue);">Marketing</span><br>Redefined.
+        </div>
+        <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:400;color:#404040;line-height:1.8;max-width:560px;">
+          Performance-first consultancy. We build data-driven, multi-channel strategies that connect your SEO, paid ads, and analytics into a single growth engine — backed by AI, delivered with precision.
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;" class="type-specimen">
+      <div class="type-meta-bar">
+        <span class="type-meta-name">Geist Mono — Technical / Data Typeface</span>
+        <div class="type-meta-tags">
+          <span class="type-tag">font-family: 'Geist Mono'</span>
+          <span class="type-tag">Weights: 300 400 500</span>
+        </div>
+      </div>
+      <div class="type-preview" style="display:flex;gap:40px;flex-wrap:wrap;align-items:center;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:400;color:#0068d6;letter-spacing:0.04em;">
+          3.8×&nbsp;&nbsp;ROAS<br>
+          <span style="font-size:14px;color:#252525;">// e-commerce avg · Q1 2026</span>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#252525;line-height:2;letter-spacing:0.14em;">
+          USE FOR: Labels · Stats metadata<br>
+          USE FOR: Technical badges · Code refs<br>
+          USE FOR: Section numbers · Eyebrows<br>
+          USE FOR: QR context text · Specs
+        </div>
+      </div>
+    </div>
+
+    <!-- Type scale -->
+    <div style="margin-top: 24px;">
+      <div class="colour-row-label">Type Scale</div>
+      <div class="type-scale">
+        <div class="scale-row">
+          <span class="scale-label">Display</span>
+          <span class="scale-sample" style="font-size:clamp(32px,5vw,68px);font-weight:800;">We Help Brands Reach.</span>
+          <span class="scale-info">68px / 800<br>−0.18rem track</span>
+        </div>
+        <div class="scale-row">
+          <span class="scale-label">Heading 1</span>
+          <span class="scale-sample" style="font-size:clamp(28px,4vw,52px);font-weight:700;">Full-Service Digital Agency</span>
+          <span class="scale-info">52px / 700<br>−0.14rem track</span>
+        </div>
+        <div class="scale-row">
+          <span class="scale-label">Heading 2</span>
+          <span class="scale-sample" style="font-size:clamp(24px,3vw,40px);font-weight:700;">Our Core Services</span>
+          <span class="scale-info">40px / 700<br>−0.12rem track</span>
+        </div>
+        <div class="scale-row">
+          <span class="scale-label">Heading 3</span>
+          <span class="scale-sample" style="font-size:22px;font-weight:700;">Search Engine Optimisation</span>
+          <span class="scale-info">22px / 700<br>−0.04em track</span>
+        </div>
+        <div class="scale-row">
+          <span class="scale-label">Body LG</span>
+          <span class="scale-sample" style="font-size:18px;font-weight:400;letter-spacing:0;color:#888;">Data-driven strategies that connect SEO, paid ads, and analytics into one engine.</span>
+          <span class="scale-info">18px / 400<br>1.8 leading</span>
+        </div>
+        <div class="scale-row">
+          <span class="scale-label">Body</span>
+          <span class="scale-sample" style="font-size:16px;font-weight:400;letter-spacing:0;color:#888;">Build measurable revenue growth through a performance system where every investment is tracked.</span>
+          <span class="scale-info">16px / 400<br>1.7 leading</span>
+        </div>
+        <div class="scale-row">
+          <span class="scale-label">Caption</span>
+          <span class="scale-sample" style="font-size:12px;font-weight:500;letter-spacing:0;color:#555;">Trusted by businesses in 4 countries · 91% campaign success rate</span>
+          <span class="scale-info">12px / 500</span>
+        </div>
+        <div class="scale-row">
+          <span class="scale-label">Label</span>
+          <span class="scale-sample" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);">Global Digital Marketing Agency</span>
+          <span class="scale-info">11px / 700<br>+0.08em track</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Type in context -->
+    <div class="type-combo">
+      <div class="combo-tile combo-light">
+        <div style="font-size:10px;font-weight:700;color:var(--blue);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:16px;">What We Do</div>
+        <div style="font-family:'Inter',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-0.04em;color:var(--dark);line-height:1.1;margin-bottom:12px;">Full-Service Digital Marketing Solutions</div>
+        <div style="font-size:15px;color:#666;line-height:1.75;">We drive growth through a multi-channel strategy — cohesive, measurable, and built around your business goals.</div>
+      </div>
+      <div class="combo-tile combo-dark">
+        <div style="font-size:10px;font-weight:700;color:#60a5fa;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:16px;">AI-Powered Marketing</div>
+        <div style="font-family:'Inter',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-0.04em;color:#fff;line-height:1.1;margin-bottom:12px;">Harnessing AI, Machine Learning &amp; the Latest Technology</div>
+        <div style="font-size:15px;color:rgba(255,255,255,0.4);line-height:1.75;">We embed artificial intelligence into every layer of your digital marketing strategy — smarter results, faster optimisation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     06 — VOICE & TONE
+════════════════════════════════════════════ -->
+<section id="voice" class="section">
+  <div class="wrap">
+    <div class="eyebrow">05 — Voice &amp; Tone</div>
+    <h2 class="section-title">Voice &amp; Tone</h2>
+    <p class="section-desc">Excel speaks like a senior strategist, not a salesperson. Precise, confident, results-focused. We lead with outcomes, not processes. We quantify claims. We never oversell.</p>
+
+    <div class="voice-grid">
+      <div class="voice-tile">
+        <div class="voice-tile-title">Word Choices</div>
+        <div class="voice-tile-sub">Use these — avoid those</div>
+        <div class="word-pairs">
+          <div class="word-pair">
+            <span class="word-do">Revenue growth</span>
+            <span class="word-arrow">→</span>
+            <span class="word-dont">Brand awareness</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">Measurable results</span>
+            <span class="word-arrow">→</span>
+            <span class="word-dont">Best-in-class solutions</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">We deliver</span>
+            <span class="word-arrow">→</span>
+            <span class="word-dont">We try to</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">Tracked to outcomes</span>
+            <span class="word-arrow">→</span>
+            <span class="word-dont">Synergistic campaigns</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">52% CPL reduction</span>
+            <span class="word-arrow">→</span>
+            <span class="word-dont">Significant savings</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="voice-tile">
+        <div class="voice-tile-title">Brand Personality</div>
+        <div class="voice-tile-sub">How we show up across every touchpoint</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+          <div style="padding:12px 14px;background:#090909;border:1px solid var(--doc-border);border-radius:8px;">
+            <div style="font-size:11px;font-weight:700;color:#e8e8e8;margin-bottom:3px;">Confident, not arrogant</div>
+            <div style="font-size:11px;color:#252525;line-height:1.5;">We state outcomes, not promises. Proof over hype.</div>
+          </div>
+          <div style="padding:12px 14px;background:#090909;border:1px solid var(--doc-border);border-radius:8px;">
+            <div style="font-size:11px;font-weight:700;color:#e8e8e8;margin-bottom:3px;">Direct, not blunt</div>
+            <div style="font-size:11px;color:#252525;line-height:1.5;">We get to the point. No padding, no filler. Every sentence earns its space.</div>
+          </div>
+          <div style="padding:12px 14px;background:#090909;border:1px solid var(--doc-border);border-radius:8px;">
+            <div style="font-size:11px;font-weight:700;color:#e8e8e8;margin-bottom:3px;">Expert, not jargon-heavy</div>
+            <div style="font-size:11px;color:#252525;line-height:1.5;">We use technical precision where it adds value. We translate complexity into clarity.</div>
+          </div>
+          <div style="padding:12px 14px;background:#090909;border:1px solid var(--doc-border);border-radius:8px;">
+            <div style="font-size:11px;font-weight:700;color:#e8e8e8;margin-bottom:3px;">Human, not corporate</div>
+            <div style="font-size:11px;color:#252525;line-height:1.5;">The founder works directly with every client. We write like a person, not a press release.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="headlines-box">
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:24px;font-family:'JetBrains Mono',monospace;">Sample Headlines by Context</div>
+      <div class="headline-item">
+        <span class="headline-type">Homepage Hero</span>
+        <span class="headline-text" style="font-size:clamp(20px,3vw,32px);">We Help Brands Reach Their Full Online Digital Marketing Potential.</span>
+      </div>
+      <div class="headline-item">
+        <span class="headline-type">Services Intro</span>
+        <span class="headline-text" style="font-size:clamp(18px,2.5vw,28px);">Full-Service Digital Marketing. Built for Results.</span>
+      </div>
+      <div class="headline-item">
+        <span class="headline-type">AI Section</span>
+        <span class="headline-text" style="font-size:clamp(18px,2.5vw,28px);color:var(--blue);">Harnessing AI, Machine Learning &amp; the Latest Technology.</span>
+      </div>
+      <div class="headline-item">
+        <span class="headline-type">CTA</span>
+        <span class="headline-text" style="font-size:clamp(16px,2vw,22px);">Book Your Free Strategy Session →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     07 — UI COMPONENTS
+════════════════════════════════════════════ -->
+<section id="components" class="section">
+  <div class="wrap">
+    <div class="eyebrow">06 — UI Components</div>
+    <h2 class="section-title">UI Components</h2>
+    <p class="section-desc">The component system uses a consistent foundation: 10px border radii for small elements, 16px for cards, 20px for hero panels. Shadows layer subtly — presence without noise.</p>
+
+    <div class="comp-grid">
+
+      <!-- Buttons -->
+      <div class="comp-tile">
+        <div class="comp-tile-header">Buttons &amp; CTAs</div>
+        <div class="comp-tile-body">
+          <div class="btn-row">
+            <a class="btn btn-primary">Book a Call <span class="btn-arrow">→</span></a>
+            <a class="btn btn-secondary">View Services <span class="btn-arrow">→</span></a>
+            <a class="btn btn-ghost btn-sm">Learn More</a>
+          </div>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid #0e0e0e;">
+            <div style="font-size:10px;font-family:'JetBrains Mono',monospace;color:#1e1e1e;margin-bottom:12px;letter-spacing:0.12em;">USAGE RULES</div>
+            <div style="font-size:11px;color:#252525;line-height:1.8;">
+              Primary (Blue) → Main conversion action per page<br>
+              Secondary (Dark) → Supporting actions, nav CTAs<br>
+              Ghost → Tertiary / learn more contexts only<br>
+              Arrow suffix → Only on directional actions
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metric cards -->
+      <div class="comp-tile">
+        <div class="comp-tile-header">Metric Cards</div>
+        <div class="comp-tile-body">
+          <div class="metric-mini-grid">
+            <div class="metric-mini metric-mini-blue on-blue">
+              <div class="metric-mini-lbl">ROAS</div>
+              <div class="metric-mini-val">3.8×</div>
+              <div class="metric-mini-sub">e-commerce avg</div>
+            </div>
+            <div class="metric-mini metric-mini-surface on-dark">
+              <div class="metric-mini-lbl">CPL Reduction</div>
+              <div class="metric-mini-val">52%</div>
+              <div class="metric-mini-sub">vs prev agency</div>
+            </div>
+            <div class="metric-mini metric-mini-amber on-amber">
+              <div class="metric-mini-lbl">Wasted Spend</div>
+              <div class="metric-mini-val">61%</div>
+              <div class="metric-mini-sub">eliminated audit</div>
+            </div>
+            <div class="metric-mini metric-mini-teal on-teal">
+              <div class="metric-mini-lbl">Traffic Growth</div>
+              <div class="metric-mini-val">+89%</div>
+              <div class="metric-mini-sub">in 6 months</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service card -->
+      <div class="comp-tile">
+        <div class="comp-tile-header">Service Card</div>
+        <div class="comp-tile-body">
+          <div class="service-card">
+            <div class="service-icon">🔍</div>
+            <div class="service-label">SEO</div>
+            <div class="service-title">Search Engine Optimisation</div>
+            <div class="service-desc">Drive sustainable organic growth with technical excellence, strategic content, and authority building. We help ambitious brands dominate search results.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges & Navigation -->
+      <div class="comp-tile">
+        <div class="comp-tile-header">Badges &amp; Navigation</div>
+        <div class="comp-tile-body">
+          <div class="badges-row" style="margin-bottom:20px;">
+            <span class="badge badge-blue">Google Partner</span>
+            <span class="badge badge-amber">91% Success Rate</span>
+            <span class="badge badge-teal">AI-Powered</span>
+            <span class="badge badge-green">GDPR Compliant</span>
+            <span class="badge badge-dark">SEO</span>
+          </div>
+          <div class="nav-preview">
+            <div class="nav-bar">
+              <div class="nav-logo-w">EXCEL</div>
+              <div class="nav-links">
+                <span class="nav-link">Services</span>
+                <span class="nav-link">AI</span>
+                <span class="nav-link">Blog</span>
+              </div>
+              <div class="nav-cta">Book a Call</div>
+            </div>
+            <div style="height:48px;background:var(--cream);"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     08 — MOTION & ANIMATION
+════════════════════════════════════════════ -->
+<section id="motion" class="section">
+  <div class="wrap">
+    <div class="eyebrow">07 — Motion &amp; Animation</div>
+    <h2 class="section-title">Motion Principles</h2>
+    <p class="section-desc">Motion at Excel is purposeful and restrained. We animate to guide attention and confirm interactions — never to entertain. Every animation has a job. If it doesn't aid understanding, it doesn't ship.</p>
+
+    <div class="motion-grid">
+      <div class="motion-tile">
+        <div class="motion-preview">
+          <div class="anim-box anim-fade-up"></div>
+        </div>
+        <div class="motion-name">Fade Up</div>
+        <div class="motion-spec">0.6s · ease · forwards</div>
+        <div class="motion-desc">Primary entrance animation for sections, cards, and hero content. Delay by 100ms per staggered item.</div>
+      </div>
+      <div class="motion-tile">
+        <div class="motion-preview">
+          <div class="anim-box anim-fade-in" style="background:rgba(0,104,214,0.3);border:2px solid var(--blue);"></div>
+        </div>
+        <div class="motion-name">Fade In</div>
+        <div class="motion-spec">0.5s · ease · forwards</div>
+        <div class="motion-desc">Used for overlays, partner logos, and subtle secondary content that appears on scroll.</div>
+      </div>
+      <div class="motion-tile">
+        <div class="motion-preview">
+          <div class="anim-box anim-hover"></div>
+        </div>
+        <div class="motion-name">Card Hover</div>
+        <div class="motion-spec">translateY(−2px) · 0.2s ease</div>
+        <div class="motion-desc">All interactive cards lift 2px on hover. Shadow intensity increases proportionally.</div>
+      </div>
+    </div>
+
+    <div class="motion-principles">
+      <div class="mp-tile">
+        <div class="mp-num">01 /</div>
+        <div class="mp-title">Respect reduced motion</div>
+        <div class="mp-desc">All animations are wrapped in <code style="background:#0d0d0d;padding:2px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--blue);">prefers-reduced-motion</code> — users who opt out see instant state changes with no animation.</div>
+      </div>
+      <div class="mp-tile">
+        <div class="mp-num">02 /</div>
+        <div class="mp-title">Ease, not linear</div>
+        <div class="mp-desc">All transitions use <code style="background:#0d0d0d;padding:2px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--blue);">ease</code> or <code style="background:#0d0d0d;padding:2px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--blue);">ease-out</code>. Linear motion feels mechanical. Ease signals intelligence and quality.</div>
+      </div>
+      <div class="mp-tile">
+        <div class="mp-num">03 /</div>
+        <div class="mp-title">Duration budget: 150–600ms</div>
+        <div class="mp-desc">Micro-interactions (hover, focus) live at 150–200ms. Entrance animations at 500–600ms. Nothing beyond 800ms unless it's a deliberate spotlight effect.</div>
+      </div>
+      <div class="mp-tile">
+        <div class="mp-num">04 /</div>
+        <div class="mp-title">Stagger for hierarchy</div>
+        <div class="mp-desc">When multiple elements animate in sequence, delay each by 80–120ms. Stagger reveals information flow and teaches the user how to read the layout.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     09 — IMAGERY
+════════════════════════════════════════════ -->
+<section id="imagery" class="section">
+  <div class="wrap">
+    <div class="eyebrow">08 — Imagery &amp; Photography</div>
+    <h2 class="section-title">Image Direction</h2>
+    <p class="section-desc">Photography is minimal and intentional. We favour data visualisations, abstract digital textures, and purposeful atmospheric depth over stock photography and generic team shots.</p>
+
+    <div class="imagery-grid">
+      <div class="imagery-tile">
+        <div class="imagery-mock imagery-mock-do">
+          <div class="imagery-icon" style="font-size:40px;opacity:0.6;">📊</div>
+        </div>
+        <div class="imagery-meta">
+          <div class="imagery-status do">✓ DO</div>
+          <div class="imagery-desc">Dark atmospheric backgrounds with subtle grain texture and data-driven graphic overlays. Radial gradients in Excel Blue.</div>
+        </div>
+      </div>
+      <div class="imagery-tile">
+        <div class="imagery-mock imagery-mock-dont1">
+          <div style="font-size:40px;opacity:0.7;">🌈</div>
+        </div>
+        <div class="imagery-meta">
+          <div class="imagery-status dont">✕ DON'T</div>
+          <div class="imagery-desc">Avoid vibrant multi-colour imagery, rainbow gradients, or highly saturated photography that fights the brand palette.</div>
+        </div>
+      </div>
+      <div class="imagery-tile">
+        <div class="imagery-mock imagery-mock-dont2">
+          <div style="font-size:40px;">😊</div>
+        </div>
+        <div class="imagery-meta">
+          <div class="imagery-status dont">✕ DON'T</div>
+          <div class="imagery-desc">Avoid generic stock photography showing handshakes, smiling teams, or office scenes. They undermine credibility.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="colour-row-label" style="margin-top:36px;">Image Rules</div>
+    <div class="image-rules">
+      <div class="img-rule">
+        <div class="img-rule-icon">🌘</div>
+        <div class="img-rule-title">Dark by default</div>
+        <div class="img-rule-desc">Hero images lean dark. Apply 20–40% dark gradient overlay on any photo used in a banner context to maintain text legibility.</div>
+      </div>
+      <div class="img-rule">
+        <div class="img-rule-icon">✦</div>
+        <div class="img-rule-title">Grain as texture</div>
+        <div class="img-rule-desc">Apply the SVG grain overlay (opacity 2.8% light, 4% dark) to all hero backgrounds. It adds depth without distraction.</div>
+      </div>
+      <div class="img-rule">
+        <div class="img-rule-icon">📐</div>
+        <div class="img-rule-title">Aspect ratios</div>
+        <div class="img-rule-desc">Blog thumbnails: 16:9. Profile photos: 1:1 in circles. Hero images: full-bleed. Never crop faces below the chin.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     10 — BUSINESS CARDS
+════════════════════════════════════════════ -->
+<section id="cards" class="section">
+  <div class="wrap">
+    <div class="eyebrow">09 — Business Cards</div>
+    <h2 class="section-title">Business Card System</h2>
+    <p class="section-desc">Three distinct concepts for different contexts — from ultra-minimal corporate to premium futuristic. Each expresses a different facet of the Excel brand. Concept 01 is the recommended standard.</p>
+
+    <div class="cards-row">
+
+      <!-- Concept 1 -->
+      <div class="card-concept">
+        <div class="card-concept-preview cc1">
+          <div class="cc-inner cc-inner-1" style="position:relative;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <div class="cc-logo cc-logo-1">EXCEL</div>
+              <div style="width:28px;height:28px;border-radius:50%;background:#e8e8e8;overflow:hidden;border:1px solid #ddd;"></div>
+            </div>
+            <div>
+              <div class="cc-rule cc-rule-1"></div>
+              <div class="cc-name cc-name-1">Wali Nori</div>
+              <div class="cc-title cc-title-1">Founder · Digital Marketing Strategist</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-concept-meta">
+          <div class="cc-num">01 /</div>
+          <div class="cc-name-meta">Ultra-Minimal Corporate</div>
+          <div class="cc-tag">White · Architectural · Restrained</div>
+          <div style="font-size:11px;color:#252525;line-height:1.65;margin-bottom:12px;">White space as currency. Single blue rule is the only decoration. Epilogue 700 — confident, geometric, zero pretence.</div>
+          <div class="cc-finish">Matte soft-touch · Spot UV on logo &amp; rule</div>
+        </div>
+      </div>
+
+      <!-- Concept 2 -->
+      <div class="card-concept">
+        <div class="card-concept-preview cc2">
+          <div class="cc-inner cc-inner-2" style="position:relative;z-index:1;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div class="cc-logo cc-logo-2">EXCEL</div>
+              <div style="width:28px;height:28px;border-radius:5px;background:rgba(0,104,214,0.2);border:1px solid var(--blue);overflow:hidden;"></div>
+            </div>
+            <div>
+              <div class="cc-name cc-name-2">Wali Nori</div>
+              <div class="cc-title cc-title-2">// Founder · Digital Marketing Strategist</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-concept-meta">
+          <div class="cc-num">02 /</div>
+          <div class="cc-name-meta">Bold Tech-Forward</div>
+          <div class="cc-tag">Dark · Electric Blue · Data-driven</div>
+          <div style="font-size:11px;color:#252525;line-height:1.65;margin-bottom:12px;">Dark canvas, surgical blue precision. Grid references data infrastructure. Syne 800 — bold, contemporary, uncompromising.</div>
+          <div class="cc-finish">Matte black · Foil on logo · Spot UV grid lines</div>
+        </div>
+      </div>
+
+      <!-- Concept 3 -->
+      <div class="card-concept">
+        <div class="card-concept-preview cc3">
+          <div class="cc-inner cc-inner-3" style="position:relative;z-index:1;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <div class="cc-logo cc-logo-3">EXCEL</div>
+              <div style="width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal);margin-top:4px;"></div>
+            </div>
+            <div>
+              <div class="cc-rule cc-rule-3"></div>
+              <div class="cc-name cc-name-3">Wali Nori</div>
+              <div class="cc-title cc-title-3">Founder · Digital Marketing Strategist</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-concept-meta">
+          <div class="cc-num">03 /</div>
+          <div class="cc-name-meta">Premium Futuristic</div>
+          <div class="cc-tag">Ultra-dark · Teal Glow · Sculptural</div>
+          <div style="font-size:11px;color:#252525;line-height:1.65;margin-bottom:12px;">Maximum negative space. Fraunces italic — luxury confidence in a tech context. Single glowing dot as sole graphic element.</div>
+          <div class="cc-finish">Ultra-matte black · Teal foil on rule &amp; dot · Embossed name</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Print spec strip -->
+    <div style="margin-top:24px;padding:22px 32px;background:var(--doc-surface);border:1px solid var(--doc-border);border-radius:12px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;">
+      <div>
+        <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#1a1a1a;margin-bottom:4px;font-family:'JetBrains Mono',monospace;">Dimensions</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2a2a2a;">85 × 55 mm</div>
+      </div>
+      <div>
+        <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#1a1a1a;margin-bottom:4px;font-family:'JetBrains Mono',monospace;">Resolution</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2a2a2a;">300 DPI</div>
+      </div>
+      <div>
+        <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#1a1a1a;margin-bottom:4px;font-family:'JetBrains Mono',monospace;">Color Mode</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2a2a2a;">CMYK</div>
+      </div>
+      <div>
+        <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#1a1a1a;margin-bottom:4px;font-family:'JetBrains Mono',monospace;">Bleed</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2a2a2a;">3 mm all sides</div>
+      </div>
+      <div>
+        <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#1a1a1a;margin-bottom:4px;font-family:'JetBrains Mono',monospace;">Safe Margin</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2a2a2a;">5 mm inset</div>
+      </div>
+      <div>
+        <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:#1a1a1a;margin-bottom:4px;font-family:'JetBrains Mono',monospace;">QR Error Corr.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#2a2a2a;">Level H (30%)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<section id="guide-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">EXCEL<span>.</span></div>
+      <div class="footer-note">
+        Brand Guidelines v1.0 · 2026<br>
+        theexcelagency.com · excel@theexcelagency.com<br>
+        Rome, Italy · Serving clients worldwide<br>
+        GDPR Compliant · Confidential
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Sidebar nav active state
+const sections = ['cover','overview','logo-section','colour','typography','voice','components','motion','imagery','cards'];
+const dots = document.querySelectorAll('.side-dot');
+
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY + window.innerHeight * 0.3;
+  sections.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.offsetTop <= scrollY) {
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[i]) dots[i].classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   description:
     'Excel helps brands reach their full online digital marketing potential through SEO, PPC, social media advertising, and AI-powered strategies.',
-  metadataBase: new URL('https://get-excel.com'),
+  metadataBase: new URL('https://www.theexcelagency.com'),
   openGraph: {
     type: 'website',
     siteName: 'Excel Consultancy',

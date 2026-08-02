@@ -1067,7 +1067,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 Marketing Insights &amp; Resources
               </h2>
               <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.7] max-w-[480px]">
-                Expert guides, case studies, and data-driven strategies from the Excel team.
+                Practical guides on growth strategy, paid media, SEO, and marketing automation. Built from real client work and actual results.
               </p>
             </div>
             <Link

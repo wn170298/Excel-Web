@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Consultancy — Brand Guidelines 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── FIXED BRAND TOKENS ── */
+:root {
+  --blue:  #0068d6;
+  --dark:  #171717;
+  --cream: #fdf9f5;
+  --amber: #f59e0b;
+  --teal:  #00c8b4;
+  --deep:  #060d1f;
+}
+
+/* ── LIGHT MODE ── */
+[data-theme="light"] {
+  --bg:        #fdf9f5;
+  --bg2:       #f5f1ec;
+  --surface:   #ffffff;
+  --surface2:  #f8f5f1;
+  --border:    #e4ddd6;
+  --border2:   #ccc6be;
+  --text:      #0a0a0a;
+  --text2:     #2e2e2e;
+  --muted:     #6b6b6b;
+  --subtle:    #a0a0a0;
+  --mono:      #505050;
+  --shadow:    0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  --shadow-lg: 0 2px 8px rgba(0,0,0,0.06), 0 12px 40px rgba(0,0,0,0.08);
+  --cover-bg:  #fdf9f5;
+  --cover-wm:  #0a0a0a;
+  --cover-meta-border: #e4ddd6;
+  --cover-meta-text: #6b6b6b;
+  --sidebar-bg: rgba(253,249,245,0.92);
+}
+
+/* ── DARK MODE ── */
+[data-theme="dark"] {
+  --bg:        #0b0b0b;
+  --bg2:       #111111;
+  --surface:   #141414;
+  --surface2:  #1a1a1a;
+  --border:    #242424;
+  --border2:   #2e2e2e;
+  --text:      #f0f0f0;
+  --text2:     #c4c4c4;
+  --muted:     #888888;
+  --subtle:    #505050;
+  --mono:      #707070;
+  --shadow:    0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+  --shadow-lg: 0 2px 8px rgba(0,0,0,0.3), 0 12px 40px rgba(0,0,0,0.4);
+  --cover-bg:  #060d1f;
+  --cover-wm:  #ffffff;
+  --cover-meta-border: #1a1a1a;
+  --cover-meta-text: #555555;
+  --sidebar-bg: rgba(11,11,11,0.92);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text2);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* ── LAYOUT ── */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+.section { padding: 96px 0; border-top: 1px solid var(--border); }
+
+/* ── SIDEBAR NAV ── */
+.sidebar {
+  position: fixed; left: 24px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex; flex-direction: column; gap: 6px;
+  background: var(--sidebar-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 10px;
+  box-shadow: var(--shadow);
+  transition: background 0.25s, border-color 0.25s;
+}
+.sidebar-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border2);
+  cursor: pointer; transition: all 0.2s;
+  position: relative;
+}
+.sidebar-dot.active { background: var(--blue); transform: scale(1.3); }
+.sidebar-dot:hover { background: var(--blue); opacity: 0.7; }
+.sidebar-dot::after {
+  content: attr(data-label);
+  position: absolute; left: 18px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  white-space: nowrap; color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 5px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.15s;
+  box-shadow: var(--shadow);
+  font-family: 'JetBrains Mono', monospace;
+}
+.sidebar-dot:hover::after { opacity: 1; }
+
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+  position: fixed; top: 24px; right: 24px; z-index: 200;
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 12px; font-weight: 600;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  user-select: none;
+}
+.theme-toggle:hover { box-shadow: var(--shadow-lg); }
+.theme-toggle .icon { font-size: 14px; line-height: 1; }
+
+/* ── EYEBROW ── */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 24px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.eyebrow::before {
+  content: ''; display: block; width: 20px; height: 1px; background: var(--blue);
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 800; letter-spacing: -0.04em;
+  line-height: 1.0; color: var(--text);
+  margin-bottom: 14px;
+}
+.section-desc {
+  font-size: 15px; color: var(--muted);
+  line-height: 1.75; max-width: 520px;
+  margin-bottom: 56px;
+}
+
+/* ────────────────────────────
+   COVER
+──────────────────────────── */
+#cover {
+  min-height: 100vh;
+  background: var(--cover-bg);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 48px;
+  position: relative; overflow: hidden;
+  transition: background 0.25s;
+}
+
+/* Light mode cover: very subtle dot grid */
+[data-theme="light"] #cover {
+  background-image: radial-gradient(circle, #ccc6be 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -14px -14px;
+}
+[data-theme="light"] #cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 10%, rgba(0,104,214,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 90%, rgba(245,158,11,0.05) 0%, transparent 50%),
+    linear-gradient(to bottom, transparent 60%, rgba(253,249,245,0.9) 100%);
+  pointer-events: none;
+}
+
+/* Dark mode cover: deep navy with blue glow */
+[data-theme="dark"] #cover {
+  background-image:
+    linear-gradient(rgba(0,104,214,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,104,214,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+[data-theme="dark"] #cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 75% 15%, rgba(0,104,214,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 85%, rgba(0,200,180,0.06) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.cover-corner {
+  position: absolute; top: 40px; right: 48px;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  z-index: 1;
+}
+.cover-corner-item {
+  font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--subtle);
+}
+
+.cover-wordmark {
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(72px, 13vw, 170px);
+  font-weight: 900; letter-spacing: -0.055em;
+  line-height: 0.9; color: var(--cover-wm);
+  position: relative; z-index: 1;
+  margin-bottom: 48px;
+  transition: color 0.25s;
+}
+.cover-wordmark .accent { color: var(--blue); }
+
+.cover-rule {
+  width: 100%; height: 1px;
+  background: var(--cover-meta-border);
+  margin-bottom: 32px;
+  position: relative; z-index: 1;
+}
+
+.cover-meta {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  flex-wrap: wrap; gap: 20px;
+  position: relative; z-index: 1;
+}
+.cover-tagline {
+  font-size: 15px; font-weight: 400;
+  color: var(--muted); max-width: 400px; line-height: 1.65;
+}
+.cover-right {
+  display: flex; flex-direction: column; gap: 4px; text-align: right;
+}
+.cover-right span {
+  font-size: 11px; color: var(--subtle);
+  letter-spacing: 0.12em; font-family: 'JetBrains Mono', monospace;
+}
+
+/* ────────────────────────────
+   BRAND OVERVIEW
+──────────────────────────── */
+#overview { background: var(--bg); }
+
+.pillars {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+}
+.pillar {
+  background: var(--surface);
+  padding: 36px 28px;
+  border-right: 1px solid var(--border);
+  transition: background 0.25s;
+}
+.pillar:last-child { border-right: none; }
+.pillar:hover { background: var(--surface2); }
+.pillar-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--blue);
+  letter-spacing: 0.22em; margin-bottom: 20px;
+}
+.pillar-word {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 24px; font-weight: 800;
+  letter-spacing: -0.03em; color: var(--text);
+  margin-bottom: 10px;
+}
+.pillar-desc { font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+.mission-box {
+  margin-top: 10px;
+  padding: 44px 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  position: relative; overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.mission-box::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: var(--blue);
+}
+.mission-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--blue);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 18px;
+}
+.mission-text {
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 600; color: var(--text);
+  letter-spacing: -0.025em; line-height: 1.45;
+}
+
+.values-grid {
+  margin-top: 10px;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+}
+.value-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 24px;
+  box-shadow: var(--shadow);
+}
+.value-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--subtle);
+  letter-spacing: 0.16em; margin-bottom: 14px;
+}
+.value-title {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 20px; font-weight: 800;
+  letter-spacing: -0.03em; color: var(--text);
+  margin-bottom: 8px;
+}
+.value-desc { font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+/* ────────────────────────────
+   LOGO
+──────────────────────────── */
+#logo-section { background: var(--bg); }
+
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.logo-tile {
+  border-radius: 14px; padding: 40px 32px;
+  display: flex; flex-direction: column;
+  justify-content: space-between; min-height: 180px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.logo-tile .logo-img {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 28px; font-weight: 900;
+  letter-spacing: -0.05em;
+}
+.logo-tile .tile-label {
+  font-size: 9.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-family: 'JetBrains Mono', monospace;
+}
+/* Light on cream */
+.lt-light { background: var(--cream); }
+.lt-light .logo-img { color: var(--dark); }
+.lt-light .tile-label { color: #999999; }
+/* Dark tile — always dark */
+.lt-dark { background: #171717; border-color: #171717; }
+.lt-dark .logo-img { color: #ffffff; }
+.lt-dark .tile-label { color: #404040; }
+/* Blue tile — always blue */
+.lt-blue { background: var(--blue); border-color: var(--blue); }
+.lt-blue .logo-img { color: #ffffff; }
+.lt-blue .tile-label { color: rgba(255,255,255,0.45); }
+
+.logo-clearspace {
+  margin-top: 10px; grid-column: span 3;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px; padding: 36px 32px;
+  display: flex; align-items: center; gap: 48px;
+  flex-wrap: wrap; box-shadow: var(--shadow);
+}
+.clearspace-diagram {
+  position: relative; display: inline-flex;
+  align-items: center; justify-content: center; flex-shrink: 0;
+}
+.cs-inner {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 28px; font-weight: 900;
+  letter-spacing: -0.05em; color: var(--text);
+  padding: 16px; border: 1.5px dashed var(--blue);
+}
+.cs-outer { position: absolute; inset: -18px; border: 1px dashed var(--border2); }
+.cs-label {
+  position: absolute; top: 50%;
+  transform: translateY(-50%);
+  font-size: 9px; color: var(--blue);
+  letter-spacing: 0.14em; font-family: 'JetBrains Mono', monospace;
+}
+.cs-label.left { right: calc(100% + 8px); white-space: nowrap; }
+.cs-label.right { left: calc(100% + 8px); white-space: nowrap; }
+.cs-text { flex: 1; }
+.cs-text h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.cs-text p { font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+.logo-dont {
+  margin-top: 10px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+.dont-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px 20px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 14px;
+  position: relative; overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.dont-tile::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    -45deg, transparent, transparent 9px,
+    rgba(220,38,38,0.05) 9px, rgba(220,38,38,0.05) 10px
+  );
+  pointer-events: none;
+}
+.dont-logo {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 22px; font-weight: 900; letter-spacing: -0.05em;
+}
+.dont-label { font-size: 10px; text-align: center; color: var(--muted); line-height: 1.5; }
+.dont-x {
+  position: absolute; top: 10px; right: 10px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(220,38,38,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; color: #dc2626; font-weight: 700;
+}
+
+/* ────────────────────────────
+   COLOUR SYSTEM
+──────────────────────────── */
+#colour { background: var(--bg); }
+
+.colour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(3, 1fr);
+  gap: 10px;
+}
+.colour-card {
+  border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.swatch { width: 100%; display: block; }
+.swatch-large { height: 150px; }
+.swatch-small { height: 90px; }
+.colour-meta { background: var(--surface); padding: 16px 18px; }
+.colour-name { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+.colour-hex {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--blue); letter-spacing: 0.08em; display: block;
+}
+.colour-usage { font-size: 10px; color: var(--muted); margin-top: 3px; line-height: 1.4; }
+
+.colour-row-label {
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--subtle);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 36px; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 12px;
+}
+.colour-row-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.neutral-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.neutral-chip {
+  border-radius: 10px; padding: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.neutral-swatch { height: 32px; border-radius: 5px; margin-bottom: 10px; }
+.neutral-val { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--mono); display: block; }
+.neutral-lbl { font-size: 9.5px; color: var(--muted); display: block; margin-top: 2px; }
+
+.colour-combos {
+  margin-top: 36px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+.colour-combo {
+  border-radius: 14px; padding: 28px 20px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.cc-label { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+.cc-name { font-family: 'Epilogue', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -0.03em; }
+.cc-desc { font-size: 10px; line-height: 1.55; }
+
+/* ────────────────────────────
+   TYPOGRAPHY
+──────────────────────────── */
+#typography { background: var(--bg); }
+
+.font-specimens { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.type-specimen {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden; box-shadow: var(--shadow);
+}
+.type-meta-bar {
+  padding: 14px 24px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.type-meta-name { font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 0.04em; }
+.type-meta-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.type-tag {
+  padding: 2px 10px; border-radius: 4px;
+  background: var(--surface2); border: 1px solid var(--border);
+  font-size: 9px; font-family: 'JetBrains Mono', monospace;
+  color: var(--blue); letter-spacing: 0.08em;
+}
+.type-preview { padding: 36px 28px; }
+
+.type-scale {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); margin-bottom: 10px;
+}
+.scale-row {
+  display: flex; align-items: baseline; gap: 24px;
+  padding: 20px 28px; border-bottom: 1px solid var(--border);
+}
+.scale-row:last-child { border-bottom: none; }
+.scale-label {
+  font-size: 9px; font-family: 'JetBrains Mono', monospace;
+  color: var(--subtle); letter-spacing: 0.14em; width: 90px; flex-shrink: 0;
+}
+.scale-sample { color: var(--text); letter-spacing: -0.03em; }
+.scale-info {
+  margin-left: auto; font-size: 9px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--mono); text-align: right; flex-shrink: 0;
+}
+
+.type-combo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.combo-tile {
+  border-radius: 14px; padding: 32px 28px;
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.combo-light { background: var(--cream); }
+.combo-dark  { background: var(--deep); }
+
+/* ────────────────────────────
+   VOICE & TONE
+──────────────────────────── */
+#voice { background: var(--bg); }
+
+.voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.voice-tile {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 32px 28px; box-shadow: var(--shadow);
+}
+.voice-tile-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.voice-tile-sub { font-size: 11px; color: var(--muted); margin-bottom: 20px; }
+
+.word-pairs { display: flex; flex-direction: column; gap: 8px; }
+.word-pair {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.word-do { font-size: 12px; font-weight: 600; color: #16a34a; flex: 1; }
+.word-arrow { color: var(--subtle); font-size: 11px; }
+.word-dont { font-size: 12px; color: var(--muted); flex: 1; text-align: right; text-decoration: line-through; }
+
+.headlines-box {
+  margin-top: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 36px; box-shadow: var(--shadow);
+}
+.headline-item {
+  padding: 20px 0; border-bottom: 1px solid var(--border);
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.headline-item:last-child { border-bottom: none; }
+.headline-type {
+  font-size: 9px; font-family: 'JetBrains Mono', monospace;
+  color: var(--blue); letter-spacing: 0.16em; text-transform: uppercase;
+  flex-shrink: 0; padding-top: 4px; width: 80px;
+}
+.headline-text {
+  font-family: 'Inter', sans-serif; font-weight: 800;
+  letter-spacing: -0.04em; color: var(--text);
+}
+
+/* ────────────────────────────
+   UI COMPONENTS
+──────────────────────────── */
+#components { background: var(--bg); }
+
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.comp-tile {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden; box-shadow: var(--shadow);
+}
+.comp-tile-header {
+  padding: 14px 24px; border-bottom: 1px solid var(--border);
+  font-size: 9.5px; font-weight: 700; color: var(--muted);
+  letter-spacing: 0.16em; text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+.comp-tile-body { padding: 32px 24px; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px;
+  border-radius: 10px; padding: 0 22px; height: 44px;
+  border: none; cursor: pointer; transition: all 0.15s; text-decoration: none;
+}
+.btn-primary  { background: var(--blue); color: #fff; box-shadow: 0 2px 14px rgba(0,104,214,0.25); }
+.btn-secondary { background: var(--dark); color: #fff; }
+.btn-ghost {
+  background: transparent; color: var(--text);
+  border: 1.5px solid var(--border2);
+}
+.btn-sm { height: 36px; padding: 0 16px; font-size: 13px; border-radius: 8px; }
+.btn-arrow { font-size: 16px; }
+
+.metric-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.metric-mini { border-radius: 12px; padding: 18px 18px; }
+.mm-blue  { background: var(--blue); }
+.mm-dark  { background: var(--surface2); border: 1px solid var(--border); }
+.mm-amber { background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.18); }
+.mm-teal  { background: rgba(0,200,180,0.05); border: 1px solid rgba(0,200,180,0.15); }
+.metric-mini-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px; }
+.metric-mini-val { font-size: 32px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; margin-bottom: 2px; }
+.metric-mini-sub { font-size: 10px; }
+.on-blue .metric-mini-lbl { color: rgba(255,255,255,0.55); }
+.on-blue .metric-mini-val { color: #fff; }
+.on-blue .metric-mini-sub { color: rgba(255,255,255,0.45); }
+.on-dark .metric-mini-lbl { color: var(--subtle); }
+.on-dark .metric-mini-val { color: var(--blue); }
+.on-dark .metric-mini-sub { color: var(--muted); }
+.on-amber .metric-mini-lbl { color: #d97706; }
+.on-amber .metric-mini-val { color: #b45309; }
+.on-amber .metric-mini-sub { color: #b45309; }
+.on-teal .metric-mini-lbl  { color: #0d9488; }
+.on-teal .metric-mini-val  { color: #0f766e; }
+.on-teal .metric-mini-sub  { color: #0f766e; }
+
+[data-theme="dark"] .on-amber .metric-mini-val { color: var(--amber); }
+[data-theme="dark"] .on-amber .metric-mini-lbl { color: rgba(245,158,11,0.7); }
+[data-theme="dark"] .on-amber .metric-mini-sub { color: rgba(245,158,11,0.5); }
+[data-theme="dark"] .on-teal .metric-mini-val  { color: var(--teal); }
+[data-theme="dark"] .on-teal .metric-mini-lbl  { color: rgba(0,200,180,0.7); }
+[data-theme="dark"] .on-teal .metric-mini-sub  { color: rgba(0,200,180,0.5); }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  padding: 5px 13px; border-radius: 6px; font-size: 11px; font-weight: 500;
+  border: 1px solid var(--border); background: var(--surface2); color: var(--text2);
+}
+.tag-blue { background: rgba(0,104,214,0.08); border-color: rgba(0,104,214,0.2); color: var(--blue); }
+.tag-amber { background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.2); color: #b45309; }
+[data-theme="dark"] .tag-amber { color: var(--amber); }
+.tag-teal { background: rgba(0,200,180,0.08); border-color: rgba(0,200,180,0.2); color: #0d9488; }
+[data-theme="dark"] .tag-teal { color: var(--teal); }
+.tag-sm { padding: 3px 10px; font-size: 10px; }
+
+.form-demo { display: flex; flex-direction: column; gap: 12px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: 11px; font-weight: 600; color: var(--text); letter-spacing: 0.04em; }
+.form-input {
+  height: 40px; border-radius: 9px;
+  border: 1.5px solid var(--border);
+  background: var(--surface); color: var(--text);
+  padding: 0 14px; font-size: 13px; font-family: 'Inter', sans-serif;
+  outline: none; transition: border-color 0.15s;
+}
+.form-input:focus { border-color: var(--blue); }
+.form-input::placeholder { color: var(--subtle); }
+
+/* ────────────────────────────
+   MOTION
+──────────────────────────── */
+#motion { background: var(--bg); }
+
+.motion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.motion-tile {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden; box-shadow: var(--shadow);
+}
+.motion-demo {
+  height: 140px; display: flex; align-items: center; justify-content: center;
+  background: var(--surface2); border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.motion-info { padding: 18px 20px; }
+.motion-name { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.motion-spec { font-size: 10px; color: var(--blue); font-family: 'JetBrains Mono', monospace; display: block; margin-bottom: 4px; }
+.motion-desc { font-size: 11px; color: var(--muted); line-height: 1.55; }
+
+@keyframes demoFadeUp {
+  0%   { opacity: 0; transform: translateY(16px); }
+  40%  { opacity: 1; transform: translateY(0); }
+  75%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+@keyframes demoFadeIn {
+  0%   { opacity: 0; }
+  40%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes demoHover {
+  0%   { transform: scale(1);    box-shadow: none; }
+  35%  { transform: scale(1.04); box-shadow: 0 8px 28px rgba(0,104,214,0.28); }
+  65%  { transform: scale(1.04); box-shadow: 0 8px 28px rgba(0,104,214,0.28); }
+  100% { transform: scale(1);    box-shadow: none; }
+}
+@keyframes demoSpotlight {
+  0%   { opacity: 0; width: 0px;  }
+  40%  { opacity: 1; width: 120px; }
+  75%  { opacity: 1; width: 120px; }
+  100% { opacity: 0; width: 0px;  }
+}
+.demo-fade-up-box {
+  font-family: 'Epilogue', sans-serif; font-size: 16px; font-weight: 800;
+  letter-spacing: -0.03em; color: var(--text);
+  animation: demoFadeUp 2.4s ease-in-out infinite;
+}
+.demo-fade-in-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 20px;
+  font-size: 12px; font-weight: 600; color: var(--text);
+  animation: demoFadeIn 2.4s ease-in-out infinite;
+}
+.demo-hover-box {
+  background: var(--blue); color: #fff;
+  border-radius: 10px; padding: 10px 20px;
+  font-size: 13px; font-weight: 600;
+  cursor: pointer; animation: demoHover 2.4s ease-in-out infinite;
+}
+.demo-spotlight-box {
+  position: relative; overflow: hidden;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 20px;
+  font-size: 12px; font-weight: 600; color: var(--muted);
+}
+.demo-spotlight-box::before {
+  content: '';
+  position: absolute; top: 0; left: -60px; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,104,214,0.2), transparent);
+  animation: demoSpotlight 2.4s ease-in-out infinite;
+}
+
+/* ────────────────────────────
+   IMAGERY
+──────────────────────────── */
+#imagery { background: var(--bg); }
+
+.imagery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; }
+.imagery-tile {
+  border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--border); position: relative;
+  box-shadow: var(--shadow);
+}
+.imagery-tile-content {
+  width: 100%; height: 200px;
+  display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: flex-end;
+  padding: 20px 20px;
+  background: linear-gradient(135deg, #060d1f 0%, #0f172a 60%, #1e3a5f 100%);
+  position: relative; overflow: hidden;
+}
+.imagery-tile-content::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(0,104,214,0.2) 0%, transparent 60%);
+}
+.imagery-tile-label {
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--blue);
+  font-family: 'JetBrains Mono', monospace;
+  position: relative; z-index: 1; margin-bottom: 8px;
+}
+.imagery-tile-title {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 18px; font-weight: 800; letter-spacing: -0.03em;
+  color: #ffffff; position: relative; z-index: 1;
+}
+.imagery-meta { background: var(--surface); padding: 16px 20px; }
+.imagery-meta-txt { font-size: 11px; color: var(--muted); line-height: 1.55; }
+
+.art-direction {
+  margin-top: 10px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.art-tile {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 24px; box-shadow: var(--shadow);
+}
+.art-tile-header {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+}
+.art-tile-icon {
+  width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.art-do   { background: rgba(22,163,74,0.1); }
+.art-dont { background: rgba(220,38,38,0.08); }
+.art-tile-name {
+  font-size: 12px; font-weight: 700; color: var(--text);
+}
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.art-list li {
+  font-size: 12px; color: var(--text2);
+  padding-left: 20px; position: relative; line-height: 1.55;
+}
+.art-list li::before {
+  content: '–'; position: absolute; left: 0; color: var(--subtle);
+}
+
+/* ────────────────────────────
+   BUSINESS CARDS
+──────────────────────────── */
+#cards { background: var(--bg); }
+
+.cards-display {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  margin-bottom: 40px;
+}
+.card-set { display: flex; flex-direction: column; gap: 14px; }
+.card-set-label {
+  font-size: 9px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--subtle);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Card display area: always neutral */
+.card-display-area {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 20px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 10px; box-shadow: var(--shadow);
+}
+.card-name {
+  font-size: 12px; font-weight: 700; color: var(--text);
+}
+.card-subtitle { font-size: 10px; color: var(--muted); }
+
+/* Business cards themselves — hardcoded as per print specs */
+.bc {
+  width: 242px; /* 85.7mm ≈ 242px at 72dpi screen */
+  height: 157px;
+  border-radius: 6px;
+  position: relative; overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15), 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* Card 1: Ultra-Minimal */
+.bc1 { background: #ffffff; }
+.bc1-bar { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #0068d6; }
+.bc1-content { padding: 20px 22px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.bc1-name { font-family: 'Epilogue', sans-serif; font-size: 15px; font-weight: 700; color: #171717; letter-spacing: -0.03em; }
+.bc1-title { font-size: 8.5px; color: #999; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; font-family: 'Inter', sans-serif; }
+.bc1-logo { font-family: 'Epilogue', sans-serif; font-weight: 900; font-size: 13px; letter-spacing: -0.04em; color: #171717; }
+.bc1-contact { display: flex; flex-direction: column; gap: 2px; }
+.bc1-contact span { font-size: 7.5px; color: #666; font-family: 'Inter', sans-serif; letter-spacing: 0.02em; }
+
+/* Card 2: Bold Tech-Forward */
+.bc2 { background: #0a0a0a; }
+.bc2-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,104,214,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,104,214,0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.bc2-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #0068d6; }
+.bc2-content { padding: 18px 20px 18px 26px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 1; }
+.bc2-name { font-family: 'Epilogue', sans-serif; font-size: 15px; font-weight: 800; color: #fff; letter-spacing: -0.03em; }
+.bc2-title { font-family: 'JetBrains Mono', monospace; font-size: 7.5px; color: #0068d6; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 3px; }
+.bc2-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+.bc2-logo { font-family: 'Epilogue', sans-serif; font-weight: 900; font-size: 13px; letter-spacing: -0.04em; color: #fff; }
+.bc2-contact { display: flex; flex-direction: column; gap: 2px; text-align: right; }
+.bc2-contact span { font-family: 'JetBrains Mono', monospace; font-size: 6.5px; color: #505050; }
+
+/* Card 3: Premium Futuristic */
+.bc3 { background: #060608; }
+.bc3-atm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(0,200,180,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(0,104,214,0.08) 0%, transparent 50%);
+}
+.bc3-dot {
+  position: absolute; top: 22px; right: 22px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #00c8b4;
+  box-shadow: 0 0 12px rgba(0,200,180,0.8);
+}
+.bc3-content { padding: 20px 22px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 1; }
+.bc3-name { font-family: 'Epilogue', sans-serif; font-size: 16px; font-weight: 300; font-style: italic; color: #f8f8f8; letter-spacing: -0.01em; }
+.bc3-title { font-family: 'Inter', sans-serif; font-size: 7.5px; color: #00c8b4; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 3px; }
+.bc3-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+.bc3-logo { font-family: 'Epilogue', sans-serif; font-weight: 900; font-size: 13px; letter-spacing: -0.04em; color: #fff; }
+.bc3-contact { display: flex; flex-direction: column; gap: 2px; text-align: right; }
+.bc3-contact span { font-size: 7px; color: rgba(255,255,255,0.3); font-family: 'Inter', sans-serif; }
+
+.cards-spec {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px 32px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  box-shadow: var(--shadow);
+}
+.spec-item-label {
+  font-size: 9px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--subtle);
+  font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;
+}
+.spec-item-val { font-size: 13px; font-weight: 600; color: var(--text); }
+.spec-item-note { font-size: 10px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+
+/* ────────────────────────────
+   DOCUMENT FOOTER
+──────────────────────────── */
+.doc-footer {
+  padding: 48px 48px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 20px;
+}
+.doc-footer-logo {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 22px; font-weight: 900;
+  letter-spacing: -0.05em; color: var(--text);
+}
+.doc-footer-meta {
+  font-size: 11px; color: var(--subtle);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em; text-align: right;
+}
+
+/* ── PAGE PROGRESS BAR ── */
+.progress-bar {
+  position: fixed; top: 0; left: 0; height: 2px;
+  background: var(--blue); z-index: 999;
+  width: 0%; transition: width 0.1s linear;
+}
+</style>
+</head>
+<body>
+
+<!-- Progress bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Theme toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+  <span class="icon" id="themeIcon">🌙</span>
+  <span id="themeLabel">Dark</span>
+</button>
+
+<!-- Sidebar navigation -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-dot active" data-label="Cover"      onclick="scrollTo('cover')"></div>
+  <div class="sidebar-dot"        data-label="Overview"   onclick="scrollTo('overview')"></div>
+  <div class="sidebar-dot"        data-label="Logo"       onclick="scrollTo('logo-section')"></div>
+  <div class="sidebar-dot"        data-label="Colour"     onclick="scrollTo('colour')"></div>
+  <div class="sidebar-dot"        data-label="Type"       onclick="scrollTo('typography')"></div>
+  <div class="sidebar-dot"        data-label="Voice"      onclick="scrollTo('voice')"></div>
+  <div class="sidebar-dot"        data-label="Components" onclick="scrollTo('components')"></div>
+  <div class="sidebar-dot"        data-label="Motion"     onclick="scrollTo('motion')"></div>
+  <div class="sidebar-dot"        data-label="Imagery"    onclick="scrollTo('imagery')"></div>
+  <div class="sidebar-dot"        data-label="Cards"      onclick="scrollTo('cards')"></div>
+</nav>
+
+<!-- ── COVER ── -->
+<section id="cover">
+  <div class="cover-corner">
+    <span class="cover-corner-item">Brand Guidelines</span>
+    <span class="cover-corner-item">Version 1.0 · 2026</span>
+    <span class="cover-corner-item">Confidential</span>
+  </div>
+  <div class="cover-wordmark">
+    EXC<span class="accent">E</span>L
+  </div>
+  <div class="cover-rule"></div>
+  <div class="cover-meta">
+    <p class="cover-tagline">Digital marketing infrastructure for businesses that mean business. One system, consistently applied.</p>
+    <div class="cover-right">
+      <span>Excel Consultancy</span>
+      <span>Rome, Italy · Global</span>
+      <span>theexcelagency.com</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── BRAND OVERVIEW ── -->
+<section id="overview" class="section">
+  <div class="wrap">
+    <div class="eyebrow">01 / Brand Overview</div>
+    <h2 class="section-title">What we stand for</h2>
+    <p class="section-desc">Excel is a performance-first digital marketing agency. Our brand reflects precision, intelligence, and the kind of clarity that moves businesses forward.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-word">Precise</div>
+        <p class="pillar-desc">Every campaign decision is data-driven. We don't guess — we measure, optimise, and prove.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-word">Intelligent</div>
+        <p class="pillar-desc">We combine AI tools with human expertise. Technology amplifies strategy, not the other way.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-word">Direct</div>
+        <p class="pillar-desc">Plain language, honest results. No jargon, no vanity metrics. Just what matters.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div class="pillar-word">Ambitious</div>
+        <p class="pillar-desc">We work with brands that want to grow seriously. Comfort zones don't interest us.</p>
+      </div>
+    </div>
+
+    <div class="mission-box">
+      <div class="mission-label">Mission</div>
+      <p class="mission-text">"To build the digital marketing infrastructure that helps ambitious brands compete and win — efficiently, measurably, and sustainably."</p>
+    </div>
+
+    <div class="values-grid" style="margin-top:10px">
+      <div class="value-card">
+        <div class="value-num">01 / Principle</div>
+        <div class="value-title">Results over optics</div>
+        <p class="value-desc">We care about outcomes, not appearances. A campaign that works quietly beats a campaign that looks good but underdelivers.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02 / Principle</div>
+        <div class="value-title">Radical transparency</div>
+        <p class="value-desc">Clients see everything. Full attribution, honest reporting, no selective presentations. Truth builds better partnerships.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03 / Principle</div>
+        <div class="value-title">Leverage AI deliberately</div>
+        <p class="value-desc">We use AI where it multiplies human judgement — never to replace it. Strategy requires context machines can't hold.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOGO SYSTEM ── -->
+<section id="logo-section" class="section">
+  <div class="wrap">
+    <div class="eyebrow">02 / Logo System</div>
+    <h2 class="section-title">The wordmark</h2>
+    <p class="section-desc">The Excel wordmark uses Epilogue 900 — tight, assured, built for performance contexts. It works at any scale.</p>
+
+    <div class="logo-grid">
+      <div class="logo-tile lt-light">
+        <div class="logo-img">EXCEL</div>
+        <div class="tile-label">On light · primary usage</div>
+      </div>
+      <div class="logo-tile lt-dark">
+        <div class="logo-img">EXCEL</div>
+        <div class="tile-label">On dark · inverted</div>
+      </div>
+      <div class="logo-tile lt-blue">
+        <div class="logo-img">EXCEL</div>
+        <div class="tile-label">On brand blue · CTAs</div>
+      </div>
+
+      <div class="logo-clearspace">
+        <div class="clearspace-diagram">
+          <div class="cs-outer"></div>
+          <div class="cs-inner">EXCEL</div>
+          <span class="cs-label left">0.5× cap-height</span>
+          <span class="cs-label right">0.5× cap-height</span>
+        </div>
+        <div class="cs-text">
+          <h4>Clear space rule</h4>
+          <p>Always maintain a minimum clear space of 0.5× the cap-height of the wordmark on all four sides. Never crowd the logo with other elements, imagery, or competing type.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:10px">
+      <div class="colour-row-label">Logo don'ts</div>
+    </div>
+    <div class="logo-dont">
+      <div class="dont-tile">
+        <div class="dont-x">✕</div>
+        <div class="dont-logo" style="color:#0068d6;filter:blur(1.5px)">EXCEL</div>
+        <div class="dont-label">Do not add drop shadows or blur effects</div>
+      </div>
+      <div class="dont-tile">
+        <div class="dont-x">✕</div>
+        <div class="dont-logo" style="color:#999;transform:skewX(-12deg)">EXCEL</div>
+        <div class="dont-label">Do not skew, stretch, or distort</div>
+      </div>
+      <div class="dont-tile">
+        <div class="dont-x">✕</div>
+        <div class="dont-logo" style="color:#f59e0b;font-weight:300">EXCEL</div>
+        <div class="dont-label">Do not use unapproved colours or weights</div>
+      </div>
+      <div class="dont-tile">
+        <div class="dont-x">✕</div>
+        <div class="dont-logo" style="color:#0a0a0a;letter-spacing:0.15em">EXCEL</div>
+        <div class="dont-label">Do not increase tracking or add outlines</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COLOUR SYSTEM ── -->
+<section id="colour" class="section">
+  <div class="wrap">
+    <div class="eyebrow">03 / Colour System</div>
+    <h2 class="section-title">Our palette</h2>
+    <p class="section-desc">A warm neutral foundation elevated by electric blue. Amber and teal are functional accents — used selectively for data and emphasis.</p>
+
+    <div class="colour-row-label">Primary palette</div>
+    <div class="colour-grid">
+      <!-- Primary large swatches -->
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#0068d6"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Excel Blue</div>
+          <span class="colour-hex">#0068d6</span>
+          <div class="colour-usage">Primary CTAs, links, interactive elements, brand accent</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#171717"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Excel Dark</div>
+          <span class="colour-hex">#171717</span>
+          <div class="colour-usage">Primary text, dark backgrounds, secondary CTAs</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#fdf9f5;border:1px solid #e4ddd6"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Excel Cream</div>
+          <span class="colour-hex">#fdf9f5</span>
+          <div class="colour-usage">Page background, warm surface, light mode foundation</div>
+        </div>
+      </div>
+      <!-- Accent small swatches -->
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#f59e0b"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Amber</div>
+          <span class="colour-hex">#f59e0b</span>
+          <div class="colour-usage">Alerts, warning states, highlight metrics</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#00c8b4"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Teal</div>
+          <span class="colour-hex">#00c8b4</span>
+          <div class="colour-usage">Success states, AI features, positive growth</div>
+        </div>
+      </div>
+      <div class="colour-card">
+        <div class="swatch swatch-large" style="background:#060d1f"></div>
+        <div class="colour-meta">
+          <div class="colour-name">Deep Navy</div>
+          <span class="colour-hex">#060d1f</span>
+          <div class="colour-usage">AI/tech section backgrounds, dark panels</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="colour-row-label">Neutral scale</div>
+    <div class="neutral-row">
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#0a0a0a"></div>
+        <span class="neutral-val">#0a0a0a</span>
+        <span class="neutral-lbl">Ink</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#404040"></div>
+        <span class="neutral-val">#404040</span>
+        <span class="neutral-lbl">Text</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#666666"></div>
+        <span class="neutral-val">#666666</span>
+        <span class="neutral-lbl">Muted</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#a0a0a0"></div>
+        <span class="neutral-val">#a0a0a0</span>
+        <span class="neutral-lbl">Subtle</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#e4ddd6"></div>
+        <span class="neutral-val">#e4ddd6</span>
+        <span class="neutral-lbl">Border</span>
+      </div>
+      <div class="neutral-chip">
+        <div class="neutral-swatch" style="background:#fdf9f5;border:1px solid #e4ddd6;border-radius:5px;height:32px"></div>
+        <span class="neutral-val">#fdf9f5</span>
+        <span class="neutral-lbl">Surface</span>
+      </div>
+    </div>
+
+    <div class="colour-row-label">Approved colour combinations</div>
+    <div class="colour-combos">
+      <div class="colour-combo" style="background:#0068d6">
+        <span class="cc-label" style="color:rgba(255,255,255,0.5)">Blue / White</span>
+        <span class="cc-name" style="color:#fff">Excel</span>
+        <span class="cc-desc" style="color:rgba(255,255,255,0.7)">CTAs, primary buttons, brand blocks</span>
+      </div>
+      <div class="colour-combo" style="background:#fdf9f5;border:1px solid #e4ddd6">
+        <span class="cc-label" style="color:#a0a0a0">Cream / Dark</span>
+        <span class="cc-name" style="color:#171717">Excel</span>
+        <span class="cc-desc" style="color:#666">Warm body text, light mode standard</span>
+      </div>
+      <div class="colour-combo" style="background:#060d1f">
+        <span class="cc-label" style="color:rgba(255,255,255,0.3)">Navy / Blue</span>
+        <span class="cc-name" style="color:#60a5fa">Excel</span>
+        <span class="cc-desc" style="color:rgba(255,255,255,0.4)">AI features, tech contexts, dark panels</span>
+      </div>
+      <div class="colour-combo" style="background:#171717">
+        <span class="cc-label" style="color:rgba(255,255,255,0.3)">Dark / White</span>
+        <span class="cc-name" style="color:#fff">Excel</span>
+        <span class="cc-desc" style="color:rgba(255,255,255,0.4)">Secondary CTAs, inverted components</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TYPOGRAPHY ── -->
+<section id="typography" class="section">
+  <div class="wrap">
+    <div class="eyebrow">04 / Typography</div>
+    <h2 class="section-title">Type system</h2>
+    <p class="section-desc">Two voices: Epilogue for headlines (bold, tight, authoritative) and Geist Sans for body (neutral, legible, modern). JetBrains Mono for all technical strings.</p>
+
+    <div class="font-specimens">
+      <div class="type-specimen">
+        <div class="type-meta-bar">
+          <span class="type-meta-name">Epilogue — Display & Headings</span>
+          <div class="type-meta-tags">
+            <span class="type-tag">Bold 800</span>
+            <span class="type-tag">Black 900</span>
+            <span class="type-tag">−0.04em</span>
+          </div>
+        </div>
+        <div class="type-preview">
+          <div style="font-family:'Epilogue',sans-serif;font-size:42px;font-weight:900;letter-spacing:-0.05em;line-height:1;color:var(--text);margin-bottom:16px">
+            Growth<br>measured.
+          </div>
+          <div style="font-family:'Epilogue',sans-serif;font-size:16px;font-weight:500;letter-spacing:-0.02em;color:var(--muted)">
+            Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm<br>
+            0 1 2 3 4 5 6 7 8 9
+          </div>
+        </div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-meta-bar">
+          <span class="type-meta-name">Geist Sans — Body & UI</span>
+          <div class="type-meta-tags">
+            <span class="type-tag">Regular 400</span>
+            <span class="type-tag">Medium 500</span>
+            <span class="type-tag">SemiBold 600</span>
+          </div>
+        </div>
+        <div class="type-preview">
+          <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:400;line-height:1.75;color:var(--text2);margin-bottom:16px">
+            We build the infrastructure that helps<br>
+            ambitious brands compete — precisely<br>
+            and measurably.
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);letter-spacing:0.04em">
+            JetBrains Mono · Data · Tags · Code
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-scale">
+      <div class="scale-row">
+        <span class="scale-label">DISPLAY</span>
+        <span class="scale-sample" style="font-size:48px;font-weight:800;font-family:'Epilogue',sans-serif">52% CPL drop</span>
+        <span class="scale-info">68px / 800 / −0.05em</span>
+      </div>
+      <div class="scale-row">
+        <span class="scale-label">H1</span>
+        <span class="scale-sample" style="font-size:34px;font-weight:800;font-family:'Epilogue',sans-serif">Performance SEO</span>
+        <span class="scale-info">40px / 800 / −0.04em</span>
+      </div>
+      <div class="scale-row">
+        <span class="scale-label">H2</span>
+        <span class="scale-sample" style="font-size:26px;font-weight:700;font-family:'Epilogue',sans-serif">Campaign analytics</span>
+        <span class="scale-info">28px / 700 / −0.03em</span>
+      </div>
+      <div class="scale-row">
+        <span class="scale-label">H3</span>
+        <span class="scale-sample" style="font-size:18px;font-weight:700;font-family:'Epilogue',sans-serif">Attribution model</span>
+        <span class="scale-info">20px / 700 / −0.02em</span>
+      </div>
+      <div class="scale-row">
+        <span class="scale-label">BODY LG</span>
+        <span class="scale-sample" style="font-size:17px;font-weight:400;letter-spacing:0">We measure what matters to your business.</span>
+        <span class="scale-info">17px / 400 / 1.75lh</span>
+      </div>
+      <div class="scale-row">
+        <span class="scale-label">BODY</span>
+        <span class="scale-sample" style="font-size:15px;font-weight:400;letter-spacing:0">Organic traffic, paid ROAS, cost-per-lead — tracked precisely.</span>
+        <span class="scale-info">15px / 400 / 1.70lh</span>
+      </div>
+      <div class="scale-row">
+        <span class="scale-label">CAPTION</span>
+        <span class="scale-sample" style="font-size:12px;font-weight:500;letter-spacing:0">3-month rolling average · Google Analytics 4</span>
+        <span class="scale-info">12px / 500 / normal</span>
+      </div>
+      <div class="scale-row" style="border-bottom:none">
+        <span class="scale-label">LABEL</span>
+        <span class="scale-sample" style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-family:'JetBrains Mono',monospace">PERFORMANCE MARKETING</span>
+        <span class="scale-info">11px / 700 / 0.08em UC</span>
+      </div>
+    </div>
+
+    <div class="type-combo" style="margin-top:10px">
+      <div class="combo-tile combo-light">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#999;font-family:'JetBrains Mono',monospace;margin-bottom:16px">SEO CASE STUDY</div>
+        <div style="font-family:'Epilogue',sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.04em;color:#0a0a0a;line-height:1.15;margin-bottom:14px">+89% organic traffic in 6 months</div>
+        <div style="font-size:14px;color:#666;line-height:1.75">A complete rethink of site architecture, content clustering, and technical foundations — resulting in sustained, compounding growth.</div>
+        <div style="margin-top:20px;display:flex;align-items:center;gap:8px">
+          <span style="width:28px;height:28px;border-radius:50%;background:#e4ddd6;display:inline-block"></span>
+          <div>
+            <span style="font-size:12px;font-weight:600;color:#0a0a0a;display:block">Wali Noorzad</span>
+            <span style="font-size:10px;color:#999">Excel Consultancy</span>
+          </div>
+        </div>
+      </div>
+      <div class="combo-tile combo-dark">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);font-family:'JetBrains Mono',monospace;margin-bottom:16px">AI MARKETING</div>
+        <div style="font-family:'Epilogue',sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.04em;color:#fff;line-height:1.15;margin-bottom:14px">Intelligence-led campaigns</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75">Predictive budget allocation, creative testing at scale, and real-time bid adjustments — all running autonomously.</div>
+        <div style="margin-top:20px">
+          <span style="font-size:12px;font-weight:600;color:#60a5fa;font-family:'JetBrains Mono',monospace">→ Explore AI features</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VOICE & TONE ── -->
+<section id="voice" class="section">
+  <div class="wrap">
+    <div class="eyebrow">05 / Voice &amp; Tone</div>
+    <h2 class="section-title">How we speak</h2>
+    <p class="section-desc">Excel's voice is sharp without being cold, confident without being arrogant. We speak like the expert in the room who doesn't need to prove it.</p>
+
+    <div class="voice-grid">
+      <div class="voice-tile">
+        <div class="voice-tile-title">Confident, not arrogant</div>
+        <div class="voice-tile-sub">We state what we can deliver — precisely.</div>
+        <div class="word-pairs">
+          <div class="word-pair">
+            <span class="word-do">We'll cut your CPL by 30–50%</span>
+            <span class="word-arrow">vs</span>
+            <span class="word-dont">We try to reduce costs</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">52% CPL reduction — proven</span>
+            <span class="word-arrow">vs</span>
+            <span class="word-dont">Significantly improved performance</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">Here's what the data shows</span>
+            <span class="word-arrow">vs</span>
+            <span class="word-dont">We believe results might improve</span>
+          </div>
+        </div>
+      </div>
+      <div class="voice-tile">
+        <div class="voice-tile-title">Clear, not jargon-heavy</div>
+        <div class="voice-tile-sub">Plain language earns more trust than buzzwords.</div>
+        <div class="word-pairs">
+          <div class="word-pair">
+            <span class="word-do">Get more from your ad budget</span>
+            <span class="word-arrow">vs</span>
+            <span class="word-dont">Leverage synergistic omnichannel solutions</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">Smarter targeting = better ROAS</span>
+            <span class="word-arrow">vs</span>
+            <span class="word-dont">Holistic programmatic optimisation</span>
+          </div>
+          <div class="word-pair">
+            <span class="word-do">Your leads cost less. You grow faster.</span>
+            <span class="word-arrow">vs</span>
+            <span class="word-dont">Maximising customer acquisition efficiency</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="headlines-box">
+      <div class="colour-row-label" style="margin-top:0">Approved headline style</div>
+      <div class="headline-item">
+        <span class="headline-type">Statement</span>
+        <span class="headline-text" style="font-size:22px">52% less spend. Same results.</span>
+      </div>
+      <div class="headline-item">
+        <span class="headline-type">Challenge</span>
+        <span class="headline-text" style="font-size:22px">Your competitors are already using AI ads. Are you?</span>
+      </div>
+      <div class="headline-item">
+        <span class="headline-type">Benefit</span>
+        <span class="headline-text" style="font-size:22px">More leads. Lower cost. Full attribution.</span>
+      </div>
+      <div class="headline-item" style="border-bottom:none">
+        <span class="headline-type">CTA</span>
+        <span class="headline-text" style="font-size:22px">See what Excel can do for your brand →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── UI COMPONENTS ── -->
+<section id="components" class="section">
+  <div class="wrap">
+    <div class="eyebrow">06 / UI Components</div>
+    <h2 class="section-title">Component library</h2>
+    <p class="section-desc">Every interactive element follows a consistent pattern: clear hierarchy, sufficient touch targets, and faithful brand colour application.</p>
+
+    <div class="comp-grid">
+      <div class="comp-tile">
+        <div class="comp-tile-header">Buttons</div>
+        <div class="comp-tile-body">
+          <div class="btn-row" style="margin-bottom:16px">
+            <a class="btn btn-primary">Book a Call <span class="btn-arrow">→</span></a>
+            <a class="btn btn-secondary">View Services</a>
+            <a class="btn btn-ghost">Learn more</a>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-sm">Get started</a>
+            <a class="btn btn-ghost btn-sm">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-tile">
+        <div class="comp-tile-header">Metric Cards</div>
+        <div class="comp-tile-body">
+          <div class="metric-mini-grid">
+            <div class="metric-mini mm-blue on-blue">
+              <div class="metric-mini-lbl">ROAS</div>
+              <div class="metric-mini-val">3.8×</div>
+              <div class="metric-mini-sub">avg. paid search</div>
+            </div>
+            <div class="metric-mini mm-dark on-dark">
+              <div class="metric-mini-lbl">CPL drop</div>
+              <div class="metric-mini-val">−52%</div>
+              <div class="metric-mini-sub">6-month period</div>
+            </div>
+            <div class="metric-mini mm-amber on-amber">
+              <div class="metric-mini-lbl">Traffic</div>
+              <div class="metric-mini-val">+89%</div>
+              <div class="metric-mini-sub">organic growth</div>
+            </div>
+            <div class="metric-mini mm-teal on-teal">
+              <div class="metric-mini-lbl">Waste cut</div>
+              <div class="metric-mini-val">61%</div>
+              <div class="metric-mini-sub">ad spend recovered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-tile">
+        <div class="comp-tile-header">Tags &amp; Labels</div>
+        <div class="comp-tile-body">
+          <div class="tags-row" style="margin-bottom:14px">
+            <span class="tag tag-blue">SEO</span>
+            <span class="tag tag-blue">Paid Ads</span>
+            <span class="tag tag-amber">In Progress</span>
+            <span class="tag tag-teal">AI-Powered</span>
+            <span class="tag">Analytics</span>
+          </div>
+          <div class="tags-row">
+            <span class="tag tag-sm tag-blue">Google Ads</span>
+            <span class="tag tag-sm tag-blue">Meta Ads</span>
+            <span class="tag tag-sm">Social</span>
+            <span class="tag tag-sm tag-teal">Automation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-tile">
+        <div class="comp-tile-header">Form Elements</div>
+        <div class="comp-tile-body">
+          <div class="form-demo">
+            <div class="form-group">
+              <label class="form-label">Your name</label>
+              <input class="form-input" placeholder="Wali Noorzad" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Business email</label>
+              <input class="form-input" placeholder="hello@company.com" type="email">
+            </div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center">Book a strategy call →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MOTION ── -->
+<section id="motion" class="section">
+  <div class="wrap">
+    <div class="eyebrow">07 / Motion</div>
+    <h2 class="section-title">Animation principles</h2>
+    <p class="section-desc">Motion at Excel is purposeful — it guides attention, communicates state, and reinforces quality. Never decorative; always intentional.</p>
+
+    <div class="motion-grid">
+      <div class="motion-tile">
+        <div class="motion-demo">
+          <div class="demo-fade-up-box">Performance<br>Marketing</div>
+        </div>
+        <div class="motion-info">
+          <div class="motion-name">Fade Up</div>
+          <span class="motion-spec">0.6s · ease-out · 16px rise</span>
+          <div class="motion-desc">Primary entry animation for hero headings and section reveals. Content emerges with gravity.</div>
+        </div>
+      </div>
+      <div class="motion-tile">
+        <div class="motion-demo">
+          <div class="demo-fade-in-box">Campaign results →</div>
+        </div>
+        <div class="motion-info">
+          <div class="motion-name">Fade In</div>
+          <span class="motion-spec">0.5s · ease-out · stagger 0.1s</span>
+          <div class="motion-desc">Card and content reveals. Used with staggered delay for grid items and list elements.</div>
+        </div>
+      </div>
+      <div class="motion-tile">
+        <div class="motion-demo">
+          <div class="demo-hover-box">Book a Call →</div>
+        </div>
+        <div class="motion-info">
+          <div class="motion-name">Hover Lift</div>
+          <span class="motion-spec">0.15s · ease · scale 1.03</span>
+          <div class="motion-desc">Buttons and interactive cards lift slightly on hover. Blue shadow intensifies to signal action.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:10px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px 32px;box-shadow:var(--shadow)">
+      <div class="colour-row-label" style="margin-top:0">Motion rules</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px">Duration</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.65">50–150ms for micro-interactions. 400–600ms for section enters. Never exceed 800ms.</p>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px">Easing</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.65">Use <span style="font-family:'JetBrains Mono',monospace;color:var(--blue);font-size:11px">ease-out</span> for enters, <span style="font-family:'JetBrains Mono',monospace;color:var(--blue);font-size:11px">ease-in-out</span> for transitions. Avoid linear.</p>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px">Accessibility</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.65">All animations must respect <span style="font-family:'JetBrains Mono',monospace;color:var(--blue);font-size:11px">prefers-reduced-motion</span>. Static fallbacks required.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── IMAGERY ── -->
+<section id="imagery" class="section">
+  <div class="wrap">
+    <div class="eyebrow">08 / Imagery</div>
+    <h2 class="section-title">Art direction</h2>
+    <p class="section-desc">Photography and graphics at Excel communicate precision and outcomes. Authentic work environments, real data visualisations, no stock-photo clichés.</p>
+
+    <div class="imagery-grid">
+      <div class="imagery-tile">
+        <div class="imagery-tile-content" style="height:240px">
+          <div class="imagery-tile-label">Primary style</div>
+          <div class="imagery-tile-title">Data-driven environments</div>
+        </div>
+        <div class="imagery-meta">
+          <p class="imagery-meta-txt">Dark workspaces with glowing analytics dashboards. Real metrics, real screens. Deep navy overlays. Shows intelligence in action.</p>
+        </div>
+      </div>
+      <div class="imagery-tile">
+        <div class="imagery-tile-content">
+          <div class="imagery-tile-label">Secondary</div>
+          <div class="imagery-tile-title">Abstract data flows</div>
+        </div>
+        <div class="imagery-meta">
+          <p class="imagery-meta-txt">Blue particle streams and network graphs. Used for hero sections and AI features.</p>
+        </div>
+      </div>
+      <div class="imagery-tile">
+        <div class="imagery-tile-content" style="background:linear-gradient(135deg,#171717 0%,#0068d6 100%)">
+          <div class="imagery-tile-label">Brand graphic</div>
+          <div class="imagery-tile-title">Blue gradient blocks</div>
+        </div>
+        <div class="imagery-meta">
+          <p class="imagery-meta-txt">Geometric brand graphics for presentations, social media, and email headers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="art-direction">
+      <div class="art-tile">
+        <div class="art-tile-header">
+          <div class="art-tile-icon art-do">✓</div>
+          <span class="art-tile-name">Use — approved imagery</span>
+        </div>
+        <ul class="art-list">
+          <li>Authentic team environments — real desks, real work, honest lighting</li>
+          <li>Real data dashboards (with client permission and data anonymised)</li>
+          <li>High-contrast, high-clarity editorial photography</li>
+          <li>Geometric, minimal abstract graphics in brand palette</li>
+          <li>Results-forward visuals: before/after charts, growth curves</li>
+        </ul>
+      </div>
+      <div class="art-tile">
+        <div class="art-tile-header">
+          <div class="art-tile-icon art-dont">✕</div>
+          <span class="art-tile-name">Avoid — off-brand imagery</span>
+        </div>
+        <ul class="art-list">
+          <li>Generic stock photos of people smiling at laptops</li>
+          <li>Overcrowded, busy compositions with no focal point</li>
+          <li>Warm, lifestyle-forward photography — not our register</li>
+          <li>Clip art, cartoons, or illustrative icons (unless brand-approved)</li>
+          <li>Text-heavy image overlays with poor contrast or legibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUSINESS CARDS ── -->
+<section id="cards" class="section">
+  <div class="wrap">
+    <div class="eyebrow">09 / Business Cards</div>
+    <h2 class="section-title">Print collateral</h2>
+    <p class="section-desc">Three concept directions — each a distinct expression of the brand. All share the same print spec: 85×55mm, CMYK, 3mm bleed, 5mm safe zone.</p>
+
+    <div class="cards-display">
+      <!-- Card Concept 1 -->
+      <div class="card-set">
+        <div class="card-display-area">
+          <span class="card-set-label">Concept A — Front</span>
+          <div class="bc bc1">
+            <div class="bc1-bar"></div>
+            <div class="bc1-content">
+              <div>
+                <div class="bc1-logo">EXCEL</div>
+              </div>
+              <div>
+                <div class="bc1-name">Wali Noorzad</div>
+                <div class="bc1-title">Founder & Performance Strategist</div>
+              </div>
+              <div class="bc1-contact">
+                <span>excel@theexcelagency.com</span>
+                <span>+39 344 442 4021</span>
+                <span>theexcelagency.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-name">Ultra-Minimal</div>
+          <div class="card-subtitle">White · Epilogue 700 · 2px blue rule</div>
+        </div>
+      </div>
+
+      <!-- Card Concept 2 -->
+      <div class="card-set">
+        <div class="card-display-area">
+          <span class="card-set-label">Concept B — Front</span>
+          <div class="bc bc2">
+            <div class="bc2-grid"></div>
+            <div class="bc2-bar"></div>
+            <div class="bc2-content">
+              <div>
+                <div class="bc2-name">Wali Noorzad</div>
+                <div class="bc2-title">Founder · Performance Strategist</div>
+              </div>
+              <div class="bc2-bottom">
+                <div class="bc2-logo">EXCEL</div>
+                <div class="bc2-contact">
+                  <span>excel@theexcelagency.com</span>
+                  <span>+39 344 442 4021</span>
+                  <span>theexcelagency.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-name">Bold Tech-Forward</div>
+          <div class="card-subtitle">Dark · Syne 800 · Blue grid accent</div>
+        </div>
+      </div>
+
+      <!-- Card Concept 3 -->
+      <div class="card-set">
+        <div class="card-display-area">
+          <span class="card-set-label">Concept C — Front</span>
+          <div class="bc bc3">
+            <div class="bc3-atm"></div>
+            <div class="bc3-dot"></div>
+            <div class="bc3-content">
+              <div>
+                <div class="bc3-name">Wali Noorzad</div>
+                <div class="bc3-title">Founder · Excel Consultancy</div>
+              </div>
+              <div class="bc3-bottom">
+                <div class="bc3-logo">EXCEL</div>
+                <div class="bc3-contact">
+                  <span>excel@theexcelagency.com</span>
+                  <span>+39 344 442 4021</span>
+                  <span>theexcelagency.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-name">Premium Futuristic</div>
+          <div class="card-subtitle">Deep dark · Fraunces italic · Teal glow</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-spec">
+      <div>
+        <div class="spec-item-label">Dimensions</div>
+        <div class="spec-item-val">85 × 55 mm</div>
+        <div class="spec-item-note">Standard ISO CR80. Bleed: 3mm all sides.</div>
+      </div>
+      <div>
+        <div class="spec-item-label">Resolution</div>
+        <div class="spec-item-val">300 DPI</div>
+        <div class="spec-item-note">Minimum for professional offset print. 350 DPI preferred.</div>
+      </div>
+      <div>
+        <div class="spec-item-label">Colour mode</div>
+        <div class="spec-item-val">CMYK</div>
+        <div class="spec-item-note">Blue: C96 M55 Y0 K0. Convert from RGB before print.</div>
+      </div>
+      <div>
+        <div class="spec-item-label">Safe zone</div>
+        <div class="spec-item-val">5 mm</div>
+        <div class="spec-item-note">All text and logos must sit inside the safe zone margin.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DOCUMENT FOOTER ── -->
+<footer class="doc-footer">
+  <div class="doc-footer-logo">EXCEL</div>
+  <div class="doc-footer-meta">
+    Brand Guidelines · Version 1.0<br>
+    © 2026 Excel Consultancy · Rome, Italy<br>
+    theexcelagency.com · Confidential
+  </div>
+</footer>
+
+<script>
+// ── THEME TOGGLE ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('themeIcon').textContent  = isDark ? '🌙' : '☀️';
+  document.getElementById('themeLabel').textContent = isDark ? 'Dark' : 'Light';
+  localStorage.setItem('excel-brand-theme', isDark ? 'light' : 'dark');
+}
+
+// Restore saved theme
+const saved = localStorage.getItem('excel-brand-theme');
+if (saved === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  document.getElementById('themeIcon').textContent  = '☀️';
+  document.getElementById('themeLabel').textContent = 'Light';
+}
+
+// ── SCROLL SPY ──
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+const sections = ['cover','overview','logo-section','colour','typography','voice','components','motion','imagery','cards'];
+const dots = document.querySelectorAll('.sidebar-dot');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      dots.forEach(d => d.classList.remove('active'));
+      const idx = sections.indexOf(entry.target.id);
+      if (idx >= 0) dots[idx].classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) observer.observe(el);
+});
+
+// ── PROGRESS BAR ──
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const max = document.body.scrollHeight - window.innerHeight;
+  const pct = max > 0 ? (scrolled / max) * 100 : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+});
+</script>
+</body>
+</html>

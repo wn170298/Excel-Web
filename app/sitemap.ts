@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/blog-data';
 
-const BASE = 'https://get-excel.com';
+const BASE = 'https://www.theexcelagency.com';
 const LOCALES = ['it', 'de'] as const;
 
 const staticPaths = [
