@@ -41,7 +41,7 @@ const AI_CAPABILITIES = [
     title: 'AI-Driven SEO',
     tagline: 'Machine learning at the scale of Google itself.',
     description:
-      'Modern SEO is no longer about keywords and backlinks alone. Google\'s ranking algorithms now incorporate hundreds of AI-driven signals, and beating them requires AI-driven strategy. Excel uses machine learning models to analyse search patterns at scale, surface semantic content gaps competitors miss, identify entity relationships that improve topical authority, and optimise for AI-powered search features including Google\'s AI Overviews and SGE. We also ensure your content is well-positioned for AI discovery tools like ChatGPT and Perplexity, which are reshaping how people find information online.',
+      'Google ranks on hundreds of AI-driven signals now—and beating them requires AI-driven strategy. We use ML to surface content gaps competitors miss, optimise for AI-powered search features like Google\'s AI Overviews, and position your content for discovery tools like ChatGPT and Perplexity.',
     bullets: [
       'Semantic content gap analysis across thousands of queries',
       'Entity-based optimisation for topical authority',
@@ -55,7 +55,7 @@ const AI_CAPABILITIES = [
     title: 'Smart PPC Bidding',
     tagline: 'Real-time bid optimisation no human can match.',
     description:
-      'Google\'s Smart Bidding has fundamentally changed PPC management. The opportunity is no longer in manual bid adjustments, it\'s in feeding the algorithm the highest-quality signals possible. Excel\'s AI bid strategy layer works with Google\'s machine learning to provide enriched conversion data, proper audience segmentation, and the campaign structure that helps smart bidding models reach their full potential faster. The result is a cost-per-acquisition curve that trends downward as the model learns, rather than plateauing at an inefficient baseline.',
+      'Google\'s Smart Bidding learns from your conversion data and continuously optimises bids in real time. We feed the algorithm the highest-quality signals possible—enriched conversion data, proper audience segmentation, clean campaign structure—so the model learns faster and your CPA trends downward.',
     bullets: [
       'Conversion data enrichment for smarter algorithm training',
       'Target CPA and Target ROAS strategy by campaign type',
@@ -69,7 +69,7 @@ const AI_CAPABILITIES = [
     title: 'Automated Content at Scale',
     tagline: 'AI-assisted content that maintains quality and brand voice.',
     description:
-      'Content at scale is no longer optional for competitive SEO, but quality cannot be sacrificed for volume. Excel uses AI-assisted content workflows to dramatically reduce time-to-publish for SEO content programmes while maintaining editorial standards. Our process uses AI for research, outline generation, and first-draft production, with human editors responsible for fact-checking, brand voice alignment, and final quality review. The result is 3–5× the content output at the same or lower cost, without the quality drop that pure AI content generates.',
+      'Content at scale used to mean sacrificing quality. AI changes that. We use AI for research and first-draft production, then human editors review every piece for accuracy, brand fit, and quality. Result: 3–5× more content at the same cost, without the AI-generated quality drop.',
     bullets: [
       'AI-assisted research and outline generation',
       'Templated content frameworks for high-volume programmatic pages',
@@ -83,7 +83,7 @@ const AI_CAPABILITIES = [
     title: 'Predictive Analytics',
     tagline: 'Anticipate opportunities and risks before they materialise.',
     description:
-      'Reactive marketing is expensive. By the time you notice a trend in your data, a competitor may already be capitalising on it. Excel\'s predictive analytics layer surfaces leading indicators, seasonal demand shifts, competitor activity patterns, audience behaviour changes, weeks before they show up in standard reports. We build custom models calibrated to your specific business and market, giving you the ability to pre-position campaigns, adjust budgets, and capture demand as it builds rather than chasing it after the fact.',
+      'Reactive marketing costs money. By the time you see a trend in your data, a competitor is already capitalising on it. Our predictive models surface leading indicators weeks in advance—seasonal demand shifts, churn risk, audience behaviour changes—so you can pre-position campaigns instead of chasing trends.',
     bullets: [
       'Seasonal demand forecasting for budget pre-positioning',
       'Churn risk scoring for existing customer retention campaigns',
@@ -97,7 +97,7 @@ const AI_CAPABILITIES = [
     title: 'Intelligent Attribution',
     tagline: 'Cut through last-click bias to see what\'s truly driving revenue.',
     description:
-      'Last-click attribution is a lie that has cost businesses billions in misallocated marketing spend. It credits the final touchpoint before conversion while ignoring every impression, search, and piece of content that built the intent to buy. Excel implements ML-powered data-driven attribution models that analyse the actual conversion paths of your customers, giving each touchpoint credit proportional to its measurable influence on the decision. The result is a truer picture of channel ROI, which leads to dramatically better budget allocation decisions.',
+      'Last-click attribution is a lie. It credits only the final touchpoint before conversion while ignoring everything that built the intent to buy. Our ML attribution models analyse actual customer paths and credit each touchpoint based on its measurable influence. Result: you see true channel ROI and make better budget decisions.',
     bullets: [
       'GA4 data-driven attribution model implementation',
       'Cross-channel de-duplication of conversion credit',
@@ -111,7 +111,7 @@ const AI_CAPABILITIES = [
     title: 'Privacy-Safe Measurement',
     tagline: 'Full measurement accuracy without compromising compliance.',
     description:
-      'Third-party cookies are disappearing, consent rates are declining, and global privacy regulations like GDPR have fundamentally changed what data you can collect and how. Excel builds measurement infrastructure that operates correctly in this constrained environment, using server-side tagging, consent mode v2, and AI-enhanced conversion modelling to recover the measurement signal lost to consent restrictions. You stay fully compliant while maintaining the data quality needed to run high-performing campaigns.',
+      'Third-party cookies are disappearing. We build measurement infrastructure that stays fully compliant while maintaining data quality—using server-side tagging, consent mode v2, and AI-enhanced conversion modelling to recover the signal lost to privacy restrictions.',
     bullets: [
       'Server-side Google Tag Manager implementation',
       'Consent Mode v2 configuration and compliance audit',
