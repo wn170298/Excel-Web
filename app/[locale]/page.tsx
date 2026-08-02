@@ -601,6 +601,179 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
+      {/* ── CASE STUDY ───────────────────────────────────────────── */}
+      <section className="py-24 bg-white dark:bg-[#080808]">
+        <div className="max-w-[900px] mx-auto px-6">
+          <div className="text-center mb-14">
+            <p className="text-[11px] font-semibold text-[#0068d6] uppercase tracking-[0.15em] mb-4">
+              See It In Action
+            </p>
+            <h2
+              className="text-[36px] sm:text-[44px] font-bold leading-[1.15] text-[#171717] dark:text-white mb-6"
+              style={{ letterSpacing: '-0.03em' }}
+            >
+              Speed Wreckers went from 66 conversions to 787.67. Here&apos;s the actual math.
+            </h2>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8] max-w-[620px] mx-auto">
+              Speed Wreckers, a Perth auto removal business, came to us running one disconnected
+              ad account. Fifteen months later, with SEO, paid media, and analytics working as
+              one system instead of five, the numbers speak for themselves.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            {/* Before */}
+            <div className="rounded-[20px] p-8 bg-[#faf7f2] dark:bg-[#0d0d0d] border border-[#e8e0d8] dark:border-[#1e1e1e]">
+              <p className="text-[11px] font-semibold text-[#999999] uppercase tracking-[0.12em] mb-6">
+                Before Excel
+              </p>
+              <div className="space-y-5">
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#171717] dark:text-white mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    3K
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Clicks</p>
+                </div>
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#171717] dark:text-white mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    66
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Conversions</p>
+                </div>
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#171717] dark:text-white mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    $7.62K
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Ad Spend</p>
+                </div>
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#171717] dark:text-white mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    ~$115
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Cost Per Conversion</p>
+                </div>
+              </div>
+            </div>
+
+            {/* After */}
+            <div className="rounded-[20px] p-8 bg-[#eef5ff] dark:bg-[#0068d6]/10 border border-[#0068d6]/25">
+              <p className="text-[11px] font-semibold text-[#0068d6] uppercase tracking-[0.12em] mb-6">
+                After Excel (15 Months)
+              </p>
+              <div className="space-y-5">
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#0068d6] mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    25.2K <span className="text-[15px] font-semibold text-[#0068d6]/70">(8.4×)</span>
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Clicks</p>
+                </div>
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#0068d6] mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    787.67 <span className="text-[15px] font-semibold text-[#0068d6]/70">(+1,092%)</span>
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Conversions</p>
+                </div>
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#0068d6] mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    $80.7K
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Ad Spend</p>
+                </div>
+                <div>
+                  <p
+                    className="text-[32px] font-bold leading-none text-[#0068d6] mb-1"
+                    style={{ letterSpacing: '-0.02em' }}
+                  >
+                    ~$102
+                  </p>
+                  <p className="text-[13px] text-[#666666] dark:text-[#888888]">Cost Per Conversion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-[17px] sm:text-[18px] font-semibold text-[#171717] dark:text-white leading-[1.7] text-center mb-16">
+            8.4× more clicks. Nearly 12× more conversions. And a lower cost per conversion than
+            when they started. That&apos;s what happens when every channel is built to feed the
+            others instead of compete with them.
+          </p>
+
+          {/* Auto Point referral */}
+          <div className="rounded-[20px] p-8 bg-[#faf7f2] dark:bg-[#0d0d0d] border border-[#e8e0d8] dark:border-[#1e1e1e]">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+              <div>
+                <p className="text-[11px] font-semibold text-[#0068d6] uppercase tracking-[0.15em] mb-2">
+                  Referred by Speed Wreckers
+                </p>
+                <h3
+                  className="text-[22px] sm:text-[26px] font-bold text-[#171717] dark:text-white"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  Auto Point Car Removal
+                </h3>
+              </div>
+              <span className="text-[11px] font-semibold text-[#0068d6] bg-[#eef5ff] dark:bg-[#0068d6]/15 px-3 py-1.5 rounded-full self-start sm:self-auto">
+                Early Results
+              </span>
+            </div>
+            <p className="text-[15px] text-[#666666] dark:text-[#888888] leading-[1.8] mb-6">
+              Speed Wreckers liked their numbers enough to send us a competitor in the same
+              industry. Auto Point&apos;s results from their first stretch working with Excel:
+            </p>
+            <div className="grid grid-cols-3 gap-4">
+              <div>
+                <p
+                  className="text-[28px] font-bold leading-none text-[#171717] dark:text-white mb-1"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  39
+                </p>
+                <p className="text-[12px] text-[#666666] dark:text-[#888888]">Conversions</p>
+              </div>
+              <div>
+                <p
+                  className="text-[28px] font-bold leading-none text-[#171717] dark:text-white mb-1"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  $3.17K
+                </p>
+                <p className="text-[12px] text-[#666666] dark:text-[#888888]">Ad Spend</p>
+              </div>
+              <div>
+                <p
+                  className="text-[28px] font-bold leading-none text-[#171717] dark:text-white mb-1"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  $81
+                </p>
+                <p className="text-[12px] text-[#666666] dark:text-[#888888]">Cost Per Conversion</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── SERVICES ─────────────────────────────────────────────── */}
       <section id="services" className="py-24 bg-[#faf7f2] dark:bg-[#0d0d0d]">
         <div className="max-w-[1200px] mx-auto px-6">
