@@ -140,10 +140,10 @@ const STATS = [
 ];
 
 const RESULTS = [
-  { label: 'Avg. CPL Reduction', value: '52%', desc: 'vs. previous agency' },
-  { label: 'Organic Traffic Growth', value: '+89%', desc: 'in 6 months' },
-  { label: 'Verified ROAS', value: '3.8×', desc: 'for e-commerce clients' },
-  { label: 'Wasted Spend Eliminated', value: '61%', desc: 'on first audit' },
+  { label: 'Cost Per Lead', value: '52%', desc: 'reduction vs. previous agency' },
+  { label: 'Organic Traffic', value: '+89%', desc: 'growth in 6 months' },
+  { label: 'E-Commerce ROAS', value: '3.8×', desc: 'average across clients' },
+  { label: 'Wasted Budget', value: '61%', desc: 'eliminated on first audit' },
 ];
 
 const recentPosts = blogPosts.slice(0, 6);
