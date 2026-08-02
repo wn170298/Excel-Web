@@ -534,6 +534,73 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
+      {/* ── SOLUTION ─────────────────────────────────────────────── */}
+      <section className="py-24 bg-[#faf7f2] dark:bg-[#0d0d0d]">
+        <div className="max-w-[700px] mx-auto px-6 text-center">
+          <p className="text-[11px] font-semibold text-[#0068d6] uppercase tracking-[0.15em] mb-4">
+            The Solution
+          </p>
+          <h2
+            className="text-[36px] sm:text-[44px] font-bold leading-[1.15] text-[#171717] dark:text-white mb-8"
+            style={{ letterSpacing: '-0.03em' }}
+          >
+            You don&apos;t need five vendors. You need one system that talks to itself.
+          </h2>
+          <div className="text-left space-y-5 mb-10">
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              That&apos;s the entire premise Excel is built on. One team runs your SEO, your ads,
+              your website, and your automation together, so every channel makes the others work
+              harder instead of quietly competing for the same credit.
+            </p>
+            <p className="text-[17px] sm:text-[18px] font-bold text-[#171717] dark:text-white leading-[1.7]">
+              We connect everything.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                Your SEO research feeds directly into your paid campaigns.
+              </span>{' '}
+              We bid on keywords already proven to convert organically, instead of guessing with
+              your ad budget.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                Analytics reveal exactly which visitors become customers.
+              </span>{' '}
+              That data shapes where we push retargeting, which pages we rebuild, and where the
+              next dollar of spend goes.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                Every page we build compounds the value of your ad spend.
+              </span>{' '}
+              Instead of paying to send traffic to a slow, generic landing page, we build pages
+              designed to convert the exact traffic your campaigns are already paying for.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                Automation nurtures every lead, even the ones not ready to buy today.
+              </span>{' '}
+              Follow-up sequences keep your pipeline warm without adding another task to your
+              plate.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                AI runs underneath all of it.
+              </span>{' '}
+              It&apos;s what makes real-time coordination possible, reading performance across
+              every channel at once and flagging where a dollar is being wasted before it drains
+              your budget. That&apos;s not something five vendors looking at five separate
+              dashboards can do.
+            </p>
+          </div>
+          <p className="text-[17px] sm:text-[18px] font-semibold text-[#171717] dark:text-white leading-[1.7]">
+            The result: you stop wasting money on channels that look good on a report but
+            don&apos;t drive revenue. Every dollar works toward the same goal, tracked by one
+            system, owned by one team.
+          </p>
+        </div>
+      </section>
+
       {/* ── SERVICES ─────────────────────────────────────────────── */}
       <section id="services" className="py-24 bg-[#faf7f2] dark:bg-[#0d0d0d]">
         <div className="max-w-[1200px] mx-auto px-6">
