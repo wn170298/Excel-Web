@@ -58,10 +58,10 @@ export default function ContactPage() {
             <span className="text-[12px] font-semibold text-[#0068d6] tracking-wide">Free Strategy Session</span>
           </div>
           <h1 className="text-[40px] sm:text-[52px] font-bold leading-[1.1] text-[#171717] dark:text-white max-w-[700px] mb-5">
-            Talk to a Digital Marketing Expert Today.
+            Let's Audit Your Growth Strategy
           </h1>
           <p className="text-[18px] text-[#555555] dark:text-[#888888] leading-[1.7] max-w-[580px] mb-8">
-            Book a free 30-minute strategy session, valued at $2,000. No sales pitch. Just a clear audit of your digital marketing and an honest action plan to grow your business.
+            Book a free 30-minute call. We'll audit your current digital presence, spot growth opportunities, and give you a clear action plan—no commitment, no sales pitch.
           </p>
           <a
             href="https://calendly.com/wali-noorzad12/30min"
