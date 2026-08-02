@@ -96,39 +96,39 @@ const SERVICES = [
 const AI_FEATURES = [
   {
     icon: Bot,
-    title: 'AI-Driven SEO',
+    title: 'Automated Optimization',
     description:
-      'Machine learning models analyse search patterns, identify semantic content gaps, and optimise for AI-powered search engines at a scale impossible to achieve manually.',
+      'Continuous A/B testing, bid adjustments, and audience refinement happen 24/7 without manual intervention, keeping your campaigns optimised across changing market conditions.',
   },
   {
     icon: Brain,
-    title: 'Smart PPC Bidding',
+    title: 'Smart Bid Management',
     description:
-      'AI-powered bid management algorithms optimise your ad spend in real-time, automatically shifting budget toward the highest-performing keywords and audiences.',
+      'AI optimises ad spend across channels in real-time, automatically shifting budget toward high-intent, high-converting keywords to maximise every pound of paid spend.',
   },
   {
     icon: Sparkles,
-    title: 'Automated Content',
+    title: 'AI-Assisted Content',
     description:
-      'AI-assisted content creation and optimisation at scale, maintaining quality and brand voice while dramatically reducing time-to-publish for SEO content programmes.',
+      'Create SEO content at scale without sacrificing quality. AI identifies content gaps, optimises for search intent, and maintains your voice across every page.',
   },
   {
     icon: TrendingUp,
     title: 'Predictive Analytics',
     description:
-      'Anticipate customer behaviour and market trends before they happen. Predictive models surface opportunities and flag risks weeks ahead of manual analysis.',
+      'Anticipate customer behaviour and identify high-conversion prospects before they\'re ready to buy. Focus your budget on the audiences most likely to convert.',
   },
   {
     icon: Target,
     title: 'Intelligent Attribution',
     description:
-      'ML-powered attribution models reveal the true impact of every marketing touchpoint, cutting through last-click bias to show you where your best customers actually come from.',
+      'ML-powered attribution cuts through last-click bias to reveal the true revenue drivers across your entire funnel. Know exactly which touchpoints drive conversions.',
   },
   {
     icon: ShieldCheck,
-    title: 'Privacy-Safe Measurement',
+    title: 'Conversion Modeling',
     description:
-      'AI-enhanced conversion modelling recovers measurement lost to consent restrictions, keeping your data GDPR-compliant without sacrificing bidding signal quality.',
+      'Privacy-compliant conversion modelling keeps your bidding signals strong while staying fully GDPR-compliant. Measure what matters without compromising customer privacy.',
   },
 ];
 
