@@ -487,6 +487,53 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
+      {/* ── PROBLEM ──────────────────────────────────────────────── */}
+      <section className="py-24 bg-white dark:bg-[#080808]">
+        <div className="max-w-[700px] mx-auto px-6 text-center">
+          <p className="text-[11px] font-semibold text-[#0068d6] uppercase tracking-[0.15em] mb-4">
+            The Problem
+          </p>
+          <h2
+            className="text-[36px] sm:text-[44px] font-bold leading-[1.15] text-[#171717] dark:text-white mb-8"
+            style={{ letterSpacing: '-0.03em' }}
+          >
+            Most businesses aren&apos;t losing to competitors. They&apos;re losing to their own marketing stack.
+          </h2>
+          <div className="text-left space-y-5 mb-10">
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              You hire an SEO agency. A separate PPC freelancer. A social media manager. Maybe a web
+              developer too. Each one optimizes their own channel and reports their own numbers &mdash; and
+              none of them talk to each other.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                Your SEO keywords never make it into your ad campaigns.
+              </span>{' '}
+              Your best organic content never gets promoted. Nobody connects the dots between what&apos;s
+              working and where you&apos;re spending.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                Attribution becomes a guessing game.
+              </span>{' '}
+              Every vendor claims credit for the same conversion. You can&apos;t tell what&apos;s actually
+              driving revenue, so you can&apos;t confidently cut what isn&apos;t.
+            </p>
+            <p className="text-[16px] text-[#666666] dark:text-[#888888] leading-[1.8]">
+              <span className="font-bold text-[18px] text-[#171717] dark:text-white">
+                And managing five different vendors becomes a part-time job.
+              </span>{' '}
+              Five invoices, five reporting formats, five points of contact &mdash; and no single person
+              accountable for the outcome.
+            </p>
+          </div>
+          <p className="text-[17px] sm:text-[18px] font-semibold text-[#171717] dark:text-white leading-[1.7]">
+            That&apos;s not a marketing problem. That&apos;s a coordination problem &mdash; and it&apos;s
+            costing you money every single day.
+          </p>
+        </div>
+      </section>
+
       {/* ── SERVICES ─────────────────────────────────────────────── */}
       <section id="services" className="py-24 bg-[#faf7f2] dark:bg-[#0d0d0d]">
         <div className="max-w-[1200px] mx-auto px-6">
