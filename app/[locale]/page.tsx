@@ -1018,9 +1018,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <span className="text-[#60a5fa]">the Latest Technology</span>
             </h2>
             <p className="text-[17px] text-white/55 leading-[1.8]">
-              We embed artificial intelligence into every layer of your digital marketing
-              strategy, delivering smarter results, faster optimisation, and sustainable
-              competitive advantage.
+              We don&apos;t use AI as a marketing gimmick. It&apos;s the backbone of how we optimize your entire system in real-time—faster and smarter than any manual process.
             </p>
           </div>
 
